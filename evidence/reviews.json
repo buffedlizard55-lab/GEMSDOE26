@@ -115,6 +115,29 @@
         "final_source_and_staged_verification_pass": true
       },
       "scientific_decision": "BLOCKED_DO_NOT_SUBMIT"
+    },
+    {
+      "pass": 7,
+      "review_set": "H26-XEDGE-v1 release",
+      "title": "PR, merge, Pages deployment and live-content verification",
+      "completed_utc": "2026-10-02T22:17:19+00:00",
+      "status": "DEPLOYMENT_CONTENT_PASS_REMOTE_TIFF_BYTES_UNVERIFIED",
+      "summary": "PR #4 from the fixed Arena branch merged as 33ed13e after passing checks. Post-merge scientific/site workflow and verified-site publish passed; the separate GitHub Pages artifact deployment job passed. Cache-busted reads of actual public Pages root, guide and current JSON confirm the XEDGE download filename, blocked decision, note/checksum and current local score. Attempting a direct remote TIFF download failed at TLS transport before any bytes arrived, so remote binary SHA is explicitly not claimed. Local and CI artifact bytes remain verified. No DrivenData read or upload occurred; scientific release remains blocked.",
+      "tests": {
+        "pr_number": 4,
+        "pr_merged": true,
+        "pr_checks_run_id": 37071227432,
+        "pr_checks_pass": true,
+        "post_merge_checks_run_id": 37071346730,
+        "post_merge_checks_pass": true,
+        "pages_deploy_run_id": 37071345832,
+        "pages_deploy_pass": true,
+        "live_root_guide_current_json_fetched": true,
+        "direct_remote_tiff_bytes_verified": false,
+        "direct_fetch_failure": "OpenSSL SSL_ERROR_SYSCALL before transfer",
+        "no_competition_upload": true
+      },
+      "scientific_decision": "BLOCKED_DO_NOT_SUBMIT"
     }
   ],
   "scope": "Successive self-review implementation checks, not independent scientific experiments or external reviews. XEDGE entries are appended only after each pass; a format/site pass does not change the blocked scientific decision."
