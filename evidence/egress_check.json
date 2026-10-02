@@ -1,0 +1,42 @@
+{
+  "checked_utc": "2026-10-02T22:58:05.957120Z",
+  "purpose": "Verify sandbox HTTPS egress allowlist before ranking H27-SEISMIC-LINEAMENT / H27-ALTERATION as executable this session",
+  "results": [
+    {
+      "url": "https://earthquake.usgs.gov/fdsnws/event/1/count",
+      "curl_exit_code": 35,
+      "http_code": "000",
+      "stderr_tail": "curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to earthquake.usgs.gov:443"
+    },
+    {
+      "url": "https://osti.gov",
+      "curl_exit_code": 35,
+      "http_code": "000",
+      "stderr_tail": "curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to osti.gov:443"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/drivendataorg/gems-prize-reference-solution/main/README.md",
+      "curl_exit_code": 35,
+      "http_code": "000",
+      "stderr_tail": "curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to raw.githubusercontent.com:443"
+    },
+    {
+      "url": "https://sentinel-cogs.s3.us-west-2.amazonaws.com",
+      "curl_exit_code": 35,
+      "http_code": "000",
+      "stderr_tail": "curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to sentinel-cogs.s3.us-west-2.amazonaws.com:443"
+    },
+    {
+      "url": "https://pypi.org/simple/",
+      "curl_exit_code": 0,
+      "http_code": "200",
+      "stderr_tail": ""
+    },
+    {
+      "url": "https://api.github.com/zen",
+      "curl_exit_code": 0,
+      "http_code": "200",
+      "stderr_tail": ""
+    }
+  ]
+}

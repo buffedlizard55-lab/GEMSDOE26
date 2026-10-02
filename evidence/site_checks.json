@@ -1,8 +1,8 @@
 {
-  "checked_utc": "2026-10-02T22:17:52+00:00",
+  "checked_utc": "2026-10-02T23:15:58+00:00",
   "status": "PASS",
   "local_html_pages": 7,
-  "local_references_checked": 224,
+  "local_references_checked": 258,
   "external_links_not_crawled": true,
   "errors": [],
   "geotiffs": [
@@ -91,6 +91,35 @@
       "inside_max": 1.0,
       "positive_pixels": 60069,
       "mass": 60069.0,
+      "scientific_release": "Separate from format; consult holdout and audit receipts"
+    },
+    {
+      "format_pass": true,
+      "checks": {
+        "single_band": true,
+        "float32": true,
+        "shape_matches_template": true,
+        "crs_matches_template": true,
+        "transform_matches_template": true,
+        "nodata_is_nan": true,
+        "all_inside_finite": true,
+        "inside_range_0_1": true,
+        "outside_all_nan": true,
+        "masked_read_range_0_1": true,
+        "masked_read_has_all_footprint_values": true,
+        "prediction_digest_matches": true
+      },
+      "path": "/home/user/GEMSDOE26/docs/downloads/gems26-dilcond-oof-v1-20261003-47629f496133-nan.tif",
+      "sha256": "d54cf7edc6ec57c29b88dec81fe3fb101efa4fe31fc9c1088664a0c2e5190887",
+      "prediction_sha256": "47629f49613365849724e198f048449d6dffb5c74d742347b27517e3bcac11d7",
+      "bytes": 475760,
+      "inside_pixels": 5167373,
+      "outside_pixels": 7111787,
+      "inside_finite": 5167373,
+      "inside_min": 0.0,
+      "inside_max": 1.0,
+      "positive_pixels": 60068,
+      "mass": 60068.0,
       "scientific_release": "Separate from format; consult holdout and audit receipts"
     },
     {
