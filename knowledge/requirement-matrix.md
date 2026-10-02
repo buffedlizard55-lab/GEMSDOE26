@@ -23,7 +23,7 @@ Read the complete prompt in README each session. Do not change the frozen H26 pr
 | Current automatic feed | Daily permitted USGS/DOE-deposited DOI metadata refresh, timestamps/errors/last-good preservation | No DrivenData scraping/live score feed; source metadata refresh does not retrain/revalidate the model |
 | Whole prompt saved and values retained | Original repeated prompt verbatim in README; AGENTS reread rule; Maximize P(Win), Own the Outcome; AI disclosure | Owner's obsolete GPU/data-placement assertions corrected in current summary, not erased from original prompt |
 | Three implementation/review passes, edge fixes | Executed logs, pathological tests, browser export/UI checks and full request reconciliation are recorded progressively | Not three independent confirmation folds or an excuse to retune failed scores |
-| PR, merge main and verify deployment | Requested publication step follows passing engineering checks; receipt recorded after execution | Work remains on the fixed Arena session branch; no claimed merge/deploy until actual success |
+| PR, merge main and verify deployment | **DONE:** PRs #1/#2 merged; verified artifact deployment run 37064320072 succeeded; actual root/guide and fresh three-source feed read live; `evidence/publication.json` | Work remains on the fixed Arena session branch; no branch switch/push to main. Direct sandbox remote Chromium is TLS/transport-blocked; local/runner browser checks pass. |
 | Limitations / concrete next session | `knowledge/results.md`, `docs/review.html`, `knowledge/sibling-review.md` | Independent truth, semantic/provenance resolution, random-encoder controls, official native DEM processing remain outstanding |
 
 ## Current release decision

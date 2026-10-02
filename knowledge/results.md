@@ -83,3 +83,7 @@ A single blind lattice score does **not identify hidden truth density** without 
 ## Compliance and automation limits
 
 No new automatic DrivenData reads after its Terms were discovered; no scraper or auto-upload. Initial requested review was tool-retrieved, **not human-read**. Permitted USGS metadata APIs can be refreshed by a daily Pages workflow; failed requests retain the last good record with visible timestamps/errors. A leaderboard snapshot is not a current feed. Organizer-authenticated data provenance, eligibility attestations and an eventual account-holder upload cannot be completed without lawful account-holder participation. Never request passwords/tokens.
+
+## Publication verification
+
+PRs #1 and #2 merged; verified artifact deployment [37064320072](https://github.com/buffedlizard55-lab/GEMSDOE26/actions/runs/37064320072) succeeded. Root landing, guide and cache-busted source-feed JSON read from actual public Pages. All three metadata APIs refreshed successfully on the runner at **2026-10-02T21:02:23 UTC**. Sandbox direct HTTP/Chromium transport remains blocked; local/runner UI checks passed. Metadata success is not native 1 m binary availability, an independent fault validation or a new leaderboard score. Full receipt: `evidence/publication.json`.
