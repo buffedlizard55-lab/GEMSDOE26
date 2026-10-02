@@ -1,5 +1,5 @@
 {
-  "checked_utc": "2026-10-02T20:34:53.157Z",
+  "checked_utc": "2026-10-02T22:11:39.770Z",
   "base_url": "http://127.0.0.1:8088/",
   "status": "PASS",
   "checks": [
@@ -7,12 +7,12 @@
       "name": "desktop first-screen TIFF download",
       "pass": true,
       "present": true,
-      "top": 635.84375,
-      "bottom": 684.234375,
+      "top": 677.421875,
+      "bottom": 725.8125,
       "viewport": 900,
       "warning": true,
       "overflow": false,
-      "href": "docs/downloads/gems26-ssl-v1-20261002-4fdde73c40a7-nan.tif"
+      "href": "docs/downloads/gems26-xedge-oof-v1-20261002-5147f8a58ddd-nan.tif"
     },
     {
       "name": "desktop prominent do-not-submit warning",
@@ -26,12 +26,12 @@
       "name": "laptop first-screen TIFF download",
       "pass": true,
       "present": true,
-      "top": 635.84375,
-      "bottom": 684.234375,
+      "top": 677.421875,
+      "bottom": 725.8125,
       "viewport": 768,
       "warning": true,
       "overflow": false,
-      "href": "docs/downloads/gems26-ssl-v1-20261002-4fdde73c40a7-nan.tif"
+      "href": "docs/downloads/gems26-xedge-oof-v1-20261002-5147f8a58ddd-nan.tif"
     },
     {
       "name": "laptop prominent do-not-submit warning",
@@ -45,12 +45,12 @@
       "name": "mobile first-screen TIFF download",
       "pass": true,
       "present": true,
-      "top": 599.8125,
-      "bottom": 648.203125,
+      "top": 729.171875,
+      "bottom": 799.953125,
       "viewport": 844,
       "warning": true,
       "overflow": false,
-      "href": "docs/downloads/gems26-ssl-v1-20261002-4fdde73c40a7-nan.tif"
+      "href": "docs/downloads/gems26-xedge-oof-v1-20261002-5147f8a58ddd-nan.tif"
     },
     {
       "name": "mobile prominent do-not-submit warning",
@@ -64,12 +64,12 @@
       "name": "small-mobile first-screen TIFF download",
       "pass": true,
       "present": true,
-      "top": 599.8125,
-      "bottom": 648.203125,
+      "top": 405.953125,
+      "bottom": 443.953125,
       "viewport": 667,
       "warning": true,
       "overflow": false,
-      "href": "docs/downloads/gems26-ssl-v1-20261002-4fdde73c40a7-nan.tif"
+      "href": "docs/downloads/gems26-xedge-oof-v1-20261002-5147f8a58ddd-nan.tif"
     },
     {
       "name": "small-mobile prominent do-not-submit warning",
@@ -87,13 +87,13 @@
       "name": "one-click target serves exact TIFF bytes",
       "pass": true,
       "ok": true,
-      "bytes": 469098,
-      "sha": "34f590461ae021830d98521567a2b1fcdfd60eeb9032e70de9bb000618ec4d35"
+      "bytes": 476670,
+      "sha": "527cd3247208a80a17439ac4e72e08a55829bb2fe201b16aa328ae86eba6dfbd"
     },
     {
       "name": "actual direct-click filename and downloaded SHA",
       "pass": true,
-      "filename": "gems26-ssl-v1-20261002-4fdde73c40a7-nan.tif"
+      "filename": "gems26-xedge-oof-v1-20261002-5147f8a58ddd-nan.tif"
     },
     {
       "name": "nested landing offers same TIFF",
@@ -114,7 +114,7 @@
     {
       "name": "browser builds and downloads genuine TIFF",
       "pass": true,
-      "filename": "gems26-browser-copy-20261002203449452-4fdde73c40a7-nan.tif"
+      "filename": "gems26-browser-copy-20261002221136296-4fdde73c40a7-nan.tif"
     },
     {
       "name": "browser copy warns same predictions and blocked gate",

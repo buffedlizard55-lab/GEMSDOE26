@@ -2,20 +2,31 @@
 
 **Read this entire README, including the complete owner prompt below, at the start of every session.** Maximize P(Win). Own the Outcome. Preserve failures, protect weekly slots, and never turn a format pass into an invented performance claim.
 
-## Download first — real TIFF, research-only
+## Latest candidate: XEDGE-v1 OOF diagnostic — research only
 
-**[Download H26-SSL-v1 `.tif`](https://buffedlizard55-lab.github.io/GEMSDOE26/docs/downloads/gems26-ssl-v1-20261002-4fdde73c40a7-nan.tif)** · [Site](https://buffedlizard55-lab.github.io/GEMSDOE26/) · [Executive submission guide](docs/executive-summary.html)
+**[Download the XEDGE four-fold OOF GeoTIFF](https://buffedlizard55-lab.github.io/GEMSDOE26/docs/downloads/gems26-xedge-oof-v1-20261002-5147f8a58ddd-nan.tif)** · [Site](https://buffedlizard55-lab.github.io/GEMSDOE26/) · [Executive guide](docs/executive-summary.html)
 
-> **BLOCKED_DO_NOT_SUBMIT.** This new model lost all four confirmation quadrants to both the exact historical H25 reference and the matched raw-feature head. No competition upload or weekly slot was used. It does **not** establish a score above 0.2477 or 0.3195.
+> **BLOCKED_DO_NOT_SUBMIT.** XEDGE-v1 failed the preregistered performance gate. This is an out-of-fold research mosaic, not a full-data final model. No competition upload or weekly slot was used; do not submit this file.
 
-- Actual file: `docs/downloads/gems26-ssl-v1-20261002-4fdde73c40a7-nan.tif`, **469,098 bytes / 60,068 selected cells**.
-- SHA256: `34f590461ae021830d98521567a2b1fcdfd60eeb9032e70de9bb000618ec4d35`.
-- One float32 band, **3,292×3,730**, EPSG:32611, affine `(100,0,243350,0,-100,4508550)`, finite 0/1 inside the **5,167,373**-cell footprint, NaN outside. Raw and masked read-back both pass. Mirror template is not organizer-authenticated.
-- Note: `GEMS26 SSL-v1 | full-raster masked pretrain; frozen head; 90/10 error fusion; 60068 dots | unscored | BLOCKED_DO_NOT_SUBMIT`.
-- The separately available label-free-error ablation is research-only. The historical H25-1 download is **identical old bytes, not a new submission; do not resubmit**.
-- Browser export writes the **same evaluated prediction cells** to a unique UTC-named TIFF; it is a tested format-copy, not browser training/new predictions/a score improvement.
+- File: `docs/downloads/gems26-xedge-oof-v1-20261002-5147f8a58ddd-nan.tif`, **476,670 bytes / 60,068 selected cells**.
+- SHA256: `527cd3247208a80a17439ac4e72e08a55829bb2fe201b16aa328ae86eba6dfbd`.
+- Note: `GEMS26 XEDGE-v1 OOF | 300/600/1200m RTP+gravity edge persistence; four buffered folds; research-only OOF, not full-fit; unscored`.
+- Strict file-format checks pass: one float32 band, **3,292×3,730**, EPSG:32611, exact owner-mirrored template transform, finite `[0,1]` in all **5,167,373** footprint pixels, NaN outside, and raw/masked read-back. This is **format validation only**, not scientific release or server acceptance.
 
-## Actual result, not a plan
+| Frozen confirmation arm | Dense pooled local DTI | Mean pooled sparse local DTI |
+|---|---:|---:|
+| H25-1 historical reference | 0.171825 | 0.096432 |
+| Matched raw-feature head | 0.131911 | 0.073836 |
+| **XEDGE head (candidate)** | **0.133141** | **0.074969** |
+| XEDGE edge-only ablation | 0.078320 | 0.044497 |
+
+XEDGE gained only **+0.001132 sparse DTI** over the fresh raw control (the frozen gate required **+0.005**) and lost **−0.021464** to H25. Its dense score was **−0.038684** below H25, beyond the permitted −0.005. It won 3/4 confirmation quadrants versus raw but 0/4 versus H25; that is not enough to pass. All draws reuse the same known catalogue and are not hidden-fault evidence. See [`evidence/xedge_holdout.json`](evidence/xedge_holdout.json), the [screen protocol](knowledge/hypothesis-slate-20261002.md), and [`knowledge/results.md`](knowledge/results.md).
+
+The owner-reported H25-1 score **0.2477** and supplied leaderboard snapshot **0.3195** remain unrefreshed. No result here beats or authenticates either external score. The earlier SSL and label-free-error TIFFs remain separately identified research artifacts; the historical H25 TIFF is **identical old bytes, not a new submission; do not resubmit**.
+
+## Earlier H26-SSL run — retained negative evidence
+
+The section below records the earlier SSL candidate and remains part of the scientific history; it is not the latest candidate.
 
 Data placement is resolved: all **14 pinned owner-mirrored inputs** restored automatically. All **19 supplied bands** were retained numerically on the full footprint. Six exhaustive masked-pretraining passes visited/masked every footprint pixel, before any label-raster pixel access. **3,061** blank cells cannot furnish reconstruction targets. Masked Huber training loss fell 0.29933→0.15645; that is not fault accuracy.
 
@@ -40,12 +51,12 @@ The owner reports H19-5 **0.1922→H25-1 0.2477** (+28.88%); no authenticated fi
 
 ## Evidence, standing rules & limitations
 
-- [Four preregistered hypotheses](knowledge/preregistration.md), committed **02a8bad before implementation**, unchanged. H26-SSL tested/rejected; XEDGE untested; DRAIN deferred because official native-DEM bytes/region coverage are unverified here; CBASE depends on resolving original depth semantics.
-- [Complete result/gate](evidence/holdout.json), [paired confirmation draws](evidence/holdout_confirmation.json), [labels-first nuisance audit](evidence/accessibility_audit.json), [error diagnostics](evidence/error_diagnostics.json).
+- [Original four-hypothesis preregistration](knowledge/preregistration.md), committed **02a8bad before H26-SSL implementation**, remains unchanged. The [XEDGE/DRAIN/STRAIN/CBASE slate](knowledge/hypothesis-slate-20261002.md) was committed as **876c0b2 before XEDGE implementation**; the exact v1 transform, including zero-score tie handling, was frozen in **fce3f74 before feature/label evaluation**. XEDGE is tested and blocked; DRAIN remains deferred pending verified official bytes/coverage, and strain/CBASE remain semantics-limited.
+- [Latest XEDGE feature receipt](evidence/xedge_feature.json), [selection draws](evidence/xedge_selection.json), [confirmation draws](evidence/xedge_confirmation.json), and [full gate/audit](evidence/xedge_holdout.json). The earlier [SSL gate](evidence/holdout.json), [labels-first nuisance audit](evidence/accessibility_audit.json), and [error diagnostics](evidence/error_diagnostics.json) remain separate.
 - [Primary-source ledger](sources/catalog.json), [central claim ledger](sources/claims.json), [19-band inventory](sources/data_inventory.csv), [all reported scores](sources/reported_scores.csv), [requirement matrix](knowledge/requirement-matrix.md), [three review passes](evidence/reviews.json).
 - Full-unlabeled training is **transductive**. Catalogue thinning and reused quadrants do not independently validate unknown faults. Do not retune the failed run on revealed confirmation folds.
 - `tc`, earthquake aliases and conductive-base/basement naming remain ambiguous in the mirror. Do not infer full stress/MT tensors from scalar channels or declare radiometrics absent from uncertified tags.
-- The mirror example contains **60,988 positives and exactly matches known labels**, contrary to the described absence example. No example VALUES were used in SSL. Header/NaN footprint validated later. Hash integrity does not authenticate organizer provenance.
+- The mirror example contains **60,988 positives and exactly matches known labels**, contrary to the described absence example. No example pixel values were used in label-free preparation, pretraining, inference, anomaly or XEDGE feature construction; supervised labels were opened only after those stages. Header/NaN footprint checks are separate. Hash integrity does not authenticate organizer provenance.
 - Target = **fault locations**, not confirmed geothermal vents/resources. Useful resource discovery requires additional heat, permeability/fluid, stress/lithology and field/well evidence.
 - [DrivenData Terms](https://www.drivendata.org/termsofuse/) prohibit automatic site access. The initial requested review was tool-retrieved **before discovering that term**, not human-read. No later competition scraping, automated login or upload is implemented. Eligibility/account-holder attestations cannot be supplied by an agent; never request credentials.
 - [Official rules PDF](https://docs.nlr.gov/docs/fy26osti/96647.pdf) read through its final section: 3 submissions/week, 1 selected final entry across both rounds, eligibility, finalist reproduction assets and AI disclosure. [AI assistance disclosure](AI_DISCLOSURE.md).
@@ -62,14 +73,16 @@ python3 -m venv .venv
 # If the CPU index is TLS-blocked, the default PyPI wheel also runs on CPU,
 # but includes much larger CUDA dependencies: pip install -r requirements-train.txt
 
-# Automatic restore → prepare → SSL → masked inference → anomaly → heads/holdout/TIFF
+# Automatic restore → prepare → original SSL → masked inference → anomaly → heads/holdout/TIFF
+# This cold replication is for the earlier SSL run, not independent XEDGE validation.
+# The XEDGE OOF result/receipt is already frozen; do not retune its revealed folds.
 # Isolated fixed-parameter replication preserves the published failed receipts:
 .venv/bin/python scripts/reproduce.py
 # Uses ignored .cache/reproduction and shared ignored data/raw; no Git branch changes.
 # Repeating it verifies the completed replica without refitting. No parameter sweep.
 
-# Independent format verification of the original actual download:
-.venv/bin/python scripts/validate_submission.py docs/downloads/gems26-ssl-v1-20261002-4fdde73c40a7-nan.tif
+# Independent format-only check of the latest XEDGE OOF research TIFF:
+.venv/bin/python scripts/validate_submission.py docs/downloads/gems26-xedge-oof-v1-20261002-5147f8a58ddd-nan.tif
 .venv/bin/python -m pytest -q
 npm ci --ignore-scripts
 npm test
@@ -83,16 +96,16 @@ node scripts/browser_check.mjs
 .venv/bin/python -m http.server 8080 --bind 0.0.0.0 --directory .cache/pages-site
 ```
 
-The original per-stage entry points remain available: `bash scripts/download_competition_data.sh`, `prepare_data.py`, `pretrain.py`, `infer_representation.py`, **`build_anomaly.py`**, `run_holdout.py`. The one-shot holdout runner refuses a second fit over archived results. Use isolated `reproduce.py`, not deletion/editing of evidence, for verification. Requires Python≥3.11, Node≥22, `gh` or public GitHub API read access and several GB of ignored cache storage. Chromium test libraries are extracted from the integrity-pinned npm package; no root/apt install or credentials needed.
+The original per-stage entry points remain available: `bash scripts/download_competition_data.sh`, `prepare_data.py`, `pretrain.py`, `infer_representation.py`, **`build_anomaly.py`**, and `run_holdout.py`. XEDGE construction/evaluation uses `scripts/build_xedge.py` and the frozen one-shot `scripts/run_xedge_holdout.py`; its archived run refuses a second fit on the revealed folds. Use isolated `reproduce.py` for the earlier SSL replication, not deletion/editing of evidence. Requires Python≥3.11, Node≥22, `gh` or public GitHub API read access and several GB of ignored cache storage. Chromium test libraries are extracted from the integrity-pinned npm package; no root/apt install or credentials needed.
 
 ## Next session — most important first
 
-1. Reread this full prompt, preserve the negative gate, do not resubmit renamed identical fields.
-2. Resolve original organizer band semantics/template provenance and obtain independent unknown-fault/untouched spatial confirmation evidence.
-3. Preregister signed cross-scale gravity–magnetic boundary persistence (H26-XEDGE) with contact/survey-stripe controls before a new experiment; do not rescue current folds.
-4. Add random-frozen-encoder/matched-parameter controls and held-out **unlabeled reconstruction** evaluation for any new SSL claim.
-5. Verify official native 1 m tile **bytes/coverage/datum/seams**, not just URLs, before H26-DRAIN regional processing. GPU capacity alone does not fix missing truth or semantics.
-6. Eligibility, deadline confirmation and an eventual **approved** upload are lawful account-holder tasks. No current candidate is approved for a slot.
+1. Reread this full prompt, preserve both negative holdout receipts, do not retune the revealed XEDGE folds, and do not resubmit renamed/OOF fields.
+2. Resolve original organizer band semantics and template provenance; prioritize genuinely untouched spatial or independent geological fault truth. The repeated known-catalogue screens are not independent validation.
+3. Keep H26-DRAIN deferred until official 1 m tile bytes, full footprint coverage, datum and seams are verified; do not substitute another unverified alias for XEDGE.
+4. For any new representation research, add random-frozen-encoder/matched-parameter controls and held-out **unlabeled reconstruction** evaluation; do not equate reconstruction loss with fault specificity.
+5. Re-rank a new 3–5 hypothesis slate only after a defensible independent test design and official data semantics/availability are resolved. H26-XEDGE failed; the remaining listed ideas are not validated candidates.
+6. Eligibility, deadline confirmation and any eventual **approved** upload are lawful account-holder tasks. No current candidate is approved for a slot.
 
 ---
 

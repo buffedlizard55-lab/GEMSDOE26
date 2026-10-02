@@ -47,7 +47,75 @@
         "cold_replication_pass": true
       },
       "scientific_decision": "BLOCKED_DO_NOT_SUBMIT"
+    },
+    {
+      "pass": 4,
+      "review_set": "H26-XEDGE-v1",
+      "title": "Preregistered science, provenance chronology and performance-gate review",
+      "completed_utc": "2026-10-02T22:10:26+00:00",
+      "status": "EVIDENCE_CONSISTENT_SCIENTIFIC_GATE_FAILED",
+      "summary": "Checked slate commit 876c0b2 (21:39:31 UTC) and exact final protocol/tie-rule commit fce3f74 (21:48:21) precede feature construction (21:50:06\u201321:50:19) and label-pixel access (21:52:13). Confirmed receipts, ancestry, artifact and feature-receipt hashes. Confirmation sparse DTI was 0.074969 XEDGE, 0.073836 raw (+0.001132, below +0.005), and 0.096432 H25 (\u22120.021464); dense XEDGE 0.133141 is \u22120.038684 below H25. Fold wins: 3/4 vs raw, 0/4 vs H25. Fixed gate remains BLOCKED_DO_NOT_SUBMIT; catalogue reused, not hidden-fault evidence; weekly slot false. Historical 0.2477 and supplied 0.3195 remain unauthenticated/unrefreshed.",
+      "tests": {
+        "slate_commit_ancestor": true,
+        "final_protocol_commit_ancestor": true,
+        "feature_precedes_label_pixels": true,
+        "feature_and_tiff_sha_linked": true,
+        "confirmation_sparse_vs_raw": 0.0011321044697135824,
+        "confirmation_sparse_vs_h25": -0.021463693421296934,
+        "raw_confirmation_fold_wins": 3,
+        "h25_confirmation_fold_wins": 0,
+        "weekly_slot_spent": false
+      },
+      "scientific_decision": "BLOCKED_DO_NOT_SUBMIT"
+    },
+    {
+      "pass": 5,
+      "review_set": "H26-XEDGE-v1",
+      "title": "Leakage, implementation, source-integrity and GeoTIFF review",
+      "completed_utc": "2026-10-02T22:10:26+00:00",
+      "status": "PASS_ENGINEERING_FORMAT_ONLY_SCIENCE_BLOCKED",
+      "summary": "Reviewed the label-free XEDGE transform, fixed 300/600/1,200 m scales, 48-pixel support erosion, zero-edge tie handling, spatial-fold runner and fail-closed gates. Builder has no label/template path; AST guard and tests pass. No network/leaderboard/upload path was added. Direct independent format check confirms one float32 band on the pinned 3,292\u00d73,730 grid, EPSG:32611, exact template transform, [0,1] footprint values and NaN outside; exact TIFF SHA matches the holdout receipt. Helper-script execution hashes are explicitly marked reconstructed after provenance-guard-only edits; this is software evidence, not hardware attestation.",
+      "tests": {
+        "python_passed": 108,
+        "node_passed": 5,
+        "compileall_pass": true,
+        "builder_label_template_access_guard_pass": true,
+        "standalone_xedge_tiff_format_pass": true,
+        "tiff_bytes": 476670,
+        "tiff_sha256": "527cd3247208a80a17439ac4e72e08a55829bb2fe201b16aa328ae86eba6dfbd",
+        "execution_code_hashes_documented": true,
+        "format_is_not_scientific_release": true
+      },
+      "scientific_decision": "BLOCKED_DO_NOT_SUBMIT"
+    },
+    {
+      "pass": 6,
+      "review_set": "H26-XEDGE-v1",
+      "title": "Submission-guide, first-screen, download and browser/site review",
+      "completed_utc": "2026-10-02T22:11:07+00:00",
+      "status": "PASS_LOCAL_DELIVERY_SCIENTIFIC_GATE_BLOCKED",
+      "summary": "Verified root and nested download links point to the unique XEDGE OOF research file and prominent warning, guide explains the exact artifact, unique name/comment, checksum and [0,1]/grid checks, and no wording implies approval or a new score. Responsive Chromium review passed desktop, laptop, mobile and small-mobile; exact bytes/hash and direct-click filename pass; note copy, interactive SHA, historical map, guide/research/source/review pages pass; no JavaScript errors or external automatic requests. Source and staged sites each pass local-reference verification. This is local site QA, not proof of remote deployment or organizer acceptance.",
+      "tests": {
+        "html_pages": 7,
+        "local_references_source": 224,
+        "local_references_staged": 224,
+        "browser_checks_passed": 26,
+        "browser_checks_failed": 0,
+        "responsive_sizes": [
+          "desktop",
+          "laptop",
+          "mobile",
+          "small-mobile"
+        ],
+        "direct_download_exact_bytes": true,
+        "note_copy_and_interactive_sha_pass": true,
+        "javascript_errors": 0,
+        "external_automatic_requests": 0,
+        "remote_deployment_verified": false,
+        "final_source_and_staged_verification_pass": true
+      },
+      "scientific_decision": "BLOCKED_DO_NOT_SUBMIT"
     }
   ],
-  "scope": "Successive implementation checks, not independent scientific experiments. Entries are added only after execution."
+  "scope": "Successive self-review implementation checks, not independent scientific experiments or external reviews. XEDGE entries are appended only after each pass; a format/site pass does not change the blocked scientific decision."
 }

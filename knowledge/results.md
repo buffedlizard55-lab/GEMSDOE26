@@ -2,12 +2,33 @@
 
 ## Outcome first
 
-**Do not spend a weekly slot on H26-SSL-v1.** It failed the frozen paired holdout against both the exact historical H25-1 file and the matched raw-feature head. There is no evidence from this run that it will exceed **0.2477**, much less **0.3195**. No file was uploaded to the contest.
+**Do not spend a weekly slot on either tested H26 candidate.** H26-SSL failed its frozen spatial holdout; the subsequently preregistered H26-XEDGE-v1 screen also failed its fixed promotion gate. Neither provides evidence of exceeding the owner-reported H25-1 **0.2477**, much less the initial leaderboard snapshot **0.3195**. No file was uploaded; zero weekly slots were used. Neither external score was refreshed or authenticated in this run.
 
-The new, real, exact-grid research artifact is:
+### Latest experiment: H26-XEDGE-v1
+
+The ranked slate was committed as `876c0b2` at **21:39:31 UTC**, before XEDGE implementation; the exact v1 transform, including zero-score tie handling, was frozen in `fce3f74` at **21:48:21 UTC**, before feature construction/evaluation. XEDGE combines signed cross-scale (300/600/1,200 m) magnetic RTP and isostatic-gravity edge-normal agreement, with orientation persistence. It used only the prepared label-free feature stack, masks and footprint for feature construction. Receipt timestamps put feature construction at **21:50:06–21:50:19 UTC** and first label-pixel access at **21:52:13 UTC**. This is an auditable software record, not hardware attestation.
+
+| Confirmation arm | Dense pooled DTI | Mean pooled sparse DTI | Contrast |
+|---|---:|---:|---|
+| Historical H25-1, as emitted | 0.171825 | 0.096432 | Owner-reported hidden score remains 0.2477; catalogue-leaky local reference |
+| Matched raw-feature head | 0.131911 | 0.073836 | Fresh four-quadrant OOF control |
+| **XEDGE + raw-feature head** | **0.133141** | **0.074969** | +0.001230 dense / +0.001132 sparse vs raw; −0.038684 dense / −0.021464 sparse vs H25 |
+| XEDGE edge-only ablation | 0.078320 | 0.044497 | Fixed-budget edge score without a trained head |
+
+The gate required at least **+0.005 pooled sparse DTI over both H25 and raw in selection and confirmation**, at least 3/4 confirmation-quadrant wins against both, dense non-inferiority within −0.005, the labels-first nuisance condition, and strict TIFF validation. XEDGE gained only **+0.001132** sparse DTI over raw in confirmation and lost to H25 in **all four** quadrants. Dense DTI was **0.038684 below H25**. It therefore fails the principal performance conditions; passing the nuisance and format checks does not rescue it. Against raw it won 3/4 confirmation quadrants, but the margin rule still fails.
+
+The 30 selection and 30 confirmation draws reuse the same known catalogue and spatial quadrants; changing draw seeds does not create independent truth. The historical H25 file is compared as emitted and carries all-catalogue-mask leakage. XEDGE is **not validated on novel faults**, not a probability/fault map, and not evidence for geothermal vents.
+
+The research-only OOF mosaic is `docs/downloads/gems26-xedge-oof-v1-20261002-5147f8a58ddd-nan.tif` (476,670 bytes; SHA256 `527cd3247208a80a17439ac4e72e08a55829bb2fe201b16aa328ae86eba6dfbd`). It is a four-model out-of-fold field, not a full-data fit, and is explicitly **BLOCKED_DO_NOT_SUBMIT**. Strict exact-grid checks pass: one float32 band, 3,292×3,730, EPSG:32611, exact owner-mirrored template transform, finite [0,1] across the 5,167,373 footprint pixels and NaN outside. This establishes file structure/range only, not organizer provenance or server acceptance. The unique note is recorded in `evidence/xedge_holdout.json` and beside the TIFF.
+
+The matched raw-head dense value reproduces the archived value **exactly** (delta 0.0), a useful control that the XEDGE comparison did not silently change the raw baseline. Full feature/build/selection/confirmation/nuisance/format receipts: `evidence/xedge_feature.json`, `evidence/xedge_selection.json`, `evidence/xedge_confirmation.json`, and `evidence/xedge_holdout.json`.
+
+### Earlier H26-SSL-v1 artifact
+
+The separate H26-SSL research artifact remains:
 `docs/downloads/gems26-ssl-v1-20261002-4fdde73c40a7-nan.tif`
 (SHA256 `34f590461ae021830d98521567a2b1fcdfd60eeb9032e70de9bb000618ec4d35`).
-It contains 60,068 binary confidence pixels, has a unique prediction fingerprint, and passes all format/range checks. **Format pass ≠ scientific release.** The separately downloadable label-free-error ablation is also research-only. The historical H25 file is copied byte-for-byte for reference and is **not a new submission**.
+It contains 60,068 binary confidence pixels and passes all format/range checks, but its own frozen holdout failed. **Format pass ≠ scientific release.** The label-free-error ablation is likewise research-only. The historical H25 file is copied byte-for-byte for reference and is **not a new submission**.
 
 ## What actually ran
 
@@ -74,7 +95,7 @@ A single blind lattice score does **not identify hidden truth density** without 
 
 1. **Do not retune this run on the same outer folds.** Preserve its failed gate and exact artifacts. Freeze any new experiment separately; obtain an untouched spatial/external confirmation source or disclose that the catalogue has already been reused extensively.
 2. Resolve feature aliases from original official metadata: the mirror describes `tc` as “tilt angle or total curvature,” while official sources use TC for different quantities (radiometric counts, thermal conductivity). GDR 1390 describes *thermal* conductivity, but does not prove which `tc` band this bridge contains. `depth_to_base_surf` is described as basement depth in the mirror, while the organizer lists depth to a **conductive base**. Do not interpret scalar geodetic strain as a full stress tensor.
-3. **H26-XEDGE** is the next lower-cost hypothesis: signed, cross-scale gravity–magnetic agreement under cover; predeclare scales and contact-vs-fault negative controls. Do not repeat the already-failed generic magnetic-low or marker-displacement hypotheses in 20GEMSDOE.
+3. **H26-XEDGE-v1 is now a preregistered negative result** and must not be retuned on these revealed folds. The four-candidate slate remains as historical prospecting, not a queue of approved submissions: DRAIN is deferred until official 1-m bytes/coverage are verified; STRAIN/CBASE require original semantics. Before another run, design genuinely untouched spatial/external confirmation and then rank a fresh 3–5 candidate slate with explicit controls.
 4. For representation research, add a random-frozen-encoder control, matched parameter budget, and spatially held-out *unlabelled reconstruction* assessment. Six full passes establish coverage, not convergence or foundation-model quality. The 100 m interpolated channels and small receptive field may not encode the native 1 m scarp signal that drove the stronger historical detector.
 5. For **H26-DRAIN**, the official TNM API lists concrete public-domain 1 m GeoTIFFs, but a direct binary HEAD and direct API calls fail TLS in this sandbox. **Metadata availability is not downloaded-data availability.** Do not call the candidate executable here until official tile bytes, datum, coverage, seams and computational storage are checked on an unrestricted runner. Current quantized lidar summaries are insufficient for drainage profiles.
 6. Independent unknown-fault labels, native lidar processing, geological/contact controls and human/expert validation remain the real bottlenecks. More GPU compute is optional for a larger MAE, not a blocker to the completed CPU prototype.
@@ -86,4 +107,4 @@ No new automatic DrivenData reads after its Terms were discovered; no scraper or
 
 ## Publication verification
 
-PRs #1 and #2 merged; verified artifact deployment [37064320072](https://github.com/buffedlizard55-lab/GEMSDOE26/actions/runs/37064320072) succeeded. Root landing, guide and cache-busted source-feed JSON read from actual public Pages. All three metadata APIs refreshed successfully on the runner at **2026-10-02T21:02:23 UTC**. Sandbox direct HTTP/Chromium transport remains blocked; local/runner UI checks passed. Metadata success is not native 1 m binary availability, an independent fault validation or a new leaderboard score. Full receipt: `evidence/publication.json`.
+The prior publication release merged PRs #1–#3 and passed verified deployment [37064320072](https://github.com/buffedlizard55-lab/GEMSDOE26/actions/runs/37064320072) from the earlier Arena branch `arena/01a0fdd8-gemsdoe26` (see `evidence/publication.json`). That deployment predates H26-XEDGE and does not publish this result. The current XEDGE work is on the fixed branch `arena/01a0fe8a-gemsdoe26`; its local site and browser checks pass, but deployment must be verified separately after the current PR. The prior root/guide/source-feed checks and metadata refresh at **2026-10-02T21:02:23 UTC** remain historical. Sandbox direct remote HTTPS transport was blocked; local/runner UI checks passed. Metadata success is not native 1 m binary availability, independent fault validation or a new leaderboard score.

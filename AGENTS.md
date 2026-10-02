@@ -1,8 +1,10 @@
 # Standing project instructions
 
 Read the ENTIRE README (including its full owner prompt), knowledge/preregistration.md,
-knowledge/results.md and the latest evidence/review_passes.json at the beginning of
-EVERY session. Maximize P(Win), Own the Outcome, preserve inconvenient evidence.
+knowledge/hypothesis-slate-20261002.md, knowledge/results.md, evidence/xedge_holdout.json,
+and the latest evidence/reviews.json at the beginning of EVERY session. Maximize P(Win),
+Own the Outcome, preserve inconvenient evidence. `evidence/review_passes.json` is a stale
+historical filename; the active three-pass log is `evidence/reviews.json`.
 
 - Work only on the Arena session branch assigned by the environment; never switch to main.
 - Check git status, fetch origin, inspect open PRs and ongoing work before editing.

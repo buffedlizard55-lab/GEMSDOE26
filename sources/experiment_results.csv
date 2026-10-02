@@ -1,7 +1,11 @@
-arm,dense_pooled_dti,confirmation_mean_pooled_sparse_dti,scope
-raw_head,0.1319113851997432,0.07474434740922427,"known-catalogue sensitivity, not leaderboard"
-ssl_head,0.12358959806445304,0.07018433682076188,"known-catalogue sensitivity, not leaderboard"
-ssl_fusion,0.12216376260544241,0.06903869536928336,"known-catalogue sensitivity, not leaderboard"
-anomaly_only,0.07913042985507998,0.04478696412851132,"known-catalogue sensitivity, not leaderboard"
-h25_reference,0.17182539268263863,0.09626140050294933,"known-catalogue sensitivity, not leaderboard"
-h19_parent,0.16625172271262373,0.07146602200717343,"known-catalogue sensitivity, not leaderboard"
+run,arm,dense_pooled_dti,confirmation_mean_pooled_sparse_dti,scope
+H26-SSL-v1,raw_head,0.1319113851997432,0.07474434740922427,"known-catalogue sensitivity, not leaderboard"
+H26-SSL-v1,ssl_head,0.12358959806445304,0.07018433682076188,"known-catalogue sensitivity, not leaderboard"
+H26-SSL-v1,ssl_fusion,0.12216376260544241,0.06903869536928336,"known-catalogue sensitivity, not leaderboard"
+H26-SSL-v1,anomaly_only,0.07913042985507998,0.04478696412851132,"known-catalogue sensitivity, not leaderboard"
+H26-SSL-v1,h25_reference,0.17182539268263863,0.09626140050294933,"known-catalogue sensitivity, not leaderboard"
+H26-SSL-v1,h19_parent,0.16625172271262373,0.07146602200717343,"known-catalogue sensitivity, not leaderboard"
+H26-XEDGE-v1,h25_reference,0.17182539268263863,0.0964322294628285,"preregistered known-catalogue screen, not hidden-fault or leaderboard evidence"
+H26-XEDGE-v1,raw_head,0.1319113851997432,0.07383643157181799,"preregistered known-catalogue screen, not hidden-fault or leaderboard evidence"
+H26-XEDGE-v1,xedge_head,0.133141092032657,0.07496853604153157,"preregistered known-catalogue screen, not hidden-fault or leaderboard evidence"
+H26-XEDGE-v1,edge_only,0.07832001317082773,0.04449748508323333,"preregistered known-catalogue screen, not hidden-fault or leaderboard evidence"
