@@ -20,6 +20,8 @@ def _binary_grid(value: np.ndarray, name: str) -> np.ndarray:
         raise ValueError(f"Nonempty two-dimensional {name} required")
     if array.dtype != np.dtype(bool) and not np.isin(array, [0, 1]).all():
         raise ValueError(f"Finite binary {name} required")
+    if name == "footprint" and not array.any():
+        raise ValueError("Footprint has no valid pixels")
     return array.astype(bool, copy=False)
 
 

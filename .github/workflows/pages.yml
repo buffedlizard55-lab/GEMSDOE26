@@ -2,7 +2,7 @@ name: Verify and publish Pages
 
 'on':
   push:
-    branches: [main, arena/01a0fdd8-gemsdoe26]
+    branches: [main, arena/01a0fe8a-gemsdoe26]
   pull_request:
     branches: [main]
   schedule:

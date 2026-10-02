@@ -1,0 +1,59 @@
+{
+  "method": "H26-XEDGE-v1",
+  "started_utc": "2026-10-02T21:50:06+00:00",
+  "completed_utc": "2026-10-02T21:50:19+00:00",
+  "labels_opened": false,
+  "template_opened": false,
+  "preregistration_path": "knowledge/hypothesis-slate-20261002.md",
+  "preregistration_sha256": "099fb3271e38b2a363ac8f358c9b1531d3b35c4d70ea22bf0591c24ac592ef3c",
+  "preregistration_commit": "876c0b2d71116edbf8c888f38366762aea1eb195",
+  "preparation_completed_utc": "2026-10-02T18:36:52+00:00",
+  "pretraining_completed_utc": "2026-10-02T18:38:01+00:00",
+  "representation_completed_utc": "2026-10-02T18:38:35+00:00",
+  "anomaly_completed_utc": "2026-10-02T18:47:45+00:00",
+  "pretraining_encoder_state_sha256": "0c6b60ff3ef292f0d9b921d14b14d496a3938b2f0dc21600bd4bea8fa3910b95",
+  "feature_stack_sha256": "4371c82e3b8339b807bdffcf4ef59a225520fe2988d521be208ae33743123bc5",
+  "prepared_values_sha256": "138c028e73c7d54ea0546e918a4625b54e93dc85f6920735f7f4211e1994c83f",
+  "prepared_observed_sha256": "1f48d9839a4ad1062482d293dc39e3ebb2ad59de366372ff8e6645e8506325b8",
+  "transform": {
+    "method": "XEDGE-v1: signed cross-modal edge-normal agreement with cross-scale line persistence",
+    "input_bands_zero_based": {
+      "magnetic_rtp": 1,
+      "isostatic_gravity": 12
+    },
+    "input_band_names_from_owner_mirror_not_organizer_authentication": [
+      "rtp",
+      "iso_grav_anom"
+    ],
+    "scales_sigma_pixels": [
+      3.0,
+      6.0,
+      12.0
+    ],
+    "scales_sigma_m_at_100m_grid": [
+      300.0,
+      600.0,
+      1200.0
+    ],
+    "gaussian_truncate_sigma": 4.0,
+    "edge_halo_pixels": 48,
+    "support_definition": "joint observed mask and footprint eroded by 48 px with 3x3 all-true structure",
+    "cross_modal_alignment": "abs(dot(g_mag,g_grav))/(norm(g_mag)*norm(g_grav)+1e-6)",
+    "scale_agreement": "geometric mean of per-scale sqrt(percentile_rank(|g_mag|)*percentile_rank(|g_grav|))*alignment",
+    "orientation_persistence": "resultant length of mean doubled-angle unit gradient vectors, separately per field",
+    "final_score": "exp(mean(log(per_scale_joint+1e-6)))*sqrt(R_mag*R_gravity), then percentile-ranked on support",
+    "support_pixels": 4272494,
+    "ranked_min": 2.3405533511322574e-07,
+    "ranked_max": 1.0,
+    "label_free_inputs_only": true,
+    "caveat": "Potential-field edges also mark contacts, intrusions, interpolation boundaries and survey artefacts; not a fault probability."
+  },
+  "score_sha256": "07894f795ad92014d2a2ab0ca9af17df0c200c2253a98fa0b52df59fa8ee5536",
+  "support_sha256": "f99761ff66b6375faa2c6aaff5a46c8f032ea28e9e858a0fea0071b3a1db9e31",
+  "elapsed_seconds": 12.912,
+  "screen_only": true,
+  "warning": "Label-free geophysical edge score; not a probability or confirmed fault/vent map.",
+  "protocol_freeze_commit": "fce3f74ad58a7f37ac5cffca6bc0c1a770bb9eda",
+  "provenance_metadata_amended_utc": "2026-10-02T22:05:20+00:00",
+  "provenance_metadata_amendment": "Added the already-existing exact final protocol-freeze commit separately from the initial ranked-slate commit; feature values, support and output bytes were not changed."
+}

@@ -42,7 +42,21 @@ def _balanced(ids: np.ndarray, target: np.ndarray, rng, cap: int) -> np.ndarray:
 
 
 def audit_targets(labels: np.ndarray, predictions: dict[str, np.ndarray], fp: np.ndarray,
-                  folds: np.ndarray) -> dict:
+                  folds: np.ndarray, *, reference: str = "h25_reference",
+                  primary: str = "ssl_fusion") -> dict:
+    labels = np.asarray(labels)
+    fp = np.asarray(fp)
+    folds = np.asarray(folds)
+    if labels.ndim != 2 or labels.shape != fp.shape or labels.shape != folds.shape:
+        raise ValueError("Aligned two-dimensional labels, footprint and folds required")
+    if (not np.isin(fp, [0, 1]).all() or not np.isin(labels[fp.astype(bool)], [0, 1]).all()
+            or not np.isin(folds[fp.astype(bool)], [0, 1, 2, 3]).all() or not predictions):
+        raise ValueError("Binary labels/footprint, four valid fold IDs and nonempty predictions required")
+    if "labels" in predictions or reference not in predictions or primary not in predictions:
+        raise ValueError("Distinct label, reference and primary audit targets required")
+    if any(not isinstance(k, str) or not k or np.shape(v) != labels.shape or
+           not np.isin(np.asarray(v), [0, 1]).all() for k, v in predictions.items()):
+        raise ValueError("Each nuisance-audit prediction must be an aligned binary grid")
     x, ids, meta = load_nuisances(fp)
     fold_fp = folds.ravel()[ids]
     # Python dict preserves this mandatory audit order.
@@ -64,12 +78,14 @@ def audit_targets(labels: np.ndarray, predictions: dict[str, np.ndarray], fp: np
             results[tag] = {"mean_fold_auc": float(np.mean(aucs)), "fold_auc": aucs,
                             "meaning": "Ability of road/closed-claim/derived-block features to identify this raster; NOT fault accuracy"}
             events[-1]["completed_utc"] = utcnow()
-    reference = results["h25_reference"]["mean_fold_auc"]
-    primary = results["ssl_fusion"]["mean_fold_auc"]
-    relative = abs(primary - .5) <= abs(reference - .5) + .01
+    reference_auc = results[reference]["mean_fold_auc"]
+    primary_auc = results[primary]["mean_fold_auc"]
+    relative = abs(primary_auc - .5) <= abs(reference_auc - .5) + .01
     return {"complete": True, "labels_audited_first": events[0]["target"] == "labels", "events": events,
-            "source_metadata": meta, "results": results, "relative_association_not_worse_by_over_0.01": bool(relative),
-            "primary_minus_reference_auc": primary - reference,
+            "reference_target": reference, "primary_target": primary,
+            "source_metadata": meta, "results": results,
+            "relative_association_not_worse_by_over_0.01": bool(relative),
+            "primary_minus_reference_auc": primary_auc - reference_auc,
             "caveat": "Different target-specific case-control samples; four regions, no causal inference or formal significance. Mirrors are not a fresh official-source download."}
 
 

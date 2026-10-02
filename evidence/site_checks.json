@@ -1,8 +1,8 @@
 {
-  "checked_utc": "2026-10-02T20:44:13+00:00",
+  "checked_utc": "2026-10-02T22:11:46+00:00",
   "status": "PASS",
   "local_html_pages": 7,
-  "local_references_checked": 192,
+  "local_references_checked": 224,
   "external_links_not_crawled": true,
   "errors": [],
   "geotiffs": [
@@ -92,7 +92,37 @@
       "positive_pixels": 60069,
       "mass": 60069.0,
       "scientific_release": "Separate from format; consult holdout and audit receipts"
+    },
+    {
+      "format_pass": true,
+      "checks": {
+        "single_band": true,
+        "float32": true,
+        "shape_matches_template": true,
+        "crs_matches_template": true,
+        "transform_matches_template": true,
+        "nodata_is_nan": true,
+        "all_inside_finite": true,
+        "inside_range_0_1": true,
+        "outside_all_nan": true,
+        "masked_read_range_0_1": true,
+        "masked_read_has_all_footprint_values": true,
+        "prediction_digest_matches": true
+      },
+      "path": "/home/user/GEMSDOE26/docs/downloads/gems26-xedge-oof-v1-20261002-5147f8a58ddd-nan.tif",
+      "sha256": "527cd3247208a80a17439ac4e72e08a55829bb2fe201b16aa328ae86eba6dfbd",
+      "prediction_sha256": "5147f8a58ddd62c5962c0de59c828be344337cfc4519efd8d73e7cad52819f7d",
+      "bytes": 476670,
+      "inside_pixels": 5167373,
+      "outside_pixels": 7111787,
+      "inside_finite": 5167373,
+      "inside_min": 0.0,
+      "inside_max": 1.0,
+      "positive_pixels": 60068,
+      "mass": 60068.0,
+      "scientific_release": "Separate from format; consult holdout and audit receipts"
     }
   ],
-  "scientific_release": "BLOCKED_DO_NOT_SUBMIT"
+  "scientific_release": "BLOCKED_DO_NOT_SUBMIT",
+  "format_is_not_scientific_release": true
 }

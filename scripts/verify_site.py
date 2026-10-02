@@ -36,7 +36,8 @@ def verify(root:Path=ROOT):
             references+=1
             if not target.is_relative_to(root) or not target.is_file():errors.append(f'{p.relative_to(root)}: missing/escaping local reference {url}')
             elif parsed.fragment and target.suffix=='.html' and parsed.fragment not in docs.get(target,Document()).ids:errors.append(f'{p.name}: missing fragment {url}')
-    h=read_json(root/'evidence/holdout.json');model=read_json(root/'docs/data/browser-model.json')
+    h=read_json(root/'evidence/holdout.json');xedge=read_json(root/'evidence/xedge_holdout.json')
+    model=read_json(root/'docs/data/browser-model.json')
     fp=decode_runs(base64.b64decode(model['footprint_runs_base64'],validate=True),HEIGHT*WIDTH).reshape(HEIGHT,WIDTH)
     if int(fp.sum())!=FOOTPRINT_PIXELS:errors.append('Incorrect browser footprint')
     manifest=read_json(root/'data/input_manifest.json')
@@ -55,7 +56,24 @@ def verify(root:Path=ROOT):
         if not path.is_file() or sha256_file(path)!=row['sha256']:errors.append('Published SHA mismatch '+row['path']);continue
         receipt=validate_submission(path,template,fp,expected_digest=row['prediction_sha256']);checks.append(receipt)
         if not receipt['format_pass']:errors.append('Invalid publication '+row['path'])
-    if h['gate']['decision']!='BLOCKED_DO_NOT_SUBMIT' or model['release_decision']!=h['gate']['decision']:errors.append('Failed research gate relabelled')
+    latest=xedge['oof_artifact'];latest_path=root/latest['path']
+    current=read_json(root/'docs/data/current.json')
+    if (current.get('latest_candidate',{}).get('path')!=latest['path'] or
+            current.get('latest_candidate',{}).get('sha256')!=latest['sha256'] or
+            current.get('scientific_decision')!='BLOCKED_DO_NOT_SUBMIT'):
+        errors.append('Current site status is not synchronized with latest XEDGE receipt')
+    if not latest_path.is_file() or sha256_file(latest_path)!=latest['sha256']:
+        errors.append('XEDGE OOF artifact SHA mismatch '+latest['path'])
+    else:
+        latest_receipt=validate_submission(latest_path,template,fp,expected_digest=latest['prediction_sha256'])
+        checks.append(latest_receipt)
+        if not latest_receipt['format_pass'] or not xedge['gate']['rules']['exact_oof_tiff_format_pass']:
+            errors.append('XEDGE OOF artifact fails strict format checks')
+    if (h['gate']['decision']!='BLOCKED_DO_NOT_SUBMIT' or
+            xedge['gate']['decision']!='BLOCKED_DO_NOT_SUBMIT' or xedge['gate']['holdout_pass'] or
+            xedge['gate']['weekly_slot_spent'] or not xedge['label_free_feature_preceded_label_access'] or
+            model['release_decision']!=h['gate']['decision']):
+        errors.append('Failed research gate or label-free ordering relabelled')
     if sha256_file(root/'knowledge/preregistration.md')!=h['preregistration_sha256']:errors.append('Frozen preregistration changed')
     catalog=read_json(root/'sources/catalog.json')['sources'];ids={r['id'] for r in catalog}
     if len(ids)!=len(catalog):errors.append('Duplicate source ids')
@@ -63,8 +81,9 @@ def verify(root:Path=ROOT):
         if not set(claim['sources']).issubset(ids):errors.append('Missing claim source '+claim['id'])
     for p in (root/'index.html',root/'docs/index.html',root/'docs/executive-summary.html'):
         text=p.read_text()
-        if Path(h['artifacts'][0]['path']).name not in text or 'download' not in text or 'Do not submit' not in text:errors.append('Missing first-screen artifact/warning '+p.name)
-    return {'checked_utc':utcnow(),'status':'PASS' if not errors else 'FAIL','local_html_pages':len(pages),'local_references_checked':references,'external_links_not_crawled':True,'errors':errors,'geotiffs':checks,'scientific_release':h['gate']['decision']}
+        if Path(latest['path']).name not in text or 'download' not in text or 'Do not submit' not in text or 'BLOCKED_DO_NOT_SUBMIT' not in text:
+            errors.append('Missing latest XEDGE first-screen artifact/warning '+p.name)
+    return {'checked_utc':utcnow(),'status':'PASS' if not errors else 'FAIL','local_html_pages':len(pages),'local_references_checked':references,'external_links_not_crawled':True,'errors':errors,'geotiffs':checks,'scientific_release':xedge['gate']['decision'],'format_is_not_scientific_release':True}
 
 
 def main():
