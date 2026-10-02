@@ -9,3 +9,7 @@ H26-XEDGE-v1,h25_reference,0.17182539268263863,0.0964322294628285,"preregistered
 H26-XEDGE-v1,raw_head,0.1319113851997432,0.07383643157181799,"preregistered known-catalogue screen, not hidden-fault or leaderboard evidence"
 H26-XEDGE-v1,xedge_head,0.133141092032657,0.07496853604153157,"preregistered known-catalogue screen, not hidden-fault or leaderboard evidence"
 H26-XEDGE-v1,edge_only,0.07832001317082773,0.04449748508323333,"preregistered known-catalogue screen, not hidden-fault or leaderboard evidence"
+H27-DILCOND-v1,h25_reference,0.17182539268263863,0.0964322294628285,"preregistered known-catalogue screen, not hidden-fault or leaderboard evidence"
+H27-DILCOND-v1,raw_head,0.1319113851997432,0.07383643157181799,"preregistered known-catalogue screen, not hidden-fault or leaderboard evidence"
+H27-DILCOND-v1,dilcond_head,0.13727877350145512,0.0770345581440851,"preregistered known-catalogue screen, not hidden-fault or leaderboard evidence"
+H27-DILCOND-v1,coincidence_only,0.050201497759074454,0.03346288638838922,"preregistered known-catalogue screen, not hidden-fault or leaderboard evidence"

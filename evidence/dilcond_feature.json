@@ -1,0 +1,60 @@
+{
+  "method": "H27-DILCOND-v1",
+  "started_utc": "2026-10-02T23:05:37+00:00",
+  "completed_utc": "2026-10-02T23:06:09+00:00",
+  "labels_opened": false,
+  "template_opened": false,
+  "preregistration_path": "knowledge/hypothesis-slate-20261003.md",
+  "preregistration_sha256": "51bdb215464677c2049e5950dbda620ef011cafcec8eb74ba678a6d939a7d6df",
+  "preregistration_commit": "a282a242a34612aeb06621f16de04b7686b33704",
+  "preparation_completed_utc": "2026-10-02T22:46:15+00:00",
+  "pretraining_completed_utc": "2026-10-02T22:47:45+00:00",
+  "representation_completed_utc": "2026-10-02T22:48:28+00:00",
+  "anomaly_completed_utc": "2026-10-02T22:48:39+00:00",
+  "pretraining_encoder_state_sha256": "0c6b60ff3ef292f0d9b921d14b14d496a3938b2f0dc21600bd4bea8fa3910b95",
+  "feature_stack_sha256": "4371c82e3b8339b807bdffcf4ef59a225520fe2988d521be208ae33743123bc5",
+  "prepared_values_sha256": "138c028e73c7d54ea0546e918a4625b54e93dc85f6920735f7f4211e1994c83f",
+  "prepared_observed_sha256": "1f48d9839a4ad1062482d293dc39e3ebb2ad59de366372ff8e6645e8506325b8",
+  "transform": {
+    "method": "DILCOND-v1: sign-aware positive dilatation x positive conductivity local-anomaly coincidence",
+    "input_bands_zero_based": {
+      "geod_dilaterate": 7,
+      "cond_surf": 16
+    },
+    "input_band_names_from_owner_mirror": [
+      "geod_dilaterate",
+      "cond_surf"
+    ],
+    "input_band_data_category_from_embedded_gdal_tags": [
+      "geodetic_strain",
+      "subsurface"
+    ],
+    "scales_sigma_pixels": [
+      3.0,
+      6.0,
+      12.0
+    ],
+    "scales_sigma_m_at_100m_grid": [
+      300.0,
+      600.0,
+      1200.0
+    ],
+    "background_sigma_factor": 4.0,
+    "gaussian_truncate_sigma": 4.0,
+    "edge_halo_pixels": 48,
+    "support_definition": "joint observed mask and footprint eroded by 48 px with 3x3 all-true structure",
+    "residual_definition": "clip(gaussian(sigma) - gaussian(4*sigma), 0, None); positive-only, asymmetric by design",
+    "joint_score": "sqrt(percentile_rank(dilation_residual+) * percentile_rank(conductivity_residual+)), zeroed where either residual is non-positive",
+    "final_score": "geometric_mean(per_scale_joint) via direct product (exact zero if any scale is non-anomalous), then percentile-ranked on support",
+    "support_pixels": 4272494,
+    "ranked_min": 0.0,
+    "ranked_max": 1.0,
+    "label_free_inputs_only": true,
+    "caveat": "Elevated conductivity plus positive dilatation can equally reflect playa evaporite, irrigated soil moisture, perched groundwater or geodetic processing noise, not only a fluid-charged fault."
+  },
+  "score_sha256": "0678b6d17b932c9d86fb311f28894e0930ffa6f7b4ff5fcec0eaf0638d8710d9",
+  "support_sha256": "f99761ff66b6375faa2c6aaff5a46c8f032ea28e9e858a0fea0071b3a1db9e31",
+  "elapsed_seconds": 32.143,
+  "screen_only": true,
+  "warning": "Label-free dilatation/conductivity coincidence score; not a probability or confirmed fault/vent map."
+}

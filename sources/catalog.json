@@ -240,6 +240,54 @@
       "claim": "Registry identifies DOI 10.15121/1881483, INGENIOUS compilation, DOE Geothermal Data Repository publisher and metadata update 2025-03-07T03:05:37Z. DataCite documents public single-DOI GET retrieval.",
       "scope": "Full returned registry response read; API request documentation first chunk checked. Registry updates are not GDR-file-change or binary-availability checks. API docs: https://support.datacite.org/docs/api-get-doi",
       "automated_refresh": true
+    },
+    {
+      "id": "nlr_rename",
+      "category": "Competition",
+      "title": "DOE renames National Renewable Energy Laboratory to National Laboratory of the Rockies",
+      "authority": "Ethanol Producer Magazine (industry press), reporting a DOE action",
+      "url": "https://ethanolproducer.com/articles/doe-renames-national-renewable-energy-laboratory-as-national-laboratory-of-the-rockies",
+      "status": "secondary_press_source_checked",
+      "reviewed": "2026-10-02",
+      "claim": "DOE renamed NREL to the National Laboratory of the Rockies (NLR) effective 2025-12-01. This resolves why GEMS Prize materials co-sponsored by 'NLR' were not a previously-unknown organization.",
+      "scope": "Single trade-press article read; not a direct energy.gov press release fetch (blocked by sandbox egress, see egress_check).",
+      "automated_refresh": false
+    },
+    {
+      "id": "nlr_rules_citation",
+      "category": "Competition",
+      "title": "NLR research-hub citation of the GEMS Prize Official Rules",
+      "authority": "National Laboratory of the Rockies (research-hub.nlr.gov)",
+      "url": "https://research-hub.nlr.gov/en/publications/geologic-enhanced-mapping-system-gems-prize-official-rules/",
+      "status": "primary_institutional_citation_checked",
+      "reviewed": "2026-10-02",
+      "claim": "NLR's own publication record cites 'Geologic Enhanced Mapping System (GEMS) Prize: Official Rules', DOI 10.2172/3818146, 19 pages \u2014 consistent with the locally mirrored GEMS_96647.pdf (same page count/title pattern). Best available independent corroboration that the Dropbox-mirrored rules PDF is authentic; it is not a byte-for-byte fetch of the DOI-resolved PDF itself (osti.gov is unreachable from this sandbox).",
+      "scope": "Citation metadata page read only; DOI target not fetched due to sandbox egress block.",
+      "automated_refresh": false
+    },
+    {
+      "id": "anss_catalog",
+      "category": "Data",
+      "title": "USGS ANSS Comprehensive Earthquake Catalog (ComCat) FDSN event API",
+      "authority": "U.S. Geological Survey",
+      "url": "https://earthquake.usgs.gov/fdsnws/event/1/",
+      "status": "named_free_official_source_not_obtainable_this_sandbox",
+      "reviewed": "2026-10-02",
+      "claim": "Free, official, public USGS seismicity catalog API; would supply raw hypocenters for an H27-SEISMIC-LINEAMENT orientation-coherence hypothesis. Confirmed named and specific per the user's requirement, but direct HTTPS access from this sandbox fails (SSL_ERROR_SYSCALL) \u2014 see evidence/egress_check.json. Deferred, not implemented against synthetic data.",
+      "scope": "Endpoint identified and documented; not fetched. No data obtained, no hypothesis validated.",
+      "automated_refresh": false
+    },
+    {
+      "id": "earth_search_stac",
+      "category": "Data",
+      "title": "Earth Search STAC API over Sentinel-2 L2A on AWS Open Data",
+      "authority": "Element 84 / AWS Open Data Program (Sentinel-2 imagery is ESA/Copernicus origin)",
+      "url": "https://earth-search.aws.element84.com/v1",
+      "status": "named_free_official_source_not_obtainable_this_sandbox",
+      "reviewed": "2026-10-02",
+      "claim": "Free, public, no-login SpatioTemporal Asset Catalog over Sentinel-2 surface reflectance; would supply SWIR bands for an H27-ALTERATION hydrothermal-alteration-index hypothesis. Confirmed named and specific, but this sandbox cannot reach generic HTTPS hosts including S3-backed endpoints \u2014 see evidence/egress_check.json. Deferred, not implemented against synthetic data.",
+      "scope": "Endpoint identified and documented; not fetched. No imagery obtained, no hypothesis validated.",
+      "automated_refresh": false
     }
   ]
 }
