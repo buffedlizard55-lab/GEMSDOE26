@@ -1,0 +1,169 @@
+{
+  "completed_utc": "2026-10-02T18:38:35+00:00",
+  "labels_opened": false,
+  "coverage_pass": true,
+  "encoder_state_sha256": "0c6b60ff3ef292f0d9b921d14b14d496a3938b2f0dc21600bd4bea8fa3910b95",
+  "checkpoint_sha256": "212d83913c9869fca0184e77a21da211acf57bd8f0863875a6db750558d96bcc",
+  "visited_pixels": 5167373,
+  "masked_evaluations_per_pixel": 3,
+  "inference_args": {
+    "tile": 192,
+    "halo": 16,
+    "threads": 2
+  },
+  "tiles": 183,
+  "groups_zero_based": {
+    "magnetic": [
+      0,
+      1,
+      2,
+      8,
+      13
+    ],
+    "gravity": [
+      4,
+      10,
+      12,
+      17
+    ],
+    "terrain": [
+      11,
+      18
+    ],
+    "strain": [
+      3,
+      6,
+      7
+    ],
+    "conductive": [
+      14,
+      16
+    ],
+    "other_unresolved": [
+      5,
+      9,
+      15
+    ]
+  },
+  "latent_sha256": "dfe35acfee667893ec861568b8be147bd96acaf9adfd0599fbb8342c65226b11",
+  "errors_sha256": "8f58662566d2363d4d46e0a620ae78d16ab5743f843c5395ec81afd2c0a7cd18",
+  "mask_scheme": "4 complementary phases, 75% hidden, global patch coordinates and >=16 pixel halo",
+  "error_meaning": "Label-free anomaly diagnostic, NOT probability or evidence of a fault",
+  "elapsed_seconds": 31.73,
+  "bands": [
+    {
+      "band": 1,
+      "masked_mse_mean": 0.1790800839662552,
+      "masked_mse_median": 0.052886962890625,
+      "valid_pixels": 5164312
+    },
+    {
+      "band": 2,
+      "masked_mse_mean": 0.28832709789276123,
+      "masked_mse_median": 0.07659912109375,
+      "valid_pixels": 5164312
+    },
+    {
+      "band": 3,
+      "masked_mse_mean": 0.768570065498352,
+      "masked_mse_median": 0.073974609375,
+      "valid_pixels": 5164312
+    },
+    {
+      "band": 4,
+      "masked_mse_mean": 0.05999927222728729,
+      "masked_mse_median": 0.0215301513671875,
+      "valid_pixels": 5164312
+    },
+    {
+      "band": 5,
+      "masked_mse_mean": 0.11997773498296738,
+      "masked_mse_median": 0.05572509765625,
+      "valid_pixels": 5164312
+    },
+    {
+      "band": 6,
+      "masked_mse_mean": 0.5845630168914795,
+      "masked_mse_median": 0.2294921875,
+      "valid_pixels": 5164300
+    },
+    {
+      "band": 7,
+      "masked_mse_mean": 0.07482554763555527,
+      "masked_mse_median": 0.02880859375,
+      "valid_pixels": 5164312
+    },
+    {
+      "band": 8,
+      "masked_mse_mean": 0.15940840542316437,
+      "masked_mse_median": 0.04827880859375,
+      "valid_pixels": 5164312
+    },
+    {
+      "band": 9,
+      "masked_mse_mean": 0.6898371577262878,
+      "masked_mse_median": 0.04296875,
+      "valid_pixels": 5164312
+    },
+    {
+      "band": 10,
+      "masked_mse_mean": 0.9177303910255432,
+      "masked_mse_median": 0.0101165771484375,
+      "valid_pixels": 5164312
+    },
+    {
+      "band": 11,
+      "masked_mse_mean": 0.7554482817649841,
+      "masked_mse_median": 0.25244140625,
+      "valid_pixels": 5164312
+    },
+    {
+      "band": 12,
+      "masked_mse_mean": 0.17043864727020264,
+      "masked_mse_median": 0.06951904296875,
+      "valid_pixels": 5164312
+    },
+    {
+      "band": 13,
+      "masked_mse_mean": 0.1729602813720703,
+      "masked_mse_median": 0.07586669921875,
+      "valid_pixels": 5164312
+    },
+    {
+      "band": 14,
+      "masked_mse_mean": 0.15342995524406433,
+      "masked_mse_median": 0.039031982421875,
+      "valid_pixels": 5164312
+    },
+    {
+      "band": 15,
+      "masked_mse_mean": 0.18019089102745056,
+      "masked_mse_median": 0.0625,
+      "valid_pixels": 5164312
+    },
+    {
+      "band": 16,
+      "masked_mse_mean": 0.16326847672462463,
+      "masked_mse_median": 0.0443115234375,
+      "valid_pixels": 5164312
+    },
+    {
+      "band": 17,
+      "masked_mse_mean": 0.6720330715179443,
+      "masked_mse_median": 0.2271728515625,
+      "valid_pixels": 5164312
+    },
+    {
+      "band": 18,
+      "masked_mse_mean": 0.1607757955789566,
+      "masked_mse_median": 0.061065673828125,
+      "valid_pixels": 5164312
+    },
+    {
+      "band": 19,
+      "masked_mse_mean": 0.5003073215484619,
+      "masked_mse_median": 0.08807373046875,
+      "valid_pixels": 5164312
+    }
+  ]
+}

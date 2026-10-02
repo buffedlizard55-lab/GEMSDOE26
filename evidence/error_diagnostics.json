@@ -1,0 +1,131 @@
+{
+  "known_catalogue_anomaly_auc_diagnostic": 0.5343560012499999,
+  "fault_specificity_not_established": true,
+  "missing_feature_pixels_inside_footprint": 3061,
+  "block_error_means": [
+    {
+      "derived_block": 1,
+      "pixels": 2273315,
+      "mean_masked_mse": 0.23834744095802307,
+      "mean_anomaly": 0.26441025733947754
+    },
+    {
+      "derived_block": 2,
+      "pixels": 1580127,
+      "mean_masked_mse": 0.39847975969314575,
+      "mean_anomaly": 0.43778249621391296
+    },
+    {
+      "derived_block": 3,
+      "pixels": 759940,
+      "mean_masked_mse": 0.5905938148498535,
+      "mean_anomaly": 0.49254488945007324
+    },
+    {
+      "derived_block": 4,
+      "pixels": 550930,
+      "mean_masked_mse": 0.3995802104473114,
+      "mean_anomaly": 0.48113662004470825
+    }
+  ],
+  "patch_phase_error_means": [
+    {
+      "row_mod4": 0,
+      "col_mod4": 0,
+      "pixels": 323135,
+      "mean_masked_mse": 0.3433901369571686
+    },
+    {
+      "row_mod4": 0,
+      "col_mod4": 1,
+      "pixels": 323196,
+      "mean_masked_mse": 0.3464541435241699
+    },
+    {
+      "row_mod4": 0,
+      "col_mod4": 2,
+      "pixels": 323216,
+      "mean_masked_mse": 0.3539661467075348
+    },
+    {
+      "row_mod4": 0,
+      "col_mod4": 3,
+      "pixels": 323092,
+      "mean_masked_mse": 0.3465287983417511
+    },
+    {
+      "row_mod4": 1,
+      "col_mod4": 0,
+      "pixels": 322753,
+      "mean_masked_mse": 0.3544408977031708
+    },
+    {
+      "row_mod4": 1,
+      "col_mod4": 1,
+      "pixels": 322779,
+      "mean_masked_mse": 0.3605254590511322
+    },
+    {
+      "row_mod4": 1,
+      "col_mod4": 2,
+      "pixels": 322790,
+      "mean_masked_mse": 0.3647332787513733
+    },
+    {
+      "row_mod4": 1,
+      "col_mod4": 3,
+      "pixels": 322678,
+      "mean_masked_mse": 0.35505929589271545
+    },
+    {
+      "row_mod4": 2,
+      "col_mod4": 0,
+      "pixels": 322669,
+      "mean_masked_mse": 0.36032354831695557
+    },
+    {
+      "row_mod4": 2,
+      "col_mod4": 1,
+      "pixels": 322730,
+      "mean_masked_mse": 0.3671855330467224
+    },
+    {
+      "row_mod4": 2,
+      "col_mod4": 2,
+      "pixels": 322744,
+      "mean_masked_mse": 0.3722899556159973
+    },
+    {
+      "row_mod4": 2,
+      "col_mod4": 3,
+      "pixels": 322611,
+      "mean_masked_mse": 0.36163872480392456
+    },
+    {
+      "row_mod4": 3,
+      "col_mod4": 0,
+      "pixels": 322468,
+      "mean_masked_mse": 0.35022544860839844
+    },
+    {
+      "row_mod4": 3,
+      "col_mod4": 1,
+      "pixels": 322518,
+      "mean_masked_mse": 0.35334470868110657
+    },
+    {
+      "row_mod4": 3,
+      "col_mod4": 2,
+      "pixels": 322540,
+      "mean_masked_mse": 0.35984742641448975
+    },
+    {
+      "row_mod4": 3,
+      "col_mod4": 3,
+      "pixels": 322393,
+      "mean_masked_mse": 0.3521208167076111
+    }
+  ],
+  "patch_phase_max_min_ratio": 1.084160304995695,
+  "warning": "AUC uses known faults after freezing the anomaly. Error varies with geology, coverage and processing. No hidden fault labels or geothermal vent confirmations."
+}

@@ -1,0 +1,59 @@
+{
+  "checked_utc": "2026-10-02T20:21:07+00:00",
+  "isolated_run": ".cache/reproduction",
+  "scope": "Same frozen protocol/data/seed, no retuning; not independent scientific confirmation",
+  "source_sha256": {
+    "src/gems26/__init__.py": "9fad027e776baf3533907580ad99f7d5dab5933bafdc12bcac552c987745fccc",
+    "src/gems26/anomaly.py": "8b5e137c40960a3669bee747e9814599e401bd3b07605b3842d4b4ee420cb899",
+    "src/gems26/audit.py": "7d3bee4b7a884080b7259fe007b31e3829313f023ff5dd8715a60c52dfa954c8",
+    "src/gems26/common.py": "f32eb42bfa980ce7cac4a830b675c7226ddb5cc2e02ad6cbca52ab831de20988",
+    "src/gems26/emission.py": "c118e26fd351b4054de06e2ed9b87c2cc2007b8e46b8f87d170b01a90165722d",
+    "src/gems26/feed.py": "f9f46de1a4b14b11bcc0703ba396c652aabec851602204e3e17b4736340526a4",
+    "src/gems26/heads.py": "b63ff3a37d871ffb0ddb35751fec48e1b1f1f1ff3c097a5bb2391a6e79974d8c",
+    "src/gems26/holdout.py": "788d0bd13c3694680113c81a39ea4da4091b97c8467ae1f3cf524a0122b50190",
+    "src/gems26/metric.py": "9ce0bd94450607221048f4d3888f8ed1a07feaa1a5ef6095e503ef87f51f3702",
+    "src/gems26/ssl.py": "2c020e7dd34f41ac4ddf9bb69cca33616a1bade3e2066dac2e8f7aad91a35aa8",
+    "src/gems26/submission.py": "2b084b5307d821ef6b7104c1c1174951740c5e53a5afe335f6310a05ad1c4ed1",
+    "scripts/restore_data.py": "956b9f2b376d313025f12d76faf4dbf28738c1a86e89874bc36982fe758e9d95",
+    "scripts/prepare_data.py": "d93af8a82d0f43e5a683e01c615e6591877ffa8a81afb94d2d03371a04749900",
+    "scripts/pretrain.py": "b598c033b83477cff46a21139d5f0670909ea45ccf2042d220ccf15ac9500ec7",
+    "scripts/infer_representation.py": "4d6c41d0c51fa8675f9f67b5bd46fca2dfdb7b51ec3c096ea2cc8b87111a1423",
+    "scripts/build_anomaly.py": "eccf39db54a862bb0e863d39259400eecdeb97188bb29432e25a6842bc16c27e",
+    "scripts/run_holdout.py": "4b4ac764c9561564d8a4c62403f48b0bf10fb7af02eb713ce96b0205a40dcb08",
+    "data/input_manifest.json": "b84e403f462e6dc0264eba442a169c9bc6ff22df305e273d1f0a36f0e44f72af",
+    "knowledge/preregistration.md": "51e41590f6c299703498c8c8af7efba055bd3e24731b2f9d3784e525733b2b6f"
+  },
+  "encoder_state_identical": true,
+  "all_artifacts_prediction_and_file_identity": true,
+  "all_confirmation_metrics_identical_1e-12": true,
+  "confirmation_differences": {
+    "raw_head": {
+      "dense_dti_delta": 0.0,
+      "sparse_mean_dti_delta": 0.0
+    },
+    "ssl_head": {
+      "dense_dti_delta": 0.0,
+      "sparse_mean_dti_delta": 0.0
+    },
+    "ssl_fusion": {
+      "dense_dti_delta": 0.0,
+      "sparse_mean_dti_delta": 0.0
+    },
+    "anomaly_only": {
+      "dense_dti_delta": 0.0,
+      "sparse_mean_dti_delta": 0.0
+    },
+    "h25_reference": {
+      "dense_dti_delta": 0.0,
+      "sparse_mean_dti_delta": 0.0
+    },
+    "h19_parent": {
+      "dense_dti_delta": 0.0,
+      "sparse_mean_dti_delta": 0.0
+    }
+  },
+  "label_access_after_ssl_and_anomaly": true,
+  "scientific_decision": "BLOCKED_DO_NOT_SUBMIT",
+  "archived_result_untouched": true,
+  "replication_pass": true
+}

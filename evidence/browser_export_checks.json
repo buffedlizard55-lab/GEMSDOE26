@@ -1,0 +1,33 @@
+{
+  "format_pass": true,
+  "checks": {
+    "single_band": true,
+    "float32": true,
+    "shape_matches_template": true,
+    "crs_matches_template": true,
+    "transform_matches_template": true,
+    "nodata_is_nan": true,
+    "all_inside_finite": true,
+    "inside_range_0_1": true,
+    "outside_all_nan": true,
+    "masked_read_range_0_1": true,
+    "masked_read_has_all_footprint_values": true,
+    "prediction_digest_matches": true
+  },
+  "path": ".cache/ui-downloads/gems26-browser-copy-20261002203449452-4fdde73c40a7-nan.tif",
+  "sha256": "53cd61d6cf1b253da4bf9f1ed876a7acfe9635ceed381878350371c38b75989b",
+  "prediction_sha256": "4fdde73c40a73247271ac2eeed63b396e515901ec06d95f8c1d6b40d1bf95a31",
+  "bytes": 49117072,
+  "inside_pixels": 5167373,
+  "outside_pixels": 7111787,
+  "inside_finite": 5167373,
+  "inside_min": 0.0,
+  "inside_max": 1.0,
+  "positive_pixels": 60068,
+  "mass": 60068.0,
+  "scientific_release": "Separate from format; consult holdout and audit receipts",
+  "checked_utc": "2026-10-02T20:34:54+00:00",
+  "inside_cell_identity": true,
+  "nan_footprint_identity": true,
+  "scope": "JavaScript copy of same frozen prediction cells; not a new detector"
+}

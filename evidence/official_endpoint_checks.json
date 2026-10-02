@@ -1,0 +1,26 @@
+{
+  "rows": [
+    {
+      "name": "3dep_binary_head",
+      "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/NV_WestCentral_EarthMRI_2020_D20/TIFF/USGS_1M_11_x28y439_NV_WestCentral_EarthMRI_2020_D20.tif",
+      "checked_utc": "2026-10-02T18:54:08+00:00",
+      "status": "network_error",
+      "error": "HTTPSConnectionPool(host='prd-tnm.s3.amazonaws.com', port=443): Max retries exceeded with url: /StagedProducts/Elevation/1m/Projects/NV_WestCentral_EarthMRI_2020_D20/TIFF/USGS_1M_11_x28y439_NV_WestCentral_EarthMRI_2020_D20.tif (Caused by SSLError(SSLZeroReturnError(6, 'TLS/SSL connection has been closed (EOF) (_ssl.c:9"
+    },
+    {
+      "name": "sciencebase_api",
+      "url": "https://www.sciencebase.gov/catalog/item/657e1d85d34e23d3533209f7?format=json",
+      "checked_utc": "2026-10-02T18:54:08+00:00",
+      "status": "network_error",
+      "error": "HTTPSConnectionPool(host='www.sciencebase.gov', port=443): Max retries exceeded with url: /catalog/item/657e1d85d34e23d3533209f7?format=json (Caused by SSLError(SSLZeroReturnError(6, 'TLS/SSL connection has been closed (EOF) (_ssl.c:992)')))"
+    },
+    {
+      "name": "tnm_api",
+      "url": "https://tnmaccess.nationalmap.gov/api/v1/products?bbox=-119.5,39.5,-119.4,39.6&datasets=Digital%20Elevation%20Model%20%28DEM%29%201%20meter&max=2",
+      "checked_utc": "2026-10-02T18:54:08+00:00",
+      "status": "network_error",
+      "error": "HTTPSConnectionPool(host='tnmaccess.nationalmap.gov', port=443): Max retries exceeded with url: /api/v1/products?bbox=-119.5,39.5,-119.4,39.6&datasets=Digital%20Elevation%20Model%20%28DEM%29%201%20meter&max=2 (Caused by SSLError(SSLZeroReturnError(6, 'TLS/SSL connection has been closed (EOF) (_ssl.c:992)')))"
+    }
+  ],
+  "note": "A listed official public URL is not evidence of a successful binary download in this sandbox"
+}

@@ -1,0 +1,55 @@
+{
+  "checked_utc": "2026-10-02T19:21:20+00:00",
+  "parent_file_sha256": "ec1f9b56b83ce33cad781ceb9f104b18fb4f2ff785263a4e89616af4aabdee8d",
+  "reference_file_sha256": "68d0e2e4fcc594f9a23f56c44b885fee733d026d39be55e18ad2a07289525310",
+  "parent_pixels": 121131,
+  "reference_pixels": 60069,
+  "emission_retained_fraction": 0.4959011318324789,
+  "reference_adds_no_pixel": true,
+  "exact_recomputed_pixel_identity": true,
+  "reference_prediction_sha256": "f284603355c10eca6da162d1795aecfd6e7ec59a02ce6e130208dfb52b9ad5d5",
+  "recomputed_prediction_sha256": "f284603355c10eca6da162d1795aecfd6e7ec59a02ce6e130208dfb52b9ad5d5",
+  "parent_to_kept_distance_pixels": {
+    "mean": 0.5354937606075025,
+    "median": 1.0,
+    "maximum": 1.4142135623730951
+  },
+  "algorithm_reads_labels": false,
+  "upstream_code_url": "https://github.com/buffedlizard55-lab/GEMSDOE24/blob/07345ea0604953d7efb858d9cfbc21e20c7aca0b/src/gems/thinning.py",
+  "owner_reported_parent_score": 0.1922,
+  "owner_reported_reference_score": 0.2477,
+  "owner_reported_relative_gain": 0.2887617065556711,
+  "score_to_file_mapping_verified_by_platform_receipt": false,
+  "local_sparse_ratio": 1.3469533884688174,
+  "metric_warning": "TP sums over truth and FP over predictions; TP+FP is not generally emitted pixel count",
+  "paired_local_decomposition": {
+    "h19_parent": {
+      "dense": {
+        "TP_w": 12192.199745867161,
+        "FP_w": 110534.69978475984,
+        "FN_w": 48795.80025413284,
+        "n_truth": 60988,
+        "n_emitted": 121131,
+        "mass": 121131.0,
+        "dti": 0.16625172271262373
+      },
+      "sparse_mean_TP_w": 2433.3987644676117,
+      "sparse_mean_FP_w": 118922.5757440888
+    },
+    "h25_reference": {
+      "dense": {
+        "TP_w": 10626.79993963955,
+        "FP_w": 54653.72308061156,
+        "FN_w": 50361.200060360454,
+        "n_truth": 60988,
+        "n_emitted": 60069,
+        "mass": 60069.0,
+        "dti": 0.17182539268263863
+      },
+      "sparse_mean_TP_w": 2116.6215600882306,
+      "sparse_mean_FP_w": 58946.40647796795
+    }
+  },
+  "local_dense_TP_credit_retained": 0.871606450119205,
+  "local_dense_FP_mass_retained": 0.49444855947532085
+}
