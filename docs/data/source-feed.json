@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "attempted_utc": "2026-10-02T19:31:09+00:00",
+  "automation_scope": "Allowlisted USGS metadata and DOE-deposited DataCite DOI metadata only; no competition site access",
+  "leaderboard": {
+    "review_date": "2026-10-02",
+    "method": "initial_requested_tool_retrieval_before_terms_discovered",
+    "leader": "DARD",
+    "score": 0.3195,
+    "reported_h25_score": 0.2477,
+    "filename_mapping_is_owner_reported": true,
+    "automated_refresh": false,
+    "url": "https://www.drivendata.org/competitions/306/competition-doe-gems/leaderboard/"
+  },
+  "items": {
+    "geodawn": {
+      "url": "https://www.sciencebase.gov/catalog/item/657e1d85d34e23d3533209f7?format=json",
+      "attempted_utc": "2026-10-02T19:31:09+00:00",
+      "last_good": {
+        "review_date": "2026-10-02",
+        "method": "fetch_page_tool_primary_json",
+        "dataset_id": "657e1d85d34e23d3533209f7",
+        "title": "GeoDAWN: Airborne magnetic and radiometric surveys of the northwestern Great Basin, Nevada and California",
+        "source_last_updated": "2025-02-28T23:02:25Z"
+      },
+      "status": "error_last_good_retained",
+      "error": "HTTPSConnectionPool(host='www.sciencebase.gov', port=443): Max retries exceeded with url: /catalog/item/657e1d85d34e23d3533209f7?format=json (Caused by SSLError(SSLZeroReturnError(6, 'TLS/SSL connection has been closed (EOF) (_ssl.c:992)')))"
+    },
+    "3dep": {
+      "url": "https://tnmaccess.nationalmap.gov/api/v1/products?bbox=-119.5,39.5,-119.4,39.6&datasets=Digital%20Elevation%20Model%20%28DEM%29%201%20meter&max=2",
+      "attempted_utc": "2026-10-02T19:31:09+00:00",
+      "last_good": {
+        "review_date": "2026-10-02",
+        "method": "fetch_page_tool_primary_json",
+        "title": "USGS 3DEP 1 m catalog sample",
+        "matching_items": 7,
+        "returned_items": 2,
+        "sample_bbox": [
+          -119.5,
+          39.5,
+          -119.4,
+          39.6
+        ],
+        "scope": "Metadata only; direct binary HEAD failed TLS in sandbox; full-region download not verified"
+      },
+      "status": "error_last_good_retained",
+      "error": "HTTPSConnectionPool(host='tnmaccess.nationalmap.gov', port=443): Max retries exceeded with url: /api/v1/products?bbox=-119.5,39.5,-119.4,39.6&datasets=Digital%20Elevation%20Model%20%28DEM%29%201%20meter&max=2 (Caused by SSLError(SSLZeroReturnError(6, 'TLS/SSL connection has been closed (EOF) (_ssl.c:992)')))"
+    },
+    "gdr_registry": {
+      "url": "https://api.datacite.org/dois/10.15121/1881483",
+      "attempted_utc": "2026-10-02T19:31:09+00:00",
+      "last_good": {
+        "review_date": "2026-10-02",
+        "method": "fetch_page_tool_primary_registry_json",
+        "title": "INGENIOUS - Great Basin Regional Dataset Compilation",
+        "doi": "10.15121/1881483",
+        "registry_last_updated": "2025-03-07T03:05:37.000Z",
+        "scope": "DOE-deposited registry metadata only, not GDR binary download verification"
+      },
+      "status": "error_last_good_retained",
+      "error": "HTTPSConnectionPool(host='api.datacite.org', port=443): Max retries exceeded with url: /dois/10.15121/1881483 (Caused by SSLError(SSLZeroReturnError(6, 'TLS/SSL connection has been closed (EOF) (_ssl.c:992)')))"
+    }
+  },
+  "all_refreshes_succeeded": false
+}

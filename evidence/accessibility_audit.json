@@ -1,0 +1,112 @@
+{
+  "complete": true,
+  "labels_audited_first": true,
+  "events": [
+    {
+      "target": "labels",
+      "started_utc": "2026-10-02T18:49:28+00:00",
+      "completed_utc": "2026-10-02T18:49:29+00:00"
+    },
+    {
+      "target": "h25_reference",
+      "started_utc": "2026-10-02T18:49:29+00:00",
+      "completed_utc": "2026-10-02T18:49:29+00:00"
+    },
+    {
+      "target": "ssl_fusion",
+      "started_utc": "2026-10-02T18:49:29+00:00",
+      "completed_utc": "2026-10-02T18:49:30+00:00"
+    },
+    {
+      "target": "anomaly_only",
+      "started_utc": "2026-10-02T18:49:30+00:00",
+      "completed_utc": "2026-10-02T18:49:31+00:00"
+    }
+  ],
+  "source_metadata": {
+    "sources": [
+      {
+        "repo": "buffedlizard55-lab/GEMSDOE24",
+        "ref": "07345ea0604953d7efb858d9cfbc21e20c7aca0b",
+        "remote_path": "data/external/audit_sources/tiger_road_distance_m.tif",
+        "path": "data/raw/tiger_road_distance_m.tif",
+        "bytes": 10492276,
+        "sha256": "e5350423508968fa2d32b0a6ae0d3fb4ae3ea645e3b8736f0c8e7ad9ff2f2988",
+        "status": "owner_mirror_integrity_only"
+      },
+      {
+        "repo": "buffedlizard55-lab/GEMSDOE24",
+        "ref": "07345ea0604953d7efb858d9cfbc21e20c7aca0b",
+        "remote_path": "data/external/audit_sources/blm_closed_claim_distance_m.tif",
+        "path": "data/raw/blm_closed_claim_distance_m.tif",
+        "bytes": 5752587,
+        "sha256": "a88356423c03fc8b6510a84f77cee2b1d38c4ccbd7761bc95c1ca8332a2e166a",
+        "status": "owner_mirror_integrity_only"
+      },
+      {
+        "repo": "buffedlizard55-lab/GEMSDOE24",
+        "ref": "07345ea0604953d7efb858d9cfbc21e20c7aca0b",
+        "remote_path": "data/external/audit_sources/acquisition_block_id_100m.tif",
+        "path": "data/raw/acquisition_block_id_100m.tif",
+        "bytes": 85031,
+        "sha256": "2c0785c4b3ec46c734d1be7a7aedbb3e816201100ab358033a3af074418c894a",
+        "status": "owner_mirror_integrity_only"
+      }
+    ],
+    "features": [
+      "log1p_road_m",
+      "log1p_closed_claim_m",
+      "derived_block_1",
+      "derived_block_2",
+      "derived_block_3",
+      "derived_block_4"
+    ],
+    "acquisition_geometry": "Derived from official figure, NOT official-coordinate polygons",
+    "source_integrity_only": true
+  },
+  "results": {
+    "labels": {
+      "mean_fold_auc": 0.50737446,
+      "fold_auc": [
+        0.5189666,
+        0.51361012,
+        0.5075606,
+        0.48936051999999997
+      ],
+      "meaning": "Ability of road/closed-claim/derived-block features to identify this raster; NOT fault accuracy"
+    },
+    "h25_reference": {
+      "mean_fold_auc": 0.531694715,
+      "fold_auc": [
+        0.53764458,
+        0.5435338399999999,
+        0.5304348,
+        0.51516564
+      ],
+      "meaning": "Ability of road/closed-claim/derived-block features to identify this raster; NOT fault accuracy"
+    },
+    "ssl_fusion": {
+      "mean_fold_auc": 0.48590778,
+      "fold_auc": [
+        0.49398248,
+        0.52563114,
+        0.49726588,
+        0.42675162
+      ],
+      "meaning": "Ability of road/closed-claim/derived-block features to identify this raster; NOT fault accuracy"
+    },
+    "anomaly_only": {
+      "mean_fold_auc": 0.5084421250000001,
+      "fold_auc": [
+        0.51801612,
+        0.5505287000000001,
+        0.46730014000000003,
+        0.49792354000000005
+      ],
+      "meaning": "Ability of road/closed-claim/derived-block features to identify this raster; NOT fault accuracy"
+    }
+  },
+  "relative_association_not_worse_by_over_0.01": true,
+  "primary_minus_reference_auc": -0.04578693499999997,
+  "caveat": "Different target-specific case-control samples; four regions, no causal inference or formal significance. Mirrors are not a fresh official-source download."
+}

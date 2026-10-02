@@ -1,0 +1,7 @@
+arm,dense_pooled_dti,confirmation_mean_pooled_sparse_dti,scope
+raw_head,0.1319113851997432,0.07474434740922427,"known-catalogue sensitivity, not leaderboard"
+ssl_head,0.12358959806445304,0.07018433682076188,"known-catalogue sensitivity, not leaderboard"
+ssl_fusion,0.12216376260544241,0.06903869536928336,"known-catalogue sensitivity, not leaderboard"
+anomaly_only,0.07913042985507998,0.04478696412851132,"known-catalogue sensitivity, not leaderboard"
+h25_reference,0.17182539268263863,0.09626140050294933,"known-catalogue sensitivity, not leaderboard"
+h19_parent,0.16625172271262373,0.07146602200717343,"known-catalogue sensitivity, not leaderboard"

@@ -1,0 +1,272 @@
+{
+  "source": "complete owner prompt first list; duplicates preserved in README, not repeated as independent observations",
+  "platform_receipts_accessed": false,
+  "rows": [
+    {
+      "repo": "GEMSDOE",
+      "site_url": "https://buffedlizard55-lab.github.io/GEMSDOE/docs/index.html",
+      "file": "gems-submission-20260925T001403Z-7f00890a",
+      "score": 0.1563,
+      "score_status": "owner_reported_not_receipt_verified"
+    },
+    {
+      "repo": "6GEMSDOE",
+      "site_url": "https://buffedlizard55-lab.github.io/6GEMSDOE/",
+      "file": "gems6_hgb88-topk03_33cec71ff0",
+      "score": 0.0286,
+      "score_status": "owner_reported_not_receipt_verified"
+    },
+    {
+      "repo": "GEMSDOE3",
+      "site_url": "https://buffedlizard55-lab.github.io/GEMSDOE3/docs/index.html",
+      "file": "pindrop-v4-nodes-20260925T152420Z-f347b70daa",
+      "score": 0.1193,
+      "score_status": "owner_reported_not_receipt_verified"
+    },
+    {
+      "repo": "GEMSDOE3",
+      "site_url": "https://buffedlizard55-lab.github.io/GEMSDOE3/docs/index.html",
+      "file": "pindrop-v4-discovery-20260925T152423Z-37f9d5b855",
+      "score": 0.083,
+      "score_status": "owner_reported_not_receipt_verified"
+    },
+    {
+      "repo": "GEMSDOE3",
+      "site_url": "https://buffedlizard55-lab.github.io/GEMSDOE3/docs/index.html",
+      "file": "pindrop-v4-ridge-20260925T152422Z-4e03fc9705",
+      "score": 0.1152,
+      "score_status": "owner_reported_not_receipt_verified"
+    },
+    {
+      "repo": "GEMSDOE2",
+      "site_url": "https://buffedlizard55-lab.github.io/GEMSDOE2/docs/index.html",
+      "file": "gemsdoe2-dual-family-union-20260925T160406Z-f68e590f",
+      "score": 0.156,
+      "score_status": "owner_reported_not_receipt_verified"
+    },
+    {
+      "repo": "GEMSDOE4",
+      "site_url": "https://buffedlizard55-lab.github.io/GEMSDOE4/",
+      "file": "gems-submission-20260926T163915Z-237f0063",
+      "score": 0.0343,
+      "score_status": "owner_reported_not_receipt_verified"
+    },
+    {
+      "repo": "5GEMSDOE",
+      "site_url": "https://buffedlizard55-lab.github.io/5GEMSDOE/docs/index.html",
+      "file": "gems-submission-20260926T175114Z-7f00890a",
+      "score": 0.1563,
+      "score_status": "owner_reported_not_receipt_verified"
+    },
+    {
+      "repo": "7GEMSDOE",
+      "site_url": "https://buffedlizard55-lab.github.io/7GEMSDOE/",
+      "file": "lidarscarp-ridge-top2pct-36c3a3f341c8",
+      "score": 0.1461,
+      "score_status": "owner_reported_not_receipt_verified"
+    },
+    {
+      "repo": "8GEMSDOE",
+      "site_url": "https://buffedlizard55-lab.github.io/8GEMSDOE/",
+      "file": "Hedge-v2_submission",
+      "score": 0.1563,
+      "score_status": "owner_reported_not_receipt_verified"
+    },
+    {
+      "repo": "GEMSDOE9",
+      "site_url": "https://buffedlizard55-lab.github.io/GEMSDOE9/docs/index.html",
+      "file": "2314b599",
+      "score": 0.0107,
+      "score_status": "owner_reported_not_receipt_verified"
+    },
+    {
+      "repo": "11GEMSDOE",
+      "site_url": "https://buffedlizard55-lab.github.io/11GEMSDOE/docs/index.html",
+      "file": "gems-structural-area06-v1",
+      "score": 0.0202,
+      "score_status": "owner_reported_not_receipt_verified"
+    },
+    {
+      "repo": "12GEMSDOE",
+      "site_url": "https://buffedlizard55-lab.github.io/12GEMSDOE/docs/index.html",
+      "file": "r7-nms3-dem10-scarp_0c9199f14e62",
+      "score": 0.1294,
+      "score_status": "owner_reported_not_receipt_verified"
+    },
+    {
+      "repo": "12GEMSDOE",
+      "site_url": "https://buffedlizard55-lab.github.io/12GEMSDOE/docs/index.html",
+      "file": "r7-nms3-dem10-scarp_0c9199f14e62_allfinite",
+      "score": 0.1294,
+      "score_status": "owner_reported_not_receipt_verified"
+    },
+    {
+      "repo": "15GEMSDOE",
+      "site_url": "https://buffedlizard55-lab.github.io/15GEMSDOE/docs/index.html",
+      "file": "gems-tso1-20260929T005627Z-conj_alteration_mag",
+      "score": 0.0782,
+      "score_status": "owner_reported_not_receipt_verified"
+    },
+    {
+      "repo": "14GEMSDOE",
+      "site_url": "https://buffedlizard55-lab.github.io/14GEMSDOE/docs/index.html",
+      "file": "GEMS_r5-geom-horse-ensemble_20260929T154852Z_ccbe1de0_site_e96e942f",
+      "score": 0.002,
+      "score_status": "owner_reported_not_receipt_verified"
+    },
+    {
+      "repo": "17GEMSDOE",
+      "site_url": "https://buffedlizard55-lab.github.io/17GEMSDOE/",
+      "file": "17GEMSDOE_F-ensemble-2pct_20260930T050626Z",
+      "score": 0.0187,
+      "score_status": "owner_reported_not_receipt_verified"
+    },
+    {
+      "repo": "18GEMSDOE",
+      "site_url": "https://buffedlizard55-lab.github.io/18GEMSDOE/",
+      "file": "H19-C_20260930T212401Z_c11e495e",
+      "score": 0.0297,
+      "score_status": "owner_reported_not_receipt_verified"
+    },
+    {
+      "repo": "19GEMSDOE",
+      "site_url": "https://buffedlizard55-lab.github.io/19GEMSDOE/docs/index.html",
+      "file": "h19-4-multiline-corroborated-openness-thermal-pop-20260930-691e4dfa-nan",
+      "score": 0.1894,
+      "score_status": "owner_reported_not_receipt_verified"
+    },
+    {
+      "repo": "19GEMSDOE",
+      "site_url": "https://buffedlizard55-lab.github.io/19GEMSDOE/docs/index.html",
+      "file": "h19-5-powerlaw-budget-multiline-corroborated-20260930-e27054cf-nan",
+      "score": 0.1922,
+      "score_status": "owner_reported_not_receipt_verified"
+    },
+    {
+      "repo": "GEMSDOE10",
+      "site_url": "https://buffedlizard55-lab.github.io/GEMSDOE10/",
+      "file": "h16-continuation-20260927T065521077735Z-3431b83c7c",
+      "score": 0.0461,
+      "score_status": "owner_reported_not_receipt_verified"
+    },
+    {
+      "repo": "GEMSDOE10",
+      "site_url": "https://buffedlizard55-lab.github.io/GEMSDOE10/",
+      "file": "h20-dem10-scarp-thin-20260927T155223039488Z-ffc91a1686",
+      "score": 0.0921,
+      "score_status": "owner_reported_not_receipt_verified"
+    },
+    {
+      "repo": "GEMSDOE10",
+      "site_url": "https://buffedlizard55-lab.github.io/GEMSDOE10/",
+      "file": "H25-ctx-ridge-20260927T232947704150Z-6452ae1d00",
+      "score": 0.128,
+      "score_status": "owner_reported_not_receipt_verified"
+    },
+    {
+      "repo": "GEMSDOE10",
+      "site_url": "https://buffedlizard55-lab.github.io/GEMSDOE10/",
+      "file": "h28-dotted-ridge-20260928T020256236880Z-6452ae1d00",
+      "score": 0.1839,
+      "score_status": "owner_reported_not_receipt_verified"
+    },
+    {
+      "repo": "13GEMSDOE",
+      "site_url": "https://buffedlizard55-lab.github.io/13GEMSDOE/",
+      "file": "20261001_r13-lattice-s5_v2_nan-outside",
+      "score": 0.0904,
+      "score_status": "owner_reported_not_receipt_verified"
+    },
+    {
+      "repo": "16GEMSDOE",
+      "site_url": "https://buffedlizard55-lab.github.io/16GEMSDOE/docs/index.html",
+      "file": "h16-1-topo-geophys-baseline-ridges-20260930-df20f65e-nan",
+      "score": 0.1855,
+      "score_status": "owner_reported_not_receipt_verified"
+    },
+    {
+      "repo": "16GEMSDOE",
+      "site_url": "https://buffedlizard55-lab.github.io/16GEMSDOE/docs/index.html",
+      "file": "h18-3a-topo-geophys-x-complexity-prior-20260930-c502dfab-nan",
+      "score": 0.0976,
+      "score_status": "owner_reported_not_receipt_verified"
+    },
+    {
+      "repo": "16GEMSDOE",
+      "site_url": "https://buffedlizard55-lab.github.io/16GEMSDOE/docs/index.html",
+      "file": "h18-4-usgs-geologic-map-faults-gap-20260930-aef8f42c-nan",
+      "score": 0.036,
+      "score_status": "owner_reported_not_receipt_verified"
+    },
+    {
+      "repo": "GEMSDOE21",
+      "site_url": "https://buffedlizard55-lab.github.io/GEMSDOE21/",
+      "file": "h19-4-reference-20260930-691e4dfa",
+      "score": 0.1894,
+      "score_status": "owner_reported_not_receipt_verified"
+    },
+    {
+      "repo": "20GEMSDOE",
+      "site_url": "https://buffedlizard55-lab.github.io/20GEMSDOE/docs/index.html",
+      "file": "h20-1-sarnnpu-powerlaw-pi0363-tilt-wingcrack-20260930-be0e8f6b-nan",
+      "score": 0.189,
+      "score_status": "owner_reported_not_receipt_verified"
+    },
+    {
+      "repo": "20GEMSDOE",
+      "site_url": "https://buffedlizard55-lab.github.io/20GEMSDOE/docs/index.html",
+      "file": "h20-5-continuous-pu-proxy-unverified-20260930-824ce73a-nan",
+      "score": null,
+      "score_status": "no_score_provided"
+    },
+    {
+      "repo": "GEMSDOE22",
+      "site_url": "https://buffedlizard55-lab.github.io/GEMSDOE22/docs/index.html",
+      "file": "h23-a-dti-optimal-emission-6pct-20261002-e2ec4b49-nan",
+      "score": 0.1002,
+      "score_status": "owner_reported_not_receipt_verified"
+    },
+    {
+      "repo": "GEMSDOE22",
+      "site_url": "https://buffedlizard55-lab.github.io/GEMSDOE22/docs/index.html",
+      "file": "h23-b-dti-optimal-emission-10pct-20261002-86176698-nan",
+      "score": null,
+      "score_status": "no_score_provided"
+    },
+    {
+      "repo": "GEMSDOE23",
+      "site_url": "https://buffedlizard55-lab.github.io/GEMSDOE23/",
+      "file": null,
+      "score": null,
+      "score_status": "no_file_or_score_provided"
+    },
+    {
+      "repo": "GEMSDOE24",
+      "site_url": "https://buffedlizard55-lab.github.io/GEMSDOE24/",
+      "file": "h25-1-dotted-h19-5-d1-5-20261002-989f59505db1-nan",
+      "score": 0.2477,
+      "score_status": "owner_reported_not_receipt_verified"
+    },
+    {
+      "repo": "25GEMSDOE (name in brief)",
+      "site_url": null,
+      "file": null,
+      "score": null,
+      "score_status": "no_url_file_or_score_provided"
+    },
+    {
+      "repo": "26GEMSDOE (name in brief)",
+      "site_url": null,
+      "file": null,
+      "score": null,
+      "score_status": "no_url_file_or_score_provided"
+    },
+    {
+      "repo": "27GEMSDOE (name in brief)",
+      "site_url": null,
+      "file": null,
+      "score": null,
+      "score_status": "no_url_file_or_score_provided"
+    }
+  ]
+}

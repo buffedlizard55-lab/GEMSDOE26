@@ -1,0 +1,20 @@
+band,name,valid_inside_pixels,normalization_median,normalization_scale,verification
+1,mag_anom - Magnetic anomaly - deviation from expected Earth's magnetic field,5164312,-57.68793296813965,124.71309143066418,embedded owner-mirror metadata; physical aliases not fully authenticated
+2,rtp - Reduced to pole magnetic data - magnetic anomaly corrected for latitude effects,5164312,-137.22166442871094,174.07086914062515,embedded owner-mirror metadata; physical aliases not fully authenticated
+3,tmi_hg - Total magnetic intensity horizontal gradient - rate of change in horizontal direction,5164312,13.155465126037598,35.64210016936065,embedded owner-mirror metadata; physical aliases not fully authenticated
+4,geod_2ndinv - Geodetic second invariant - measure of strain rate tensor magnitude,5164312,19.90778923034668,12.550000190734863,embedded owner-mirror metadata; physical aliases not fully authenticated
+5,iso_grav_anom_slope - Isostatic gravity anomaly slope - gradient of gravity after isostatic correction,5164312,0.10218460857868195,0.07649870078079403,embedded owner-mirror metadata; physical aliases not fully authenticated
+6,tc - Tilt angle or total curvature - magnetic field derivative for edge detection,5164300,18.48169994354248,4.282358131408689,embedded owner-mirror metadata; physical aliases not fully authenticated
+7,geod_shearrate - Geodetic shear rate - rate of angular deformation from GPS/InSAR,5164312,9.699999809265137,8.649999618530273,embedded owner-mirror metadata; physical aliases not fully authenticated
+8,geod_dilaterate - Geodetic dilatation rate - rate of volumetric strain (expansion/contraction),5164312,5.5,7.887011995315554,embedded owner-mirror metadata; physical aliases not fully authenticated
+9,tmi_vg - Total magnetic intensity vertical gradient - rate of change in vertical direction,5164312,-0.008997071534395218,0.26468635216355413,embedded owner-mirror metadata; physical aliases not fully authenticated
+10,"deq_n100a15 - Distance to earthquake (n=100km radius, a=15° azimuth parameters)",5164312,622.7999877929688,6600.700000762939,embedded owner-mirror metadata; physical aliases not fully authenticated
+11,iso_grav_anom_vg - Isostatic gravity anomaly vertical gradient - vertical rate of change,5164312,-0.07213491946458817,1.789122025966646,embedded owner-mirror metadata; physical aliases not fully authenticated
+12,det_elev - Detrended elevation - topography with regional trends removed,5164312,-75.57621002197266,253.89093994140643,embedded owner-mirror metadata; physical aliases not fully authenticated
+13,iso_grav_anom - Isostatic gravity anomaly - gravity after compensating for topographic mass,5164312,-7.26103401184082,10.243065958023074,embedded owner-mirror metadata; physical aliases not fully authenticated
+14,tmi - Total magnetic intensity - total strength of magnetic field,5164312,-124.8157730102539,157.21814926147465,embedded owner-mirror metadata; physical aliases not fully authenticated
+15,depth_to_base_surf - Depth to basement surface - thickness of sedimentary cover,5164312,316.3645324707031,662.368481163979,embedded owner-mirror metadata; physical aliases not fully authenticated
+16,"ieq_n100a15 - Earthquake intensity or density (n=100km radius, a=15° parameters)",5164312,755.7000122070312,934.2750091552734,embedded owner-mirror metadata; physical aliases not fully authenticated
+17,cond_surf - Conductivity surface - electrical conductivity of subsurface,5164312,2.885897636413574,0.7004575133323669,embedded owner-mirror metadata; physical aliases not fully authenticated
+18,iso_grav_anom_hg - Isostatic gravity anomaly horizontal gradient - horizontal rate of change,5164312,0.037620771676301956,2.2346880984306337,embedded owner-mirror metadata; physical aliases not fully authenticated
+19,det_elev_slope - Detrended elevation slope - gradient of elevation after detrending,5164312,3.7492629289627075,7.470555298402906,embedded owner-mirror metadata; physical aliases not fully authenticated

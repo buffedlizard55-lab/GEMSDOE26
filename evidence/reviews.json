@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "passes": [
+    {
+      "pass": 1,
+      "title": "Complete initial experiment, export and publication implementation",
+      "completed_utc": "2026-10-02T20:01:14+00:00",
+      "status": "IMPLEMENTED_AND_CHECKED_WITH_IDENTIFIED_UI_FIX",
+      "summary": "Real SSL/anomaly/frozen-head/four-fold run finished and failed science gate; 72 Python tests and 4 JS tests passed. Three TIFFs and browser-generated full-grid TIFF passed strict Rasterio checks. 7 HTML pages/189 local references checked. Chromium found the laptop download bottom 777.8px below a 768px viewport; image sizing and first-screen layout queued for Pass 2. Browser NSS dependencies recovered from pinned package after apt networking failed.",
+      "tests": {
+        "python_passed": 72,
+        "node_passed": 4,
+        "html_pages": 7,
+        "local_references": 189,
+        "browser_checks_passed": 20,
+        "browser_checks_failed": 1
+      },
+      "scientific_decision": "BLOCKED_DO_NOT_SUBMIT"
+    },
+    {
+      "pass": 2,
+      "title": "Pathological-input, provenance, reproducibility and first-screen review",
+      "completed_utc": "2026-10-02T20:21:40+00:00",
+      "status": "PASS_ENGINEERING_SCIENCE_REMAINS_BLOCKED",
+      "summary": "Fixed missing-CRS error, zero/invalid masks, hidden NaN multiplication, missing-target NaN gradients, pre-quantization range checks, uint8 mask indexing, empty footprints, unsafe dates, zero-epoch heads, invalid ridge sigma and malformed metadata preservation. Shortened hero, fixed portrait overflow, added portable locked browser libraries and last-good feed cache. Updated executable cold-replication route and restored missing anomaly step in README; original prompt preserved byte-for-byte. 100 Python tests, 5 JS tests, 21 Chromium checks and 189 local references pass. No changed scientific thresholds or promotion of the failed candidate.",
+      "tests": {
+        "python_passed": 100,
+        "node_passed": 5,
+        "browser_passed": 21,
+        "local_references": 189
+      },
+      "scientific_decision": "BLOCKED_DO_NOT_SUBMIT"
+    },
+    {
+      "pass": 3,
+      "title": "Cold end-to-end replication and final request reconciliation",
+      "completed_utc": "2026-10-02T20:38:44+00:00",
+      "status": "PASS_ENGINEERING_SCIENCE_REMAINS_BLOCKED",
+      "summary": "Cold source-isolated automatic restore\u2192prepare\u2192six-pass SSL\u2192masked inference\u2192anomaly\u2192four-fold heads/holdout reproduced encoder state, all six metric arms and all three TIFFs exactly. Fresh base install passed 85 non-Torch tests; full environment 100 Python tests and 5 JS tests pass. Added small-phone first-screen check, real direct-download filename/SHA and clipboard test; fixed small-screen wrapping and asynchronous clipboard permissions/fallback. All 26 Chromium checks pass and the actual browser-downloaded TIFF passes independent Rasterio cell/NaN identity. Full original prompt preserved and requirements explicitly distinguish implemented engineering from unmet winning-score/independent-truth goals. PR/deployment follows, recorded separately after execution. Final staging review found and fixed an omitted linked test-source directory; the public allowlist now includes tests without raw data/.git. Final local reference count 192.",
+      "tests": {
+        "python_passed": 101,
+        "node_passed": 5,
+        "fresh_base_tests_passed": 85,
+        "browser_passed": 26,
+        "html_pages": 7,
+        "local_references": 192,
+        "cold_replication_pass": true
+      },
+      "scientific_decision": "BLOCKED_DO_NOT_SUBMIT"
+    }
+  ],
+  "scope": "Successive implementation checks, not independent scientific experiments. Entries are added only after execution."
+}

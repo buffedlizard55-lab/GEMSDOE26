@@ -1,57 +1,98 @@
-# GEMSDOE26 · learn the background before learning the faults
+# GEMSDOE26 · learn the region before learning the faults
 
-**Read this entire README, including the complete owner prompt below, at the start of every project session.** Maximize P(Win) and Own the Outcome: preserve negative results, protect weekly submission slots, and never replace evidence with an optimistic score claim.
+**Read this entire README, including the complete owner prompt below, at the start of every session.** Maximize P(Win). Own the Outcome. Preserve failures, protect weekly slots, and never turn a format pass into an invented performance claim.
 
-## First priority: a downloadable competition GeoTIFF
+## Download first — real TIFF, research-only
 
-- **Site:** https://buffedlizard55-lab.github.io/GEMSDOE26/
-- **Submission guide:** [Executive summary](docs/executive-summary.html)
-- The first screen must expose the exact evaluated `.tif`, a unique name, short note, checksum, format receipt and scientific release decision.
-- **Format validation is separate from permission to spend a slot.** A new idea is not recommended unless it beats the current comparable blocked-holdout best. No automated competition uploads.
-- The reported H25-1 score **0.2477** belongs to the owner’s brief; a requested initial official leaderboard snapshot showed an account with 0.2477, but did not identify its TIFF. The snapshot leader was **0.3195**, not a promise or permanent ranking.
+**[Download H26-SSL-v1 `.tif`](https://buffedlizard55-lab.github.io/GEMSDOE26/docs/downloads/gems26-ssl-v1-20261002-4fdde73c40a7-nan.tif)** · [Site](https://buffedlizard55-lab.github.io/GEMSDOE26/) · [Executive submission guide](docs/executive-summary.html)
 
-## Starting state and next work
+> **BLOCKED_DO_NOT_SUBMIT.** This new model lost all four confirmation quadrants to both the exact historical H25 reference and the matched raw-feature head. No competition upload or weekly slot was used. It does **not** establish a score above 0.2477 or 0.3195.
 
-This checkout initially had only an 11-byte title README: there was no existing pipeline, data, website, or prior-session code here. Reviewed public sibling evidence is recorded as external historical evidence, not experiments run in this repo.
+- Actual file: `docs/downloads/gems26-ssl-v1-20261002-4fdde73c40a7-nan.tif`, **469,098 bytes / 60,068 selected cells**.
+- SHA256: `34f590461ae021830d98521567a2b1fcdfd60eeb9032e70de9bb000618ec4d35`.
+- One float32 band, **3,292×3,730**, EPSG:32611, affine `(100,0,243350,0,-100,4508550)`, finite 0/1 inside the **5,167,373**-cell footprint, NaN outside. Raw and masked read-back both pass. Mirror template is not organizer-authenticated.
+- Note: `GEMS26 SSL-v1 | full-raster masked pretrain; frozen head; 90/10 error fusion; 60068 dots | unscored | BLOCKED_DO_NOT_SUBMIT`.
+- The separately available label-free-error ablation is research-only. The historical H25-1 download is **identical old bytes, not a new submission; do not resubmit**.
+- Browser export writes the **same evaluated prediction cells** to a unique UTC-named TIFF; it is a tested format-copy, not browser training/new predictions/a score improvement.
 
-1. Freeze geological hypotheses and evaluation rules **before** implementation: [preregistration](knowledge/preregistration.md).
-2. Restore hash-pinned owner-mirrored inputs autonomously. Hash integrity is **not organizer-authenticated provenance**.
-3. Pretrain on **every pixel of the full unlabeled 19-band footprint** using random masked patches; never open fault labels until pretraining and masked-error inference complete.
-4. Freeze the encoder; fit only small final heads on geographically separated training labels. Keep a label-free anomaly signal and a matched supervised control.
-5. Validate on four buffered spatial quadrants, report dense and sparse-simulation DTI, compare with the exact historical H25-1 best; do not consume a weekly slot on a failed gate.
-6. Export/read back/validate exact-grid float32 predictions in [0,1], with NaN outside; publish the format and research decisions independently.
-7. Review in three recorded passes, open a PR from the Arena session branch, merge only after checks pass, and verify Pages deployment.
+## Actual result, not a plan
 
-## Evidence and compliance
+Data placement is resolved: all **14 pinned owner-mirrored inputs** restored automatically. All **19 supplied bands** were retained numerically on the full footprint. Six exhaustive masked-pretraining passes visited/masked every footprint pixel, before any label-raster pixel access. **3,061** blank cells cannot furnish reconstruction targets. Masked Huber training loss fell 0.29933→0.15645; that is not fault accuracy.
 
-- Official sources, claims, limitations and timestamps belong in the source/claim ledgers and knowledge notes. Distinguish primary-source statements, owner-reported scores, local measurements and hypotheses.
-- The actual competition target is **fault locations**, not confirmed geothermal vents or production wells. Geothermal-resource discovery additionally needs heat, permeability, fluid and reservoir evidence.
-- MAE/Prithvi are a methodological precedent, not proof that reconstruction error identifies faults. Our CPU-sized convolutional masked autoencoder is not Prithvi or an architectural reproduction of He et al.’s ViT MAE.
-- Whole-raster unsupervised training is **transductive**. The known-fault proxy and component-thinned truth do not independently validate unknown faults.
-- DrivenData’s [Terms of Use](https://www.drivendata.org/termsofuse/) prohibit automatic site access. After discovering that provision, no further automated DrivenData access is permitted. The initial requested review was a tool-retrieved snapshot, not a human reading. Automated source updates must use permitted official APIs, not scrape the leaderboard. Account authentication, eligibility attestations and competition upload remain account-holder actions; never request credentials.
-- The [official rules PDF](https://docs.nlr.gov/docs/fy26osti/96647.pdf) was read in full. It requires three-per-week submission discipline, one selected final entry across both rounds, reproducibility assets for finalists, eligibility checks and disclosure of generative-AI assistance. See [AI disclosure](AI_DISCLOSURE.md).
+Frozen masked-error inference and the coherent label-free anomaly finished before first label access **2026-10-02 18:47:49 UTC**. Only final heads were then trained on component-grouped, 1.5 km-buffered spatial folds. No confirmation tuning; encoder parameter hash unchanged. The small convolutional MAE-inspired model ran on **CPU**, not GPU/Prithvi weights.
+
+| Arm | Dense pooled local DTI | Mean pooled sparse confirmation DTI |
+|---|---:|---:|
+| Historical H25-1 D1.5 | **0.171825** | **0.096261** |
+| Historical H19-5 parent | 0.166252 | 0.071466 |
+| Matched raw-feature head | **0.131911** | **0.074744** |
+| Frozen SSL head | 0.123590 | 0.070184 |
+| **Primary SSL + error** | **0.122164** | **0.069039 — REJECT** |
+| Label-free error only | 0.079130 | 0.044787 |
+
+These are known-catalogue density-sensitivity simulations, **not independent unknown-fault truth or live leaderboard scores**. Historical H25 catalogue masking leaks held-out geometry; the matched raw head is the fresh buffered OOF control. There is no random-encoder causal control and SSL has more input parameters. The anomaly is label-independent, **not statistically independent** or established fault-specific evidence.
+
+### Why the reported 0.2477 file is stronger
+
+We exactly reproduced the historical label-free BFS/D1.5 thinning: **121,131→60,069** points, no added pixel, maximum parent-to-kept distance **141.42 m**. In the paired local dense calculation it retains **87.16% weighted TP credit** but only **49.44% weighted FP mass**. This explains how reduced redundancy can improve the metric without a new detector. `TP+FP` is **not** generally the emitted count.
+
+The owner reports H19-5 **0.1922→H25-1 0.2477** (+28.88%); no authenticated filename/score receipt is accessible. The initial requested official snapshot showed DARD **0.3195** and an account at .2477, not a TIFF binding; it is **not a live feed**. See [scientific interpretation](knowledge/results.md), [exact forensics](evidence/reference_forensics.json), [historical review](knowledge/sibling-review.md).
+
+## Evidence, standing rules & limitations
+
+- [Four preregistered hypotheses](knowledge/preregistration.md), committed **02a8bad before implementation**, unchanged. H26-SSL tested/rejected; XEDGE untested; DRAIN deferred because official native-DEM bytes/region coverage are unverified here; CBASE depends on resolving original depth semantics.
+- [Complete result/gate](evidence/holdout.json), [paired confirmation draws](evidence/holdout_confirmation.json), [labels-first nuisance audit](evidence/accessibility_audit.json), [error diagnostics](evidence/error_diagnostics.json).
+- [Primary-source ledger](sources/catalog.json), [central claim ledger](sources/claims.json), [19-band inventory](sources/data_inventory.csv), [all reported scores](sources/reported_scores.csv), [requirement matrix](knowledge/requirement-matrix.md), [three review passes](evidence/reviews.json).
+- Full-unlabeled training is **transductive**. Catalogue thinning and reused quadrants do not independently validate unknown faults. Do not retune the failed run on revealed confirmation folds.
+- `tc`, earthquake aliases and conductive-base/basement naming remain ambiguous in the mirror. Do not infer full stress/MT tensors from scalar channels or declare radiometrics absent from uncertified tags.
+- The mirror example contains **60,988 positives and exactly matches known labels**, contrary to the described absence example. No example VALUES were used in SSL. Header/NaN footprint validated later. Hash integrity does not authenticate organizer provenance.
+- Target = **fault locations**, not confirmed geothermal vents/resources. Useful resource discovery requires additional heat, permeability/fluid, stress/lithology and field/well evidence.
+- [DrivenData Terms](https://www.drivendata.org/termsofuse/) prohibit automatic site access. The initial requested review was tool-retrieved **before discovering that term**, not human-read. No later competition scraping, automated login or upload is implemented. Eligibility/account-holder attestations cannot be supplied by an agent; never request credentials.
+- [Official rules PDF](https://docs.nlr.gov/docs/fy26osti/96647.pdf) read through its final section: 3 submissions/week, 1 selected final entry across both rounds, eligibility, finalist reproduction assets and AI disclosure. [AI assistance disclosure](AI_DISCLOSURE.md).
+- Daily workflow refreshes permitted **USGS metadata and DOE-deposited DataCite DOI metadata**, with visible timestamps/errors and cache-retained last good records, not a live leaderboard or model-training service. No automated branch commits. Failed source requests do not become fabricated successful checks.
 
 ## Reproduction
 
-The implementation and exact measured results are documented in `knowledge/results.md` and small JSON receipts under `evidence/`. Bulk inputs, tensor caches and checkpoints are ignored; only small publication deliverables are versioned. See `requirements.txt`, `requirements-train.txt`, and the CLI help for resource controls.
+This checkout originally had only an 11-byte title README; the previous ready-to-train/GPU-needed statement in the owner prompt did not describe existing code here. The complete CPU implementation and real artifacts now exist. Large raw data/checkpoints/tensor caches are ignored; pinned code, recipes, receipts and the small final TIFFs are versioned.
 
 ```bash
-python -m venv .venv
+python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
-# CPU PyTorch (use the appropriate CUDA wheel only on a GPU machine):
 .venv/bin/pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cpu
-bash scripts/download_competition_data.sh
-.venv/bin/python scripts/prepare_data.py
-.venv/bin/python scripts/pretrain.py
-.venv/bin/python scripts/infer_representation.py
-.venv/bin/python scripts/run_holdout.py
+# If the CPU index is TLS-blocked, the default PyPI wheel also runs on CPU,
+# but includes much larger CUDA dependencies: pip install -r requirements-train.txt
+
+# Automatic restore → prepare → SSL → masked inference → anomaly → heads/holdout/TIFF
+# Isolated fixed-parameter replication preserves the published failed receipts:
+.venv/bin/python scripts/reproduce.py
+# Uses ignored .cache/reproduction and shared ignored data/raw; no Git branch changes.
+# Repeating it verifies the completed replica without refitting. No parameter sweep.
+
+# Independent format verification of the original actual download:
+.venv/bin/python scripts/validate_submission.py docs/downloads/gems26-ssl-v1-20261002-4fdde73c40a7-nan.tif
+.venv/bin/python -m pytest -q
+npm ci --ignore-scripts
+npm test
+node scripts/browser_export_check.mjs .cache/browser-export.tif
+.venv/bin/python scripts/verify_browser_export.py .cache/browser-export.tif
 .venv/bin/python scripts/build_site.py
-.venv/bin/python -m pytest
 .venv/bin/python scripts/verify_site.py
-.venv/bin/python -m http.server 8080 --bind 0.0.0.0
+.venv/bin/python scripts/stage_site.py
+node scripts/browser_check.mjs
+# Serve only the public allowlist, never .git/raw inputs/environment/caches:
+.venv/bin/python -m http.server 8080 --bind 0.0.0.0 --directory .cache/pages-site
 ```
 
-No command logs into DrivenData or uploads a competition entry. Each stage fails closed on missing/mismatched inputs. Normal reproduction requires public GitHub read access (`gh` or the public API); GitHub credentials are never recorded. The scheduled feed refresh is metadata-only, not a model-training or live-leaderboard service.
+The original per-stage entry points remain available: `bash scripts/download_competition_data.sh`, `prepare_data.py`, `pretrain.py`, `infer_representation.py`, **`build_anomaly.py`**, `run_holdout.py`. The one-shot holdout runner refuses a second fit over archived results. Use isolated `reproduce.py`, not deletion/editing of evidence, for verification. Requires Python≥3.11, Node≥22, `gh` or public GitHub API read access and several GB of ignored cache storage. Chromium test libraries are extracted from the integrity-pinned npm package; no root/apt install or credentials needed.
+
+## Next session — most important first
+
+1. Reread this full prompt, preserve the negative gate, do not resubmit renamed identical fields.
+2. Resolve original organizer band semantics/template provenance and obtain independent unknown-fault/untouched spatial confirmation evidence.
+3. Preregister signed cross-scale gravity–magnetic boundary persistence (H26-XEDGE) with contact/survey-stripe controls before a new experiment; do not rescue current folds.
+4. Add random-frozen-encoder/matched-parameter controls and held-out **unlabeled reconstruction** evaluation for any new SSL claim.
+5. Verify official native 1 m tile **bytes/coverage/datum/seams**, not just URLs, before H26-DRAIN regional processing. GPU capacity alone does not fix missing truth or semantics.
+6. Eligibility, deadline confirmation and an eventual **approved** upload are lawful account-holder tasks. No current candidate is approved for a slot.
 
 ---
 

@@ -1,0 +1,31 @@
+# Original request — acceptance and limitations
+
+Read the complete prompt in README each session. Do not change the frozen H26 preregistration to conceal its negative result. Three successive checks are recorded in `evidence/reviews.json`; exact test counts belong to the log, not a timeless claim.
+
+| Owner requirement | Outcome / evidence | Boundary |
+|---|---|---|
+| Review repository and previous next steps | Empty initial repository audited; all 24 supplied sibling URLs have pinned source reviews, short roots followed to docs; 32 reported score entries retained | Source read ≠ deployed-site or submission-receipt verification; unspecified 25/26/27 lack URL/file/score |
+| Explain highest .2477 H25-1 result | Independent operator reconstruction, exact subset identity, counts, distances, and paired local TP/FP decomposition; `reference_forensics.json`, `knowledge/results.md` | Owner-reported hidden score, not authenticated file receipt or hidden causal decomposition |
+| Rank 3–5 novel geological hypotheses before implementation | Four ranked, layer/transform/novelty/physical rationale/cost/conditional benefit in committed preregistration `02a8bad` | Novelty relative to reviewed peers; not all scientific literature/unseen competitors; no invented numerical ΔDTI |
+| Check official free external sources before viability | USGS metadata/public-domain statement and exact S3 URLs checked; direct requests executed and TLS failures logged | Native DEM regional bytes/coverage NOT verified; DRAIN deferred; depth semantics remain unresolved |
+| Autonomous data restore and preparation | All 14 hash-pinned owner-mirror inputs restored, entire 19-band stack processed, real CPU run | Mirror integrity ≠ organizer authenticity; no unlawful competition login automation |
+| Full unlabeled raster first, random masked patches | Six exhaustive passes, full 5,167,373-pixel footprint, 19 bands, 75% masks, visit/mask coverage; `pretraining.json` | 3,061 blank cells cannot supply targets. Convolutional objective-inspired model, not ViT MAE/Prithvi; no reconstruction validation set |
+| Final-layer-only sparse-label learning | Encoder/decoder frozen, detached caches, matched raw/SSL final heads, unchanged state hash | Equal hidden widths but not input parameter count; random-encoder causal control absent; scores uncalibrated |
+| Independent label-free anomaly | Masked inference/coherent error completed before label access; ablation exported, `anomaly.json`/`representation.json` | Label independence ≠ statistical independence or fault specificity; weak known-catalogue AUC, no unknown-fault evidence |
+| Spatial blocked validation before weekly slot | Four buffered component-grouped outer folds, paired 30+30 draws, exact metric, frozen gates | Known-catalogue sensitivity only; H25 catalogue-mask leakage; no independent new-fault truth |
+| No slot without beating current comparable best | **Satisfied: rejected candidate, zero uploads, `BLOCKED_DO_NOT_SUBMIT`** | Failure is retained, not retuned or cosmetically renamed into eligibility |
+| Generate score above .2477 / .3195 and place top | **NOT MET: primary .069039 sparse proxy loses to H25 .096261 and raw .074744; all 4 fold losses** | Do not promise an external score or top prize. Snapshot target .3195 is not a live monitored ranking |
+| Actual obvious first-screen .tif | Root/nested landing and executive guide contain actual compressed research TIFF; unique filename, note, SHA and checks | Research-only; no approved new competition candidate. Historical reference clearly identical/do not resubmit |
+| Exact single float32 [0,1], CRS, shape, affine, NaN footprint | Strict raw/masked read-back, range/grid/identity tests, actual output receipts | No silently clipped input. Cause of prior rejected file unknown; no server acceptance or organizer provenance guarantee |
+| Website generates a TIFF | Browser reconstructs full exact frozen cell field, checks fingerprint, writes valid TIFF; independent Rasterio identity test | Format-copy, NOT retraining/new predictions/new score; uncompressed ~49 MB, compressed direct download preferred |
+| Clean, organized, easy UI and executive guide | Static responsive root Pages, actual map previews, search, copy fields, download guide, CSV/source tables, readable boundaries | Upload steps apply only to a future approved candidate; current gate forbids upload |
+| Deep official scientific literature and reusable knowledge | Source/claim ledgers with verification depth, DOI/license/source availability; CVPR MAE, Prithvi/NASA, USGS/GDR, primary geological papers | Abstract/method/source scopes labelled; no claim all papers/code were read/reproduced in full; no confirmed vent list |
+| Current automatic feed | Daily permitted USGS/DOE-deposited DOI metadata refresh, timestamps/errors/last-good preservation | No DrivenData scraping/live score feed; source metadata refresh does not retrain/revalidate the model |
+| Whole prompt saved and values retained | Original repeated prompt verbatim in README; AGENTS reread rule; Maximize P(Win), Own the Outcome; AI disclosure | Owner's obsolete GPU/data-placement assertions corrected in current summary, not erased from original prompt |
+| Three implementation/review passes, edge fixes | Executed logs, pathological tests, browser export/UI checks and full request reconciliation are recorded progressively | Not three independent confirmation folds or an excuse to retune failed scores |
+| PR, merge main and verify deployment | Requested publication step follows passing engineering checks; receipt recorded after execution | Work remains on the fixed Arena session branch; no claimed merge/deploy until actual success |
+| Limitations / concrete next session | `knowledge/results.md`, `docs/review.html`, `knowledge/sibling-review.md` | Independent truth, semantic/provenance resolution, random-encoder controls, official native DEM processing remain outstanding |
+
+## Current release decision
+
+Engineering success does not imply scientific success. No validated new winning candidate, no proven new geothermal vent, no live score, no weekly slot used. Preserve exact downloads/negative results and freeze a genuinely new confirmation protocol before further experimentation.

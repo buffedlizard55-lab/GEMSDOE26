@@ -1,0 +1,155 @@
+{
+  "checked_utc": "2026-10-02T18:35:51+00:00",
+  "integrity_not_organizer_authentication": true,
+  "files": [
+    {
+      "repo": "buffedlizard55-lab/GEMSDOE",
+      "ref": "c0c06ac82178f26b94fce3397036ef8f12a2f3a0",
+      "remote_paths": [
+        "data/bridge/gems-geodawn-numerical-features.tif.part-000",
+        "data/bridge/gems-geodawn-numerical-features.tif.part-001",
+        "data/bridge/gems-geodawn-numerical-features.tif.part-002",
+        "data/bridge/gems-geodawn-numerical-features.tif.part-003",
+        "data/bridge/gems-geodawn-numerical-features.tif.part-004"
+      ],
+      "path": "data/raw/training_features.tif",
+      "bytes": 418912844,
+      "sha256": "4371c82e3b8339b807bdffcf4ef59a225520fe2988d521be208ae33743123bc5",
+      "status": "owner_mirror_integrity_only",
+      "verified": true
+    },
+    {
+      "repo": "buffedlizard55-lab/GEMSDOE24",
+      "ref": "07345ea0604953d7efb858d9cfbc21e20c7aca0b",
+      "remote_path": "data/bridge/labels.tif",
+      "path": "data/raw/labels.tif",
+      "bytes": 425830,
+      "sha256": "7ba308ccdc4418b31a178f4f1ef21aaa6e152e4028f2f6f64b01f7eb25ae4093",
+      "status": "owner_mirror_integrity_only",
+      "verified": true
+    },
+    {
+      "repo": "buffedlizard55-lab/GEMSDOE24",
+      "ref": "07345ea0604953d7efb858d9cfbc21e20c7aca0b",
+      "remote_path": "data/bridge/sample_submission.tif",
+      "path": "data/raw/sample_submission.tif",
+      "bytes": 1599597,
+      "sha256": "2176d08e485aa2cd2860ce8df539db4faf4d76163b38a4dd8c30a40454d35cbc",
+      "status": "owner_mirror_integrity_only",
+      "verified": true
+    },
+    {
+      "repo": "buffedlizard55-lab/GEMSDOE24",
+      "ref": "07345ea0604953d7efb858d9cfbc21e20c7aca0b",
+      "remote_path": "docs/data/footprint.bin",
+      "path": "data/raw/footprint.bin",
+      "bytes": 15681,
+      "sha256": "9ec93feb7c07793a81332a30853e4971d51f6bf19791a09f195307f3d1f9893f",
+      "status": "owner_mirror_integrity_only",
+      "transport": "Git blobs API base64; contents endpoint returned corrupted small .bin bytes in this sandbox",
+      "verified": true
+    },
+    {
+      "repo": "buffedlizard55-lab/GEMSDOE24",
+      "ref": "07345ea0604953d7efb858d9cfbc21e20c7aca0b",
+      "remote_path": "docs/data/footprint.json",
+      "path": "data/raw/footprint.json",
+      "bytes": 546,
+      "sha256": "1ff930a731bf975871fe701eb2334bad48e659a76c01e19f74075896537a91fd",
+      "status": "owner_mirror_integrity_only",
+      "verified": true
+    },
+    {
+      "repo": "buffedlizard55-lab/GEMSDOE24",
+      "ref": "07345ea0604953d7efb858d9cfbc21e20c7aca0b",
+      "remote_path": "docs/downloads/gems24-h25-1-dotted-h19-5-d1-5-20261002-989f59505db1-nan.tif",
+      "path": "data/raw/h25_best.tif",
+      "bytes": 1632732,
+      "sha256": "68d0e2e4fcc594f9a23f56c44b885fee733d026d39be55e18ad2a07289525310",
+      "status": "owner_mirror_integrity_only",
+      "verified": true
+    },
+    {
+      "repo": "buffedlizard55-lab/GEMSDOE24",
+      "ref": "07345ea0604953d7efb858d9cfbc21e20c7aca0b",
+      "remote_path": "inputs/gems19-h19-5-powerlaw-budget-multiline-corroborated-20260930-e27054cf-nan.tif",
+      "path": "data/raw/h19_parent.tif",
+      "bytes": 1712322,
+      "sha256": "ec1f9b56b83ce33cad781ceb9f104b18fb4f2ff785263a4e89616af4aabdee8d",
+      "status": "owner_mirror_integrity_only",
+      "verified": true
+    },
+    {
+      "repo": "buffedlizard55-lab/GEMSDOE24",
+      "ref": "07345ea0604953d7efb858d9cfbc21e20c7aca0b",
+      "remote_path": "data/external/lidar_scarp_features_u8.tif",
+      "path": "data/raw/lidar_scarp_features_u8.tif",
+      "bytes": 36943606,
+      "sha256": "d580bb8bdcdb941e32fefb8b38044bc5bf04e199bf2e83498c3576e6fc465568",
+      "status": "owner_mirror_integrity_only",
+      "verified": true
+    },
+    {
+      "repo": "buffedlizard55-lab/GEMSDOE24",
+      "ref": "07345ea0604953d7efb858d9cfbc21e20c7aca0b",
+      "remote_path": "data/external/lidar_scarp_features.json",
+      "path": "data/raw/lidar_scarp_features.json",
+      "bytes": 3531,
+      "sha256": "9ef0df6e87598a8b0cd52fe821661e5fdb3a00568c5d9b1c5d61fd6b242dcd41",
+      "status": "owner_mirror_integrity_only",
+      "verified": true
+    },
+    {
+      "repo": "buffedlizard55-lab/GEMSDOE24",
+      "ref": "07345ea0604953d7efb858d9cfbc21e20c7aca0b",
+      "remote_path": "data/external/audit_sources/tiger_road_distance_m.tif",
+      "path": "data/raw/tiger_road_distance_m.tif",
+      "bytes": 10492276,
+      "sha256": "e5350423508968fa2d32b0a6ae0d3fb4ae3ea645e3b8736f0c8e7ad9ff2f2988",
+      "status": "owner_mirror_integrity_only",
+      "verified": true
+    },
+    {
+      "repo": "buffedlizard55-lab/GEMSDOE24",
+      "ref": "07345ea0604953d7efb858d9cfbc21e20c7aca0b",
+      "remote_path": "data/external/audit_sources/blm_closed_claim_distance_m.tif",
+      "path": "data/raw/blm_closed_claim_distance_m.tif",
+      "bytes": 5752587,
+      "sha256": "a88356423c03fc8b6510a84f77cee2b1d38c4ccbd7761bc95c1ca8332a2e166a",
+      "status": "owner_mirror_integrity_only",
+      "verified": true
+    },
+    {
+      "repo": "buffedlizard55-lab/GEMSDOE24",
+      "ref": "07345ea0604953d7efb858d9cfbc21e20c7aca0b",
+      "remote_path": "data/external/audit_sources/acquisition_block_id_100m.tif",
+      "path": "data/raw/acquisition_block_id_100m.tif",
+      "bytes": 85031,
+      "sha256": "2c0785c4b3ec46c734d1be7a7aedbb3e816201100ab358033a3af074418c894a",
+      "status": "owner_mirror_integrity_only",
+      "verified": true
+    },
+    {
+      "repo": "buffedlizard55-lab/GEMSDOE24",
+      "ref": "07345ea0604953d7efb858d9cfbc21e20c7aca0b",
+      "remote_path": "data/external/audit_sources/acquisition_blocks_receipt.json",
+      "path": "data/raw/acquisition_blocks_receipt.json",
+      "bytes": 5736,
+      "sha256": "577076187434560514baa62995f6bb61b4d43f015b1abaf9a358936b94b5fb75",
+      "status": "owner_mirror_integrity_only",
+      "verified": true
+    },
+    {
+      "repo": "buffedlizard55-lab/GEMSDOE24",
+      "ref": "07345ea0604953d7efb858d9cfbc21e20c7aca0b",
+      "remote_path": "data/external/derived_sgmc_faults_100m_u8.tif",
+      "path": "data/raw/sgmc_faults.tif",
+      "bytes": 198602,
+      "sha256": "643cbe992ef4ba37588fb469163ed8291e3ceb23d6c1f78a3cfaa462430c2da0",
+      "status": "owner_mirror_integrity_only",
+      "verified": true
+    }
+  ],
+  "failures": [],
+  "note": "No raster label values opened. No automatic DrivenData access."
+}
