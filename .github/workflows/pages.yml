@@ -19,7 +19,7 @@ concurrency:
 jobs:
   verify:
     name: Scientific and website checks
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4, resolved 2026-10-02
@@ -111,7 +111,7 @@ jobs:
     name: Publish verified research site
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     needs: verify
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       pages: write
       id-token: write
@@ -119,7 +119,8 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Select GitHub Actions as the Pages publication source
+      - name: Select GitHub Actions as the Pages publication source when allowed
+        continue-on-error: true
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
