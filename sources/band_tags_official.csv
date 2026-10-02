@@ -1,0 +1,20 @@
+band,band_name,data_category,data_type,description
+1,mag_anom,magnetic_data,numeric,Magnetic anomaly - deviation from expected Earth's magnetic field
+2,rtp,magnetic_data,numeric,Reduced to pole magnetic data - magnetic anomaly corrected for latitude effects
+3,tmi_hg,magnetic_data,numeric,Total magnetic intensity horizontal gradient - rate of change in horizontal direction
+4,geod_2ndinv,geodetic_strain,numeric,Geodetic second invariant - measure of strain rate tensor magnitude
+5,iso_grav_anom_slope,gravity_data,numeric,Isostatic gravity anomaly slope - gradient of gravity after isostatic correction
+6,tc,magnetic_data,numeric,Tilt angle or total curvature - magnetic field derivative for edge detection
+7,geod_shearrate,geodetic_strain,numeric,Geodetic shear rate - rate of angular deformation from GPS/InSAR
+8,geod_dilaterate,geodetic_strain,numeric,Geodetic dilatation rate - rate of volumetric strain (expansion/contraction)
+9,tmi_vg,magnetic_data,numeric,Total magnetic intensity vertical gradient - rate of change in vertical direction
+10,deq_n100a15,seismic,numeric,"Distance to earthquake (n=100km radius, a=15° azimuth parameters)"
+11,iso_grav_anom_vg,gravity_data,numeric,Isostatic gravity anomaly vertical gradient - vertical rate of change
+12,det_elev,topographic,numeric,Detrended elevation - topography with regional trends removed
+13,iso_grav_anom,gravity_data,numeric,Isostatic gravity anomaly - gravity after compensating for topographic mass
+14,tmi,magnetic_data,numeric,Total magnetic intensity - total strength of magnetic field
+15,depth_to_base_surf,subsurface,numeric,Depth to basement surface - thickness of sedimentary cover
+16,ieq_n100a15,seismic,numeric,"Earthquake intensity or density (n=100km radius, a=15° parameters)"
+17,cond_surf,subsurface,numeric,Conductivity surface - electrical conductivity of subsurface
+18,iso_grav_anom_hg,gravity_data,numeric,Isostatic gravity anomaly horizontal gradient - horizontal rate of change
+19,det_elev_slope,topographic,numeric,Detrended elevation slope - gradient of elevation after detrending
