@@ -1,0 +1,12 @@
+{
+  "checked_utc": "2026-10-02T21:01:18.016Z",
+  "base_url": "https://buffedlizard55-lab.github.io/GEMSDOE26/",
+  "status": "FAIL",
+  "checks": [],
+  "errors": [
+    "net::ERR_CONNECTION_CLOSED at https://buffedlizard55-lab.github.io/GEMSDOE26/"
+  ],
+  "download_directory": "/home/user/GEMSDOE26/.cache/ui-downloads",
+  "screenshots_directory": "/home/user/GEMSDOE26/.cache/ui",
+  "external_links_not_crawled": true
+}

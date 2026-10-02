@@ -1,0 +1,37 @@
+{
+  "review_date_utc": "2026-10-02",
+  "site_url": "https://buffedlizard55-lab.github.io/GEMSDOE26/",
+  "guide_url": "https://buffedlizard55-lab.github.io/GEMSDOE26/docs/executive-summary.html",
+  "pull_requests": [
+    {"number":1,"url":"https://github.com/buffedlizard55-lab/GEMSDOE26/pull/1","state":"MERGED","merged_at":"2026-10-02T20:54:48Z","merge_commit":"2208178b852a16eb62d00cab9d31bc84dff537e7"},
+    {"number":2,"url":"https://github.com/buffedlizard55-lab/GEMSDOE26/pull/2","state":"MERGED","merged_at":"2026-10-02T21:01:43Z","merge_commit":"e3313fc565b66cf4a26d79d94b304c3914e5ae2e"}
+  ],
+  "verified_artifact_deployment": {
+    "run_id":37064320072,
+    "url":"https://github.com/buffedlizard55-lab/GEMSDOE26/actions/runs/37064320072",
+    "head_sha":"e3313fc565b66cf4a26d79d94b304c3914e5ae2e",
+    "conclusion":"success",
+    "scientific_and_website_checks_job":111028225146,
+    "publish_job":111028641548
+  },
+  "live_http_checks": {
+    "method":"fetch_page of actual deployed owner Pages, not a repository source read",
+    "root_download_and_blocked_warning_visible":true,
+    "executive_guide_and_real_tiff_link_visible":true,
+    "current_metadata_json_checked_url":"https://buffedlizard55-lab.github.io/GEMSDOE26/docs/data/source-feed.json?v=37064320072",
+    "deployed_refresh_attempted_utc":"2026-10-02T21:02:23+00:00",
+    "all_three_metadata_refreshes_succeeded":true,
+    "source_statuses":{"geodawn":"ok","3dep":"ok","gdr_registry":"ok"}
+  },
+  "irregularities": [
+    "Initial CI caught an unstaged root index.html; fixed before successful checks/merge.",
+    "Sandbox Pages-source setting update returned Resource not accessible by integration; direct custom artifact deployment succeeded while repository remains legacy main/root. Optional settings change is non-fatal.",
+    "Direct sandbox Chromium access to deployed HTTPS Pages closes at network transport; local Chromium and GitHub-runner UI/download checks pass. Deployed HTTP content independently read through fetch_page. Do not call the sandbox remote browser test a pass.",
+    "Initial same-URL web-tool cache returned the older source-feed JSON; cache-busted live URL confirms the new successful metadata refresh."
+  ],
+  "scientific_release":"BLOCKED_DO_NOT_SUBMIT",
+  "no_competition_upload":true,
+  "leaderboard_is_not_automatically_refreshed":true,
+  "native_dem_binary_full_region_availability_still_unverified":true,
+  "work_branch":"arena/01a0fdd8-gemsdoe26"
+}
