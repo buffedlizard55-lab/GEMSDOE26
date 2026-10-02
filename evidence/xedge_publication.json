@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "release": "H26-XEDGE-v1 research website and blocked OOF artifact",
+  "pull_request": {
+    "number": 4,
+    "url": "https://github.com/buffedlizard55-lab/GEMSDOE26/pull/4",
+    "state": "MERGED",
+    "base": "main",
+    "head_branch": "arena/01a0fe8a-gemsdoe26",
+    "head_commit": "f86c376",
+    "merge_commit": "33ed13e725b7761af6a500ffd0e1bdd2bac98a32",
+    "merged_at_utc": "2026-10-02T22:13:47Z",
+    "checks_run_id": 37071227432,
+    "checks_job_id": 111050890593,
+    "checks_conclusion": "success"
+  },
+  "post_merge_verification": {
+    "workflow": "Verify and publish Pages",
+    "run_id": 37071346730,
+    "url": "https://github.com/buffedlizard55-lab/GEMSDOE26/actions/runs/37071346730",
+    "head_sha": "33ed13e725b7761af6a500ffd0e1bdd2bac98a32",
+    "conclusion": "success",
+    "scientific_and_website_job_id": 111051265779,
+    "publish_job_id": 111051662955,
+    "publish_job_conclusion": "success"
+  },
+  "pages_artifact_deployment": {
+    "workflow": "pages-build-deployment",
+    "run_id": 37071345832,
+    "url": "https://github.com/buffedlizard55-lab/GEMSDOE26/actions/runs/37071345832",
+    "head_sha": "33ed13e725b7761af6a500ffd0e1bdd2bac98a32",
+    "conclusion": "success",
+    "deploy_job_id": 111051308944,
+    "deploy_job_conclusion": "success"
+  },
+  "live_http_checks": {
+    "checked_utc": "2026-10-02T22:16:59+00:00",
+    "method": "Cache-busted fetch_page reads of the actual public owner Pages URLs; not a repository-source read.",
+    "cache_bust": "?v=33ed13e725b7761af6a500ffd0e1bdd2bac98a32",
+    "root": {
+      "url": "https://buffedlizard55-lab.github.io/GEMSDOE26/?v=33ed13e725b7761af6a500ffd0e1bdd2bac98a32",
+      "fetched": true,
+      "xedge_oof_filename_visible": true,
+      "blocked_do_not_submit_visible": true,
+      "confirmation_scores_and_raw_margin_visible": true,
+      "no_upload_status_visible": true
+    },
+    "executive_guide": {
+      "url": "https://buffedlizard55-lab.github.io/GEMSDOE26/docs/executive-summary.html?v=33ed13e725b7761af6a500ffd0e1bdd2bac98a32",
+      "fetched": true,
+      "download_link_visible": true,
+      "unique_filename_note_sha_visible": true,
+      "grid_and_range_checks_visible": true,
+      "do_not_submit_warning_visible": true
+    },
+    "current_json": {
+      "url": "https://buffedlizard55-lab.github.io/GEMSDOE26/docs/data/current.json?v=33ed13e725b7761af6a500ffd0e1bdd2bac98a32",
+      "fetched": true,
+      "run": "H26-XEDGE-v1",
+      "sha256": "527cd3247208a80a17439ac4e72e08a55829bb2fe201b16aa328ae86eba6dfbd",
+      "scientific_decision": "BLOCKED_DO_NOT_SUBMIT",
+      "weekly_slot_spent": false
+    },
+    "direct_tiff_binary": {
+      "exact_remote_bytes_verified": false,
+      "attempt": "curl --fail --location to the deployed .tif URL",
+      "result": "Transport failed before download: OpenSSL SSL_connect SSL_ERROR_SYSCALL to buffedlizard55-lab.github.io:443.",
+      "local_and_CI_artifact_bytes_verified": true,
+      "local_bytes": 476670,
+      "local_sha256": "527cd3247208a80a17439ac4e72e08a55829bb2fe201b16aa328ae86eba6dfbd"
+    }
+  },
+  "historical_publication_receipt": "evidence/publication.json records the previous release from arena/01a0fdd8-gemsdoe26; it predates XEDGE.",
+  "scientific_release": "BLOCKED_DO_NOT_SUBMIT",
+  "no_competition_upload": true,
+  "leaderboard_or_competition_site_access_performed": false,
+  "limitations": [
+    "Public Pages root, guide and current JSON were fetched successfully; the deployed TIFF binary could not be fetched directly from this sandbox due TLS transport failure.",
+    "A deployment workflow success plus local CI artifact checks does not prove organizer acceptance or scientific performance."
+  ]
+}
