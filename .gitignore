@@ -1,0 +1,14 @@
+.venv/
+.cache/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.partial
+node_modules/
+data/raw/
+data/prepared/
+artifacts/
+logs/
+.coverage
+htmlcov/
+.env
