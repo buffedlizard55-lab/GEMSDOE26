@@ -1,31 +1,308 @@
 {
   "schema_version": 1,
   "claims": [
-    {"id":"C01","claim":"Competition target is fault locations; predictions are not confirmed geothermal vents.","status":"primary_source_checked","sources":["competition","siler","hermant"]},
-    {"id":"C02","claim":"Metric is distance-weighted Tversky with alpha=.2, beta=.8 and a 300 m triangular support.","status":"primary_source_checked","sources":["competition"],"implementation":"src/gems26/metric.py"},
-    {"id":"C03","claim":"With G truth pixels, DTI=T/[.2(T+F)+.8G]; T+F is not generally emitted pixel count.","status":"derived_from_verified_equations","sources":["competition"],"evidence":"tests/test_metric.py"},
-    {"id":"C04","claim":"A submission has one float32 band, [0,1] confidence, EPSG:32611, 100 m, exact template grid, null/NaN outside.","status":"primary_source_checked","sources":["competition","rules"],"evidence":"evidence/holdout.json#/artifacts"},
-    {"id":"C05","claim":"Three contest submissions per week, one final entry across both rounds, AI-use disclosure and finalist reproducibility assets are required.","status":"primary_source_checked_full_rules","sources":["rules"],"evidence":"AI_DISCLOSURE.md"},
-    {"id":"C06","claim":"Initial requested leaderboard snapshot showed DARD .3195 and account wbg1 .2477, not filenames.","status":"initial_tool_snapshot_not_current_feed","sources":["leaderboard"],"evidence":"docs/data/source-feed.json#/leaderboard"},
-    {"id":"C07","claim":"H25-1 scored .2477; H19-5 parent scored .1922.","status":"owner_reported_no_platform_receipt","sources":["h25"],"evidence":"README.md#complete-owner-prompt"},
-    {"id":"C08","claim":"The exact H25 raster is a 60069-pixel subset of the 121131-pixel parent; deterministic 1.5px operator reproduced pixel-for-pixel.","status":"locally_computed_integrity_only","sources":["h25"],"evidence":"evidence/reference_forensics.json"},
-    {"id":"C09","claim":"All 19 full-resolution stack bands were retained; six pretraining passes visited/masked every footprint pixel before raster label access.","status":"locally_computed_software_receipts","sources":["mae","prithvi"],"evidence":"evidence/pretraining.json","limit":"3061 in-footprint cells have no observed channel and cannot furnish target values; coverage means visit/mask, not invented data."},
-    {"id":"C10","claim":"Masked-error inference hides each pixel in three complementary masks, with spatial halos; encoder is frozen during final-head fitting.","status":"locally_computed_software_receipts","sources":["mae"],"evidence":"evidence/representation.json","limit":"Small convolutional objective-inspired model, not Prithvi, not a ViT-MAE architecture reproduction."},
-    {"id":"C11","claim":"Primary SSL fusion fails both frozen spatial selection and confirmation comparisons; do not submit.","status":"locally_computed_no_hidden_labels","sources":["h25"],"evidence":"evidence/holdout.json#/gate","limit":"Known-catalogue proxy plus repeated component-thinning draws; not independent novel-fault truth."},
-    {"id":"C12","claim":"Label-free reconstruction errors do not establish fault specificity; known-catalogue diagnostic AUC .53436.","status":"locally_computed_with_scientific_limit","sources":["earney","geodawn"],"evidence":"evidence/error_diagnostics.json","limit":"Label independence is not statistical independence; no hidden-fault or geothermal-vent discovery established."},
-    {"id":"C13","claim":"Mirror example submission has 60988 positives and exactly matches known labels, contrary to the official description of an absence sample.","status":"locally_computed_provenance_irregularity","sources":["competition"],"evidence":"evidence/holdout.json#/input_irregularities","limit":"Owner-mirrored file, not an organizer-authenticated original; no example VALUES used in SSL."},
-    {"id":"C14","claim":"tc and depth aliases in the mirror are physically ambiguous and should not be guessed.","status":"unresolved_semantics_flagged","sources":["competition","thermal_conductivity","geodawn"],"evidence":"evidence/preparation.json#/bands"},
-    {"id":"C15","claim":"TNM listed public-domain one-meter tiles, but direct tile/metadata requests fail TLS in this sandbox.","status":"metadata_verified_execution_blocked","sources":["3dep"],"evidence":"evidence/official_endpoint_checks.json","limit":"No verified regional raw-DEM download; H26-DRAIN remains deferred."},
-    {"id":"C16","claim":"Automatic DrivenData access is prohibited by the Terms; the daily feed must not scrape its site.","status":"primary_source_checked","sources":["terms","rules"],"implementation":"src/gems26/feed.py"},
-    {"id":"C17","claim":"The cause of the owner's earlier range-error rejection is unknown because the rejected file/server trace is absent.","status":"explicit_unknown","sources":["competition"],"evidence":"knowledge/results.md","limit":"New files pass local range/structure checks; no server-acceptance guarantee or unsupported historical root cause."},
-    {"id":"C18","claim":"A score above .2477 or .3195 is possible in principle but unsupported by either tested H26 candidate.","status":"conditional_judgment_not_score_prediction","sources":["competition","h25"],"evidence":"knowledge/results.md"},
-    {"id":"C19","claim":"The preregistered H26-XEDGE-v1 screen fails its fixed gate: confirmation sparse DTI .074969 versus .073836 raw and .096432 H25; dense .133141 versus .131911 raw and .171825 H25.","status":"locally_computed_preregistered_known_catalogue_screen","sources":["competition","h25"],"evidence":"evidence/xedge_holdout.json#/gate","limit":"Sparse improvement over raw is +.001132, below +.005; H25 dense noninferiority and H25 comparisons fail. Not hidden-fault or leaderboard evidence."},
-    {"id":"C20","claim":"The XEDGE four-fold OOF GeoTIFF passes strict local single-band float32 [0,1] grid/mask checks but is explicitly research-only and blocked from submission.","status":"locally_computed_format_not_scientific_release","sources":["competition"],"evidence":"evidence/xedge_holdout.json#/oof_artifact","limit":"OOF mosaic is not a full-data fit; owner-mirrored template is not organizer-authenticated and server acceptance is not guaranteed."},
-    {"id":"C21","claim":"H26-XEDGE feature construction completed before its first recorded label-pixel access; fixed RTP/gravity cross-scale feature support is 4,272,494 cells (82.68% of footprint).","status":"locally_computed_software_receipt","sources":["geodawn","earney"],"evidence":"evidence/xedge_feature.json","limit":"Band semantics are owner-mirror metadata; potential-field edges are not uniquely faults and may mark contacts, intrusions or survey artifacts."},
-    {"id":"C22","claim":"H27-SRCOH is a preregistered, label-free multiscale edge-coherence transform of the three owner-mirror strain-named channels; names/units are unverified and no full tensor is inferred.","status":"implemented_label_free_feature_screen_failed_as_recorded_in_C26","sources":["ingenious","geodawn"],"evidence":"evidence/h27_srcoh_feature.json","limit":"Owner-mirror aliases/units are unverified; the preregistered known-catalogue spatial screen failed (C26). No independent fault confirmation or geothermal-resource claim."},
-    {"id":"C23","claim":"USGS ComCat count query returned 14,502 events for the specified broad GeoDAWN bounding rectangle, M≥2.5, 1975-01-01 through 2024-12-31.","status":"official_api_count_query_not_completeness_validation","sources":["comcat","geodawn"],"evidence":"knowledge/hypothesis-slate-20261002-v2.md","limit":"Count does not verify complete records, detection completeness, faults or competition-footprint alignment."},
-    {"id":"C24","claim":"The official GeoDAWN ScienceBase item lists Area-1/Area-2 grid ZIP metadata (44,487,393 and 238,439,415 bytes); direct binary HEAD failed TLS in this sandbox.","status":"official_metadata_listed_binary_not_received","sources":["geodawn"],"evidence":"sources/catalog.json","limit":"Archive contents, precise radiometric channel schema and full aligned raster coverage remain unverified."},
-    {"id":"C25","claim":"The approximate USGS 3DEP 1-m product query returned 1,454 metadata items with download URLs, but no direct binary bytes or full exact-AOI coverage were verified here.","status":"official_metadata_available_raw_bytes_unverified","sources":["3dep"],"evidence":"knowledge/hypothesis-slate-20261002-v2.md","limit":"Do not call native 1-m drainage processing ready until footprint coverage, actual files, datum and seams are checked."},
-    {"id":"C26","claim":"The sole authorized H27-SRCOH screen failed its frozen gate: confirmation sparse local DTI 0.072414 versus matched raw 0.077166, fixed XEDGE OOF 0.075839, and H25 0.096849; status remains BLOCKED_DO_NOT_SUBMIT and no slot/upload occurred.","status":"preregistered_local_spatial_screen_failed_not_leaderboard_score","sources":["competition","h25","geodawn"],"evidence":"evidence/h27_srcoh_holdout.json#/gate","limit":"The draw groups reuse the known catalogue and revealed quadrants; H25 retains disclosed all-catalogue-mask leakage; owner-mirror strain aliases/units are unverified. Not independent unknown-fault truth or an official competition score. The experiment-time commit IDs are absent from this PR clone, so ancestry cannot be reauthenticated here; pinned source hashes remain inspectable."}
+    {
+      "id": "C01",
+      "claim": "Competition target is fault locations; predictions are not confirmed geothermal vents.",
+      "status": "primary_source_checked",
+      "sources": [
+        "competition",
+        "siler",
+        "hermant"
+      ]
+    },
+    {
+      "id": "C02",
+      "claim": "Metric is distance-weighted Tversky with alpha=.2, beta=.8 and a 300 m triangular support.",
+      "status": "primary_source_checked",
+      "sources": [
+        "competition"
+      ],
+      "implementation": "src/gems26/metric.py"
+    },
+    {
+      "id": "C03",
+      "claim": "With G truth pixels, DTI=T/[.2(T+F)+.8G]; T+F is not generally emitted pixel count.",
+      "status": "derived_from_verified_equations",
+      "sources": [
+        "competition"
+      ],
+      "evidence": "tests/test_metric.py"
+    },
+    {
+      "id": "C04",
+      "claim": "A submission has one float32 band, [0,1] confidence, EPSG:32611, 100 m, exact template grid, null/NaN outside.",
+      "status": "primary_source_checked",
+      "sources": [
+        "competition",
+        "rules"
+      ],
+      "evidence": "evidence/holdout.json#/artifacts"
+    },
+    {
+      "id": "C05",
+      "claim": "Three contest submissions per week, one final entry across both rounds, AI-use disclosure and finalist reproducibility assets are required.",
+      "status": "primary_source_checked_full_rules",
+      "sources": [
+        "rules"
+      ],
+      "evidence": "AI_DISCLOSURE.md"
+    },
+    {
+      "id": "C06",
+      "claim": "Initial requested leaderboard snapshot showed DARD .3195 and account wbg1 .2477, not filenames.",
+      "status": "initial_tool_snapshot_not_current_feed",
+      "sources": [
+        "leaderboard"
+      ],
+      "evidence": "docs/data/source-feed.json#/leaderboard"
+    },
+    {
+      "id": "C07",
+      "claim": "H25-1 scored .2477; H19-5 parent scored .1922.",
+      "status": "owner_reported_no_platform_receipt",
+      "sources": [
+        "h25"
+      ],
+      "evidence": "README.md#complete-owner-prompt"
+    },
+    {
+      "id": "C08",
+      "claim": "The exact H25 raster is a 60069-pixel subset of the 121131-pixel parent; deterministic 1.5px operator reproduced pixel-for-pixel.",
+      "status": "locally_computed_integrity_only",
+      "sources": [
+        "h25"
+      ],
+      "evidence": "evidence/reference_forensics.json"
+    },
+    {
+      "id": "C09",
+      "claim": "All 19 full-resolution stack bands were retained; six pretraining passes visited/masked every footprint pixel before raster label access.",
+      "status": "locally_computed_software_receipts",
+      "sources": [
+        "mae",
+        "prithvi"
+      ],
+      "evidence": "evidence/pretraining.json",
+      "limit": "3061 in-footprint cells have no observed channel and cannot furnish target values; coverage means visit/mask, not invented data."
+    },
+    {
+      "id": "C10",
+      "claim": "Masked-error inference hides each pixel in three complementary masks, with spatial halos; encoder is frozen during final-head fitting.",
+      "status": "locally_computed_software_receipts",
+      "sources": [
+        "mae"
+      ],
+      "evidence": "evidence/representation.json",
+      "limit": "Small convolutional objective-inspired model, not Prithvi, not a ViT-MAE architecture reproduction."
+    },
+    {
+      "id": "C11",
+      "claim": "Primary SSL fusion fails both frozen spatial selection and confirmation comparisons; do not submit.",
+      "status": "locally_computed_no_hidden_labels",
+      "sources": [
+        "h25"
+      ],
+      "evidence": "evidence/holdout.json#/gate",
+      "limit": "Known-catalogue proxy plus repeated component-thinning draws; not independent novel-fault truth."
+    },
+    {
+      "id": "C12",
+      "claim": "Label-free reconstruction errors do not establish fault specificity; known-catalogue diagnostic AUC .53436.",
+      "status": "locally_computed_with_scientific_limit",
+      "sources": [
+        "earney",
+        "geodawn"
+      ],
+      "evidence": "evidence/error_diagnostics.json",
+      "limit": "Label independence is not statistical independence; no hidden-fault or geothermal-vent discovery established."
+    },
+    {
+      "id": "C13",
+      "claim": "Mirror example submission has 60988 positives and exactly matches known labels, contrary to the official description of an absence sample.",
+      "status": "locally_computed_provenance_irregularity",
+      "sources": [
+        "competition"
+      ],
+      "evidence": "evidence/holdout.json#/input_irregularities",
+      "limit": "Owner-mirrored file, not an organizer-authenticated original; no example VALUES used in SSL."
+    },
+    {
+      "id": "C14",
+      "claim": "tc and depth aliases in the mirror are physically ambiguous and should not be guessed.",
+      "status": "unresolved_semantics_flagged",
+      "sources": [
+        "competition",
+        "thermal_conductivity",
+        "geodawn"
+      ],
+      "evidence": "evidence/preparation.json#/bands"
+    },
+    {
+      "id": "C15",
+      "claim": "TNM listed public-domain one-meter tiles, but direct tile/metadata requests fail TLS in this sandbox.",
+      "status": "metadata_verified_execution_blocked",
+      "sources": [
+        "3dep"
+      ],
+      "evidence": "evidence/official_endpoint_checks.json",
+      "limit": "No verified regional raw-DEM download; H26-DRAIN remains deferred."
+    },
+    {
+      "id": "C16",
+      "claim": "Automatic DrivenData access is prohibited by the Terms; the daily feed must not scrape its site.",
+      "status": "primary_source_checked",
+      "sources": [
+        "terms",
+        "rules"
+      ],
+      "implementation": "src/gems26/feed.py"
+    },
+    {
+      "id": "C17",
+      "claim": "The cause of the owner's earlier range-error rejection is unknown because the rejected file/server trace is absent.",
+      "status": "explicit_unknown",
+      "sources": [
+        "competition"
+      ],
+      "evidence": "knowledge/results.md",
+      "limit": "New files pass local range/structure checks; no server-acceptance guarantee or unsupported historical root cause."
+    },
+    {
+      "id": "C18",
+      "claim": "A score above .2477 or .3195 is possible in principle but unsupported by either tested H26 candidate.",
+      "status": "conditional_judgment_not_score_prediction",
+      "sources": [
+        "competition",
+        "h25"
+      ],
+      "evidence": "knowledge/results.md"
+    },
+    {
+      "id": "C19",
+      "claim": "The preregistered H26-XEDGE-v1 screen fails its fixed gate: confirmation sparse DTI .074969 versus .073836 raw and .096432 H25; dense .133141 versus .131911 raw and .171825 H25.",
+      "status": "locally_computed_preregistered_known_catalogue_screen",
+      "sources": [
+        "competition",
+        "h25"
+      ],
+      "evidence": "evidence/xedge_holdout.json#/gate",
+      "limit": "Sparse improvement over raw is +.001132, below +.005; H25 dense noninferiority and H25 comparisons fail. Not hidden-fault or leaderboard evidence."
+    },
+    {
+      "id": "C20",
+      "claim": "The XEDGE four-fold OOF GeoTIFF passes strict local single-band float32 [0,1] grid/mask checks but is explicitly research-only and blocked from submission.",
+      "status": "locally_computed_format_not_scientific_release",
+      "sources": [
+        "competition"
+      ],
+      "evidence": "evidence/xedge_holdout.json#/oof_artifact",
+      "limit": "OOF mosaic is not a full-data fit; owner-mirrored template is not organizer-authenticated and server acceptance is not guaranteed."
+    },
+    {
+      "id": "C21",
+      "claim": "H26-XEDGE feature construction completed before its first recorded label-pixel access; fixed RTP/gravity cross-scale feature support is 4,272,494 cells (82.68% of footprint).",
+      "status": "locally_computed_software_receipt",
+      "sources": [
+        "geodawn",
+        "earney"
+      ],
+      "evidence": "evidence/xedge_feature.json",
+      "limit": "Band semantics are owner-mirror metadata; potential-field edges are not uniquely faults and may mark contacts, intrusions or survey artifacts."
+    },
+    {
+      "id": "C22",
+      "claim": "The official reference-solution repository and this repo's independently mirrored training_features.tif agree on the GDAL band-tag schema (band_name/data_category/data_type/description) and the Tversky-loss constants (alpha=0.2, beta=0.8) used for the DTI metric.",
+      "status": "primary_source_checked_corroboration",
+      "sources": [
+        "reference_code",
+        "competition"
+      ],
+      "evidence": "sources/band_tags_official.csv",
+      "limit": "Confirms the tag SCHEMA and loss constants, not the physical meaning of ambiguous short band codes like 'tc'; see C14 for that open flag."
+    },
+    {
+      "id": "C23",
+      "claim": "DOE renamed the National Renewable Energy Laboratory to the National Laboratory of the Rockies (NLR) effective 2025-12-01, and NLR's own institutional record cites the GEMS Prize Official Rules (DOI 10.2172/3818146) consistent with our locally mirrored GEMS_96647.pdf.",
+      "status": "secondary_and_institutional_source_corroboration",
+      "sources": [
+        "nlr_rename",
+        "nlr_rules_citation"
+      ],
+      "limit": "Neither source is a direct fetch of the DOI-resolved PDF itself (osti.gov unreachable from this sandbox); treat as corroboration, not organizer authentication."
+    },
+    {
+      "id": "C24",
+      "claim": "H27-DILCOND-v1 (positive-dilatation x positive-conductivity local-anomaly coincidence, bands geod_dilaterate/cond_surf) was preregistered (commit a282a242a34612aeb06621f16de04b7686b33704) before implementation, its label-free feature completed before any label-pixel access, and its corrected frozen promotion gate evaluated BLOCKED_DO_NOT_SUBMIT: it beat the matched raw-feature head by +0.005367 pooled dense / +0.003198 pooled sparse DTI at confirmation (4/4 quadrant wins versus raw, below the +0.005 sparse requirement) and lost all four confirmation quadrants to historical H25-1.",
+      "status": "locally_computed_preregistered_known_catalogue_screen",
+      "sources": [],
+      "evidence": "evidence/dilcond_holdout.json",
+      "limit": "Known-catalogue sensitivity screen only, not independent unknown-fault or leaderboard evidence. No weekly submission slot was spent."
+    },
+    {
+      "id": "C25",
+      "claim": "This sandbox has no general HTTPS egress: direct connections to earthquake.usgs.gov, osti.gov, raw.githubusercontent.com and sentinel-cogs.s3.us-west-2.amazonaws.com all fail with SSL_ERROR_SYSCALL, while pypi.org and api.github.com succeed. The named free/official USGS ANSS earthquake catalog and AWS Open Data Earth Search STAC sources for H27-SEISMIC-LINEAMENT and H27-ALTERATION are therefore confirmed viable-in-principle but not obtainable from this environment, and both hypotheses are deferred rather than implemented against synthetic data.",
+      "status": "locally_computed_software_receipt",
+      "sources": [
+        "anss_catalog",
+        "earth_search_stac"
+      ],
+      "evidence": "evidence/egress_check.json",
+      "limit": "This is a statement about THIS sandbox's network policy at this timestamp, not a statement about whether these sources are reachable from an unrestricted runner (they should be, being public no-auth official/open-data APIs). The subsequent H27-SRCOH screen is separately documented in C26–C30."
+    },
+    {
+      "id": "C26",
+      "claim": "H27-SRCOH is a preregistered, label-free multiscale edge-coherence transform of the three owner-mirror strain-named channels; names/units are unverified and no full tensor is inferred.",
+      "status": "implemented_label_free_feature_screen_failed_as_recorded_in_C30",
+      "sources": [
+        "ingenious",
+        "geodawn"
+      ],
+      "evidence": "evidence/h27_srcoh_feature.json",
+      "limit": "Owner-mirror aliases/units are unverified; the preregistered known-catalogue spatial screen failed (C30). No independent fault confirmation or geothermal-resource claim."
+    },
+    {
+      "id": "C27",
+      "claim": "USGS ComCat count query returned 14,502 events for the specified broad GeoDAWN bounding rectangle, M≥2.5, 1975-01-01 through 2024-12-31.",
+      "status": "official_api_count_query_not_completeness_validation",
+      "sources": [
+        "anss_catalog",
+        "geodawn"
+      ],
+      "evidence": "knowledge/hypothesis-slate-20261002-v2.md",
+      "limit": "Count does not verify complete records, detection completeness, faults or competition-footprint alignment."
+    },
+    {
+      "id": "C28",
+      "claim": "The official GeoDAWN ScienceBase item lists Area-1/Area-2 grid ZIP metadata (44,487,393 and 238,439,415 bytes); direct binary HEAD failed TLS in this sandbox.",
+      "status": "official_metadata_listed_binary_not_received",
+      "sources": [
+        "geodawn"
+      ],
+      "evidence": "sources/catalog.json",
+      "limit": "Archive contents, precise radiometric channel schema and full aligned raster coverage remain unverified."
+    },
+    {
+      "id": "C29",
+      "claim": "The approximate USGS 3DEP 1-m product query returned 1,454 metadata items with download URLs, but no direct binary bytes or full exact-AOI coverage were verified here.",
+      "status": "official_metadata_available_raw_bytes_unverified",
+      "sources": [
+        "3dep"
+      ],
+      "evidence": "knowledge/hypothesis-slate-20261002-v2.md",
+      "limit": "Do not call native 1-m drainage processing ready until footprint coverage, actual files, datum and seams are checked."
+    },
+    {
+      "id": "C30",
+      "claim": "The H27-SRCOH-v1 screen failed its frozen gate: confirmation sparse local DTI 0.072414 versus matched raw 0.077166, fixed XEDGE OOF 0.075839, and H25 0.096849; status remains BLOCKED_DO_NOT_SUBMIT and no slot/upload occurred.",
+      "status": "preregistered_local_spatial_screen_failed_not_leaderboard_score",
+      "sources": [
+        "competition",
+        "h25",
+        "geodawn"
+      ],
+      "evidence": "evidence/h27_srcoh_holdout.json#/gate",
+      "limit": "The draw groups reuse the known catalogue and revealed quadrants; H25 retains disclosed all-catalogue-mask leakage; owner-mirror strain aliases/units are unverified. Not independent unknown-fault truth or an official competition score. The experiment-time commit IDs are absent from this PR clone, so ancestry cannot be reauthenticated here; pinned source hashes remain inspectable. No H27-SRCOH TIFF, upload, slot, or leaderboard access occurred."
+    }
   ]
 }

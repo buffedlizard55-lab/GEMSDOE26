@@ -14,10 +14,10 @@
     "masked_read_has_all_footprint_values": true,
     "prediction_digest_matches": true
   },
-  "path": ".cache/browser-export.tif",
-  "sha256": "6c505690c4c87df6cb585a200283331505e41424ed21f58d1de54b712aa0a456",
-  "prediction_sha256": "4fdde73c40a73247271ac2eeed63b396e515901ec06d95f8c1d6b40d1bf95a31",
-  "bytes": 49117072,
+  "path": "docs/downloads/gems26-dilcond-oof-v1-20261003-47629f496133-nan.tif",
+  "sha256": "d54cf7edc6ec57c29b88dec81fe3fb101efa4fe31fc9c1088664a0c2e5190887",
+  "prediction_sha256": "47629f49613365849724e198f048449d6dffb5c74d742347b27517e3bcac11d7",
+  "bytes": 475760,
   "inside_pixels": 5167373,
   "outside_pixels": 7111787,
   "inside_finite": 5167373,
@@ -26,8 +26,6 @@
   "positive_pixels": 60068,
   "mass": 60068.0,
   "scientific_release": "Separate from format; consult holdout and audit receipts",
-  "checked_utc": "2026-10-03T04:41:12+00:00",
-  "inside_cell_identity": true,
-  "nan_footprint_identity": true,
-  "scope": "JavaScript copy of same frozen prediction cells; not a new detector"
+  "method": "four-fold out-of-fold diagnostic; never an upload recommendation",
+  "short_comment": "GEMS26 DILCOND-v1 OOF | 300/600/1200m positive-dilatation x positive-conductivity local-anomaly coincidence; four buffered folds; research-only OOF, not full-fit; unscored"
 }

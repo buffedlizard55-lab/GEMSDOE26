@@ -141,7 +141,60 @@
     },
     {
       "pass": 8,
-      "review_set": "H27-SRCOH-v1 public status integration",
+      "review_set": "H27-DILCOND-v1",
+      "title": "Preregistration, label-free feature, buffered-fold holdout implementation",
+      "completed_utc": "2026-10-02T22:56:09+00:00",
+      "status": "IMPLEMENTATION_COMPLETE_GATE_BLOCKED",
+      "summary": "Preregistered a 5-item H27 hypothesis slate (knowledge/hypothesis-slate-20261003.md, commit a282a242) before writing any DILCOND code. Confirmed via local GDAL-tag extraction (sources/band_tags_official.csv) that band 8/17 are geod_dilaterate/cond_surf. Implemented src/gems26/dilcond.py (sign-aware positive-dilatation x positive-conductivity coincidence at 3/6/12 px scales), scripts/build_dilcond.py (label-free, chained receipts, slate-commit-ancestor check) and scripts/run_dilcond_holdout.py (four buffered quadrant folds, matched raw_head control, 30+30 seeded draws, nuisance audit, OOF TIFF). Also re-verified sandbox network egress (evidence/egress_check.json) before ranking H27-SEISMIC-LINEAMENT/ALTERATION as deferred rather than executable.",
+      "tests": {
+        "slate_committed_before_implementation": true,
+        "label_free_feature_before_label_access": true,
+        "holdout_decision": "BLOCKED_DO_NOT_SUBMIT",
+        "egress_check_hosts_tested": 6,
+        "egress_check_reachable": 2
+      },
+      "scientific_decision": "BLOCKED_DO_NOT_SUBMIT"
+    },
+    {
+      "pass": 9,
+      "review_set": "H27-DILCOND-v1",
+      "title": "Bug review: pixel-level scoring defect found in dilcond.py and fixed",
+      "completed_utc": "2026-10-02T23:06:09+00:00",
+      "status": "BUG_FOUND_FIXED_RERUN_COMPLETE",
+      "summary": "Added tests/test_dilcond.py (6 unit tests). One test (zero-signal pixels must stay at exact zero, not an average-rank tie) failed against the pass-8 implementation: the log-sum-exp-with-epsilon combination across scales left a shared non-zero floor for pixels that were non-anomalous at every scale, which percentile-rank then spread to the middle of the score distribution instead of zero, contradicting the frozen spec. Fixed by replacing the combination with a direct product + exact n-th root (exact zero propagates). This is a bug fix to match the already-frozen spec, applied before interpreting results (the pre-fix run had already failed the same gate, so there was no incentive to rescue it). Rebuilt the label-free feature and reran the full holdout from scratch with the corrected code; both the feature artifact and OOF TIFF changed SHA256 as expected. The corrected result (dense 0.137279 / sparse 0.077035, 4/4 confirmation wins vs raw, still short of the +0.005 gate) supersedes the pre-fix numbers (dense 0.133808 / sparse 0.075398, 3/4 wins), which are documented but not cited as operative.",
+      "tests": {
+        "new_unit_tests_added": 6,
+        "unit_tests_passed": 6,
+        "bug_found": true,
+        "bug_fixed_before_result_interpreted": true,
+        "feature_and_holdout_rerun_after_fix": true,
+        "post_fix_holdout_decision": "BLOCKED_DO_NOT_SUBMIT"
+      },
+      "scientific_decision": "BLOCKED_DO_NOT_SUBMIT"
+    },
+    {
+      "pass": 10,
+      "review_set": "H27-DILCOND-v1 release",
+      "title": "Site regeneration, README/Research/Sources sync, full local+browser QA",
+      "completed_utc": "2026-10-02T23:15:11+00:00",
+      "status": "PASS_LOCAL_DELIVERY_SCIENTIFIC_GATE_BLOCKED",
+      "summary": "Rebuilt the static site (scripts/build_site.py) to make DILCOND the featured first-screen download, demoted XEDGE to a labeled 'previous candidate' section, added the H27 slate table (DILCOND tested, SEISMIC-LINEAMENT/ALTERATION deferred on confirmed sandbox egress grounds, STRAIN/CBASE carried over) and a clearly-marked not-yet-implemented H28 proposal. Updated README (latest/previous candidate sections, [0,1]-error explanation section, unique name/note section, next-session list, dated owner-prompt addendum marker, evidence links) and knowledge/results.md. Added sources/catalog.json and sources/claims.json entries for the reference-solution schema match, NLR rename/rules corroboration, DILCOND result and the sandbox egress receipt, keeping existing compact JSON formatting to avoid a cosmetic diff. Found two stale hardcoded XEDGE references in scripts/browser_check.mjs during this pass (it still read evidence/xedge_holdout.json for the expected download filename/SHA/note) and fixed them before re-running. Discarded unrelated stale evidence-timestamp diffs (preparation/pretraining/representation/anomaly/data_restore.json) via git checkout. Final state: scripts/verify_site.py PASS (258 local references, 0 errors), node scripts/browser_check.mjs PASS (0 errors, desktop/laptop/mobile/small-mobile, no console errors, no external automatic requests), 114/114 pytest, 5/5 node --test, format/roundtrip validation of the DILCOND TIFF all pass.",
+      "tests": {
+        "verify_site_status": "PASS",
+        "verify_site_errors": 0,
+        "browser_check_errors": 0,
+        "pytest_passed": 114,
+        "pytest_failed": 0,
+        "node_test_passed": 5,
+        "node_test_failed": 0,
+        "stale_browser_check_references_found_and_fixed": true,
+        "stale_evidence_timestamp_diffs_discarded": true
+      },
+      "scientific_decision": "BLOCKED_DO_NOT_SUBMIT"
+    },
+    {
+      "pass": 11,
+      "review_set": "H27-SRCOH-v1 public status integration (pre-main-integration; pass renumbered chronologically)",
       "title": "Outcome-first README, landing page, guide and site regression review",
       "completed_utc": "2026-10-02T23:56:53+00:00",
       "status": "PASS_ENGINEERING_SITE_SCIENCE_REMAINS_BLOCKED",
@@ -170,8 +223,8 @@
       "scientific_decision": "BLOCKED_DO_NOT_SUBMIT"
     },
     {
-      "pass": 9,
-      "review_set": "H27-SRCOH-v1 evidence reconciliation",
+      "pass": 12,
+      "review_set": "H27-SRCOH-v1 evidence reconciliation (pre-main-integration; pass renumbered chronologically)",
       "title": "Frozen gate, chronology, source claims and cross-file metric audit",
       "completed_utc": "2026-10-02T23:56:53+00:00",
       "status": "METRICS_AND_SOURCE_HASHES_PASS_ANCESTRY_NOT_REAUTHENTICATED_IN_CURRENT_CLONE",
@@ -201,8 +254,8 @@
       "scientific_decision": "BLOCKED_DO_NOT_SUBMIT"
     },
     {
-      "pass": 10,
-      "review_set": "H27-SRCOH-v1 full-request and publication reconciliation",
+      "pass": 13,
+      "review_set": "H27-SRCOH-v1 full-request and publication reconciliation (pre-main-integration; pass renumbered chronologically)",
       "title": "Original prompt, submission-stop guidance, staged-site safety and final check",
       "completed_utc": "2026-10-02T23:56:53+00:00",
       "status": "PASS_REQUEST_RECONCILIATION_SCIENCE_REMAINS_BLOCKED",
@@ -223,8 +276,8 @@
       "scientific_decision": "BLOCKED_DO_NOT_SUBMIT"
     },
     {
-      "pass": 11,
-      "review_set": "H27-SRCOH-v1 final post-edit regression",
+      "pass": 14,
+      "review_set": "H27-SRCOH-v1 final post-edit regression (pre-main-integration; pass renumbered chronologically)",
       "title": "Clean-environment final builder, test, link and browser verification",
       "completed_utc": "2026-10-03T04:20:29+00:00",
       "status": "PASS_LOCAL_CI_READY_SCIENCE_REMAINS_BLOCKED",
@@ -256,7 +309,73 @@
         "provenance_limit_visible_in_public_research_and_review_pages": true
       },
       "scientific_decision": "BLOCKED_DO_NOT_SUBMIT"
+    },
+    {
+      "pass": 15,
+      "review_set": "main-line integration after concurrent H27-DILCOND merge",
+      "title": "Conflict resolution, experiment chronology, and cross-release audit",
+      "completed_utc": "2026-10-03T04:44:13+00:00",
+      "status": "PASS_INTEGRATION_SCIENCE_REMAINS_BLOCKED",
+      "summary": "Integrated current main into the fixed Arena branch after PR #6 added the earlier H27-DILCOND run and PR #7 recorded its deployment. Preserved DILCOND code, receipts, archived OOF TIFF, source checks and current-owner-prompt suffix instead of reverting them. Reconciled chronology: DILCOND completed at 23:07:46 UTC; the later H27-SRCOH screen completed at 23:43:47 UTC and emitted no TIFF. Updated README/site/current.json to distinguish the latest failed screen from the newest available, still-blocked research TIFF. Corrected the imported DILCOND central claim against its final holdout receipt (+0.005367 dense, +0.003198 sparse). No H27 runner was invoked and no scientific result was retuned.",
+      "scientific_decision": "BLOCKED_DO_NOT_SUBMIT"
+    },
+    {
+      "pass": 16,
+      "review_set": "integrated current-main site and test regression",
+      "title": "Python, Node, public-site, exact TIFF and responsive browser verification",
+      "completed_utc": "2026-10-03T04:45:25+00:00",
+      "status": "PASS_LOCAL_DELIVERY_SCIENCE_REMAINS_BLOCKED",
+      "summary": "Python suite: 108 passed, one Torch-only test module skipped because PyTorch is unavailable in this sandbox; the earlier full-environment run recorded 117 passed. Node unit tests: 5 passed. Site build and both source/staged verifiers passed (7 pages, 290 local references). Chromium browser QA passed 26/26 across desktop, laptop, mobile and small-mobile after compacting the hero text to keep the DILCOND research-download CTA visible in every viewport. Directly downloaded H27-DILCOND OOF bytes match the pinned 475,760-byte file and SHA256 d54cf7edc6ec57c29b88dec81fe3fb101efa4fe31fc9c1088664a0c2e5190887; format checks pass, its science gate remains blocked. No JS errors or automatic external requests.",
+      "tests": {
+        "python_passed": 108,
+        "python_skipped": 1,
+        "python_skip_reason": "tests/test_ssl.py requires torch; PyTorch is unavailable in this sandbox",
+        "previous_full_python_passed": 117,
+        "node_passed": 5,
+        "site_build_pass": true,
+        "site_verify_pass": true,
+        "staged_site_verify_pass": true,
+        "html_pages": 7,
+        "local_references": 290,
+        "browser_checks_passed": 26,
+        "browser_checks_failed": 0,
+        "responsive_sizes": [
+          "desktop",
+          "laptop",
+          "mobile",
+          "small-mobile"
+        ],
+        "direct_download_sha": "d54cf7edc6ec57c29b88dec81fe3fb101efa4fe31fc9c1088664a0c2e5190887",
+        "javascript_errors": 0,
+        "external_automatic_requests": 0,
+        "h27_srcoh_tiff_created": false,
+        "h27_dilcond_archived_tiff_present": true
+      },
+      "scientific_decision": "BLOCKED_DO_NOT_SUBMIT"
+    },
+    {
+      "pass": 17,
+      "review_set": "integrated request, freeze, provenance, and no-replay review",
+      "title": "Three-way final scope audit against the user request and original README prompt",
+      "completed_utc": "2026-10-03T04:47:16+00:00",
+      "status": "PASS_SCOPE_AND_PROVENANCE_LIMIT_EXPLICIT",
+      "summary": "Checked the complete user scope, requirement matrix, README and public pages line by line. The permanent README owner-prompt suffix remains byte-identical to current main. README and public links use the exact label ‘result and provenance notes’; the H27-SRCOH result note has the exact heading ‘Evidence, provenance boundary and future work’. No H27 replay link or replay attempt was added; no SRCOH TIFF was generated; no revealed fold was retuned. Frozen slate/input/code hashes match, but experiment-time SRCOH commit ancestry is not reauthenticated in this clone and the prior checkout review is identified only as historical evidence. The receipts and current site continue to show all 15 gate rules false, `BLOCKED_DO_NOT_SUBMIT`, no upload, no leaderboard access and no weekly slot. The earlier H27-DILCOND TIFF remains clearly identified as a separate format-valid but blocked research artifact.",
+      "tests": {
+        "permanent_owner_prompt_suffix_unchanged": true,
+        "requested_link_label_exact": true,
+        "requested_heading_exact": true,
+        "h27_replay_link_added": false,
+        "h27_replay_attempted": false,
+        "revealed_quadrants_retuned": false,
+        "h27_srcoh_tiff_created": false,
+        "pinned_source_hashes_match": true,
+        "experiment_commit_ancestry_reauthenticated": false,
+        "weekly_slot_spent": false,
+        "upload_performed": false,
+        "leaderboard_accessed": false
+      },
+      "scientific_decision": "BLOCKED_DO_NOT_SUBMIT"
     }
   ],
-  "scope": "Successive self-review implementation checks, not independent scientific experiments or external reviews. H26-XEDGE and H27 entries are appended only after each pass; repository-snapshot provenance limits are recorded rather than inferred away. A format/site pass does not change the blocked scientific decision."
+  "scope": "Successive self-review implementation checks, not independent scientific experiments or external reviews. H26/XEDGE, H27-DILCOND, and H27-SRCOH entries are preserved in experiment chronology; main-line integration and final checks follow them. A format/site pass does not change a blocked scientific decision."
 }

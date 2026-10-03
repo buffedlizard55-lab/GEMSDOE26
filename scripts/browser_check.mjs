@@ -47,7 +47,7 @@ try{
   await page.setViewport({width:1440,height:900});await page.goto(base,{waitUntil:'networkidle0'});
   await page.click('[data-map*="map-h25.png"]');
   check('historical map toggle',await page.$eval('#study-map',x=>x.src.includes('map-h25.png')));
-  const published=JSON.parse(await readFile('evidence/xedge_holdout.json','utf8')).oof_artifact;
+  const published=JSON.parse(await readFile('evidence/dilcond_holdout.json','utf8')).oof_artifact;
   const direct=await page.evaluate(async href=>{const response=await fetch(href);const b=await response.arrayBuffer();return {ok:response.ok,bytes:b.byteLength,sha:[...new Uint8Array(await crypto.subtle.digest('SHA-256',b))].map(x=>x.toString(16).padStart(2,'0')).join('')};},published.path);
   check('one-click target serves exact TIFF bytes',direct.ok && direct.bytes===published.bytes && direct.sha===published.sha256,direct);
   let directName;
@@ -72,7 +72,7 @@ try{
   await page.click('[data-copy="submission-note"]');
   await page.waitForFunction(()=>document.querySelector('[data-copy="submission-note"]')?.textContent.startsWith('Copied'),{timeout:10000});
   const copied=await page.evaluate(()=>navigator.clipboard.readText());
-  check('short note copy button works',copied===JSON.parse(await readFile('evidence/xedge_holdout.json','utf8')).submission_note);
+  check('short note copy button works',copied===JSON.parse(await readFile('evidence/dilcond_holdout.json','utf8')).submission_note);
   await page.click('#verify-download');
   await page.waitForFunction(()=>document.querySelector('#checksum-status')?.textContent.startsWith('Checksum verified:'),{timeout:30000});check('interactive SHA verification',true);
   const finished=new Promise((ok,fail)=>{

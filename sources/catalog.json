@@ -109,21 +109,9 @@
       "status": "primary_source_json_body_checked",
       "reviewed": "2026-10-02",
       "claim": "Surveys span 51,857 km², 149,030 line-km, four acquisition blocks; east–west flight-line spacings 200 m (Area 1) and 400 m (Area 2); variable clearance and magnetic processing corrections matter.",
-      "scope": "USGS ScienceBase item JSON reports a 2025-02-28 source update, the release spatial bounding box, and archived Area-1/Area-2 grid ZIP metadata. The item describes magnetic and radiometric products. Listed ZIPs: 22103_area1_grids.zip (44,487,393 bytes) and 22103_area2_grids.zip (238,439,415 bytes). Direct binary HEAD to ScienceBase closed at TLS in this sandbox; archive contents, radiometric channel names/units and exact competition-grid coverage are not verified. Release extent is not the same as cellwise coverage.",
+      "scope": "LastUpdated in reviewed API = 2025-02-28T23:02:25Z. Acquisition-block boundaries used by us are owner-derived from official figures, not official-coordinate polygons.",
       "license": "USGS data release; retain original metadata and attribution",
-      "automated_refresh": true,
-      "metadata_files": [
-        {
-          "name": "22103_area1_grids.zip",
-          "bytes": 44487393,
-          "download_url": "https://www.sciencebase.gov/catalog/file/get/657e1d85d34e23d3533209f7?f=__disk__83%2Ff2%2F53%2F83f25379f9fb3df7a545c37001f1a78f52f9af7e"
-        },
-        {
-          "name": "22103_area2_grids.zip",
-          "bytes": 238439415,
-          "download_url": "https://www.sciencebase.gov/catalog/file/get/657e1d85d34e23d3533209f7?f=__disk__f0%2F51%2F14%2Ff05114e2023fca1feb5bc64d704476d28f897a7c"
-        }
-      ]
+      "automated_refresh": true
     },
     {
       "id": "ingenious",
@@ -160,13 +148,12 @@
       "url": "https://tnmaccess.nationalmap.gov/api/v1/products?bbox=-119.5,39.5,-119.4,39.6&datasets=Digital%20Elevation%20Model%20%28DEM%29%201%20meter&max=2",
       "status": "primary_api_metadata_checked_binary_access_blocked_here",
       "reviewed": "2026-10-02",
-      "claim": "A small in-region query returned seven matching tiles and two GeoTIFF URLs; an approximate broader regional query returned 1,454 matching metadata items with concrete GeoTIFF URLs and sizes. Metadata describes bare-earth lidar DEMs, public-domain distribution, NAVD88 elevations and possible seams across collection projects.",
-      "scope": "The broader bbox is approximate and does not certify full exact competition-footprint coverage. Direct binary HEAD to the listed S3 sample failed TLS in this sandbox; raw tile bytes, exact coverage, seam treatment and source datum mosaic are NOT verified. H27-CHANNEL-DEFLECT remains deferred.",
+      "claim": "Query returned seven matching tiles and two actual GeoTIFF URLs. Metadata states bare-earth lidar surface, NAD83 UTM meters, NAVD88 elevations, and public-domain 3DEP products; project seams may exist.",
+      "scope": "Only a small bbox checked. Direct binary HEAD and direct API requests failed TLS in this sandbox. Full-region raw-byte availability and coverage are NOT verified; H26-DRAIN is deferred, not executable here.",
       "license": "Public domain (explicit metadata statement)",
       "sample_download_url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/NV_WestCentral_EarthMRI_2020_D20/TIFF/USGS_1M_11_x28y439_NV_WestCentral_EarthMRI_2020_D20.tif",
       "sample_bytes_from_metadata": 29746910,
-      "automated_refresh": true,
-      "regional_metadata_query": "https://tnmaccess.nationalmap.gov/api/v1/products?bbox=-120.1%2C37.2%2C-117.8%2C40.9&datasets=Digital%20Elevation%20Model%20%28DEM%29%201%20meter&max=10"
+      "automated_refresh": true
     },
     {
       "id": "earney",
@@ -255,16 +242,51 @@
       "automated_refresh": true
     },
     {
-      "id": "comcat",
-      "category": "Data",
-      "title": "USGS ComCat FDSN Event Web Service",
-      "authority": "U.S. Geological Survey, Earthquake Hazards Program",
-      "url": "https://earthquake.usgs.gov/fdsnws/event/1/",
-      "query_url": "https://earthquake.usgs.gov/fdsnws/event/1/count?format=geojson&starttime=1975-01-01&endtime=2024-12-31&minmagnitude=2.5&minlatitude=37.3641&maxlatitude=40.7247&minlongitude=-120.0024&maxlongitude=-116.1415",
-      "status": "official_api_documentation_and_count_query_checked",
+      "id": "nlr_rename",
+      "category": "Competition",
+      "title": "DOE renames National Renewable Energy Laboratory to National Laboratory of the Rockies",
+      "authority": "Ethanol Producer Magazine (industry press), reporting a DOE action",
+      "url": "https://ethanolproducer.com/articles/doe-renames-national-renewable-energy-laboratory-as-national-laboratory-of-the-rockies",
+      "status": "secondary_press_source_checked",
       "reviewed": "2026-10-02",
-      "claim": "Official count query returned 14,502 ComCat records for M≥2.5, 1975-01-01 through 2024-12-31, in the GeoDAWN ScienceBase bounding rectangle.",
-      "scope": "Count/query availability only. It does not establish magnitude completeness, event location quality, fault association or alignment to the competition footprint. Full event records were not used in H27-SRCOH.",
+      "claim": "DOE renamed NREL to the National Laboratory of the Rockies (NLR) effective 2025-12-01. This resolves why GEMS Prize materials co-sponsored by 'NLR' were not a previously-unknown organization.",
+      "scope": "Single trade-press article read; not a direct energy.gov press release fetch (blocked by sandbox egress, see egress_check).",
+      "automated_refresh": false
+    },
+    {
+      "id": "nlr_rules_citation",
+      "category": "Competition",
+      "title": "NLR research-hub citation of the GEMS Prize Official Rules",
+      "authority": "National Laboratory of the Rockies (research-hub.nlr.gov)",
+      "url": "https://research-hub.nlr.gov/en/publications/geologic-enhanced-mapping-system-gems-prize-official-rules/",
+      "status": "primary_institutional_citation_checked",
+      "reviewed": "2026-10-02",
+      "claim": "NLR's own publication record cites 'Geologic Enhanced Mapping System (GEMS) Prize: Official Rules', DOI 10.2172/3818146, 19 pages — consistent with the locally mirrored GEMS_96647.pdf (same page count/title pattern). Best available independent corroboration that the Dropbox-mirrored rules PDF is authentic; it is not a byte-for-byte fetch of the DOI-resolved PDF itself (osti.gov is unreachable from this sandbox).",
+      "scope": "Citation metadata page read only; DOI target not fetched due to sandbox egress block.",
+      "automated_refresh": false
+    },
+    {
+      "id": "anss_catalog",
+      "category": "Data",
+      "title": "USGS ANSS Comprehensive Earthquake Catalog (ComCat) FDSN event API",
+      "authority": "U.S. Geological Survey",
+      "url": "https://earthquake.usgs.gov/fdsnws/event/1/",
+      "status": "named_free_official_source_not_obtainable_this_sandbox",
+      "reviewed": "2026-10-02",
+      "claim": "Free, official, public USGS seismicity catalog API; would supply raw hypocenters for an H27-SEISMIC-LINEAMENT orientation-coherence hypothesis. Confirmed named and specific per the user's requirement, but direct HTTPS access from this sandbox fails (SSL_ERROR_SYSCALL) — see evidence/egress_check.json. Deferred, not implemented against synthetic data.",
+      "scope": "Endpoint identified and documented; not fetched. No data obtained, no hypothesis validated.",
+      "automated_refresh": false
+    },
+    {
+      "id": "earth_search_stac",
+      "category": "Data",
+      "title": "Earth Search STAC API over Sentinel-2 L2A on AWS Open Data",
+      "authority": "Element 84 / AWS Open Data Program (Sentinel-2 imagery is ESA/Copernicus origin)",
+      "url": "https://earth-search.aws.element84.com/v1",
+      "status": "named_free_official_source_not_obtainable_this_sandbox",
+      "reviewed": "2026-10-02",
+      "claim": "Free, public, no-login SpatioTemporal Asset Catalog over Sentinel-2 surface reflectance; would supply SWIR bands for an H27-ALTERATION hydrothermal-alteration-index hypothesis. Confirmed named and specific, but this sandbox cannot reach generic HTTPS hosts including S3-backed endpoints — see evidence/egress_check.json. Deferred, not implemented against synthetic data.",
+      "scope": "Endpoint identified and documented; not fetched. No imagery obtained, no hypothesis validated.",
       "automated_refresh": false
     },
     {

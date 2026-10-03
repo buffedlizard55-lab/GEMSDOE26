@@ -1,12 +1,12 @@
 # H27-SRCOH-v1 frozen screen result
 
-**Decision: `BLOCKED_DO_NOT_SUBMIT`.** The only authorized H27 candidate failed its preregistered, reused-catalogue spatial screen. It is not eligible for a contest slot, and no H27 GeoTIFF was exported. The separate H26-XEDGE OOF file remains a format-valid research artifact and remains blocked; this result does not change its status.
+**Decision: `BLOCKED_DO_NOT_SUBMIT`.** The authorized H27-SRCOH candidate failed its preregistered, reused-catalogue spatial screen. It is not eligible for a contest slot, and no H27-SRCOH GeoTIFF was exported. The earlier H27-DILCOND screen has a separate OOF TIFF that remains research-only and blocked; H26-XEDGE is an older blocked research artifact. This SRCOH result changes none of their scores or release decisions.
 
 ## Scope and frozen chronology
 
 - Four distinct mechanisms were ranked in [`hypothesis-slate-20261002-v2.md`](hypothesis-slate-20261002-v2.md). H27-SRCOH alone was authorized. The other three candidates remain deferred and untested.
 - The holdout receipt records quantitative-slate commit `140cbd5286cd9130c290772575c42ea1d862453c`, SHA-256 `64310e85a5b636e20f2a35165ee10c714e204dedf62c57d1afe88351b2ee06a7`, and code-freeze commit `3d696771fcd796d24f4b121ddbcb5f53321ec0a0`; code-freeze manifest SHA-256 `22a253b3f40e11185e0f233a1f4cabe6f65b1b256de16e43ede694fe3ae171ab`.
-- **Current-checkout provenance boundary:** this PR clone starts at assigned base `cee5eb0982dad19be65181ecefaa05bc5d6d7844`; the experiment-time freeze commit objects are absent from its Git object database. The prior checkout's review record says the ancestry check passed then, but ancestry cannot be reauthenticated from this clone. The frozen protocol, input, and code-file hashes remain available for inspection; this is not an independent hardware attestation.
+- **Current-checkout provenance boundary:** the SRCOH experiment was recorded in a checkout at assigned base `cee5eb0982dad19be65181ecefaa05bc5d6d7844`; this PR branch now also includes the later merged `main` history. The experiment-time SRCOH freeze commit objects remain absent from this clone's Git object database. The prior checkout's review record says the ancestry check passed then, but ancestry cannot be reauthenticated from this clone. The frozen protocol, input, and code-file hashes remain available for inspection; this is not an independent hardware attestation.
 - Whole-footprint preparation completed at `2026-10-02T23:39:02Z`; six-pass label-free pretraining completed at `23:40:36Z`; frozen inference at `23:41:20Z`; the anomaly stage at `23:41:29Z`; the H27 feature at `23:41:58Z`; first label-pixel access for this H27 run at `23:42:31Z`. Every pre-label receipt states `labels_opened: false`; the feature receipt also states `template_opened: false`.
 - The fixed footprint has 5,167,373 cells. H27 support is 4,272,494 cells (82.68%). The feature is one ranked scalar derived only from prepared zero-based bands `(3, 6, 7)`, their observation masks and the footprint. The mirror aliases are owner-supplied names; their physical semantics and units are not authenticated.
 - This is transductive use of the complete unlabeled raster and a repeated, publicly known fault catalogue—not independent hidden-fault validation. The local DTI values below are not DrivenData scores.
@@ -32,7 +32,7 @@ The raw control's 52nd feature is fixed at zero; the H27 head adds the one prere
 
 The preregistered screen required at least `+0.005` sparse DTI versus **each** comparator in both groups, at least 3/4 repeat-fold wins against each, and dense DTI no worse than any comparator by more than 0.005. **All 15 component gate rules failed.** This is not a marginal pass, and the result does not support a leaderboard-score forecast.
 
-## Evidence and reproduction boundary
+## Evidence, provenance boundary and future work
 
 - [`evidence/h27_srcoh_feature.json`](../evidence/h27_srcoh_feature.json) — hashes, code/protocol freeze, pre-label chronology, support and feature.
 - [`evidence/h27_srcoh_holdout.json`](../evidence/h27_srcoh_holdout.json) — fold receipts, comparator pins, gate and decision.
