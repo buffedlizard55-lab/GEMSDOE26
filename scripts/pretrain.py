@@ -22,9 +22,18 @@ def main() -> None:
     parser.add_argument("--tile", type=int, default=64)
     parser.add_argument("--batch-size", type=int, default=8)
     parser.add_argument("--threads", type=int, default=2)
+    parser.add_argument("--preregistration", default="knowledge/preregistration.md",
+                        help="Committed protocol whose bytes are pinned in the label-free receipt")
     args = parser.parse_args()
     if args.epochs < 1 or args.tile % 4 or args.batch_size < 1 or args.threads < 1:
         raise ValueError("Positive epochs/batch/threads and 4-divisible tile size required")
+    preregistration_path = (ROOT / args.preregistration).resolve()
+    try:
+        preregistration_relative = preregistration_path.relative_to(ROOT.resolve()).as_posix()
+    except ValueError as exc:
+        raise ValueError("Preregistration must be inside the project root") from exc
+    if not preregistration_path.is_file():
+        raise FileNotFoundError(f"Preregistration not found: {preregistration_relative}")
     torch.set_num_threads(args.threads)
     torch.manual_seed(SEED)
     torch.use_deterministic_algorithms(True)
@@ -110,7 +119,8 @@ def main() -> None:
                "checkpoint_sha256": sha256_file(checkpoint),
                "torch_version": torch.__version__, "device": "cpu",
                "elapsed_seconds": round(time.monotonic() - t0, 2),
-               "preregistration_sha256": sha256_file(ROOT / "knowledge/preregistration.md")}
+               "preregistration_path": preregistration_relative,
+               "preregistration_sha256": sha256_file(preregistration_path)}
     write_json(EVIDENCE / "pretraining.json", receipt)
     print("PRETRAINING COMPLETE — labels still unopened", flush=True)
 

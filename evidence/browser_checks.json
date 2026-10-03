@@ -1,5 +1,5 @@
 {
-  "checked_utc": "2026-10-02T23:16:20.237Z",
+  "checked_utc": "2026-10-03T04:48:01.395Z",
   "base_url": "http://127.0.0.1:8088/",
   "status": "PASS",
   "checks": [
@@ -7,8 +7,8 @@
       "name": "desktop first-screen TIFF download",
       "pass": true,
       "present": true,
-      "top": 704.609375,
-      "bottom": 753,
+      "top": 650.234375,
+      "bottom": 698.625,
       "viewport": 900,
       "warning": true,
       "overflow": false,
@@ -26,8 +26,8 @@
       "name": "laptop first-screen TIFF download",
       "pass": true,
       "present": true,
-      "top": 704.609375,
-      "bottom": 753,
+      "top": 650.234375,
+      "bottom": 698.625,
       "viewport": 768,
       "warning": true,
       "overflow": false,
@@ -45,8 +45,8 @@
       "name": "mobile first-screen TIFF download",
       "pass": true,
       "present": true,
-      "top": 753.171875,
-      "bottom": 823.953125,
+      "top": 705.171875,
+      "bottom": 775.953125,
       "viewport": 844,
       "warning": true,
       "overflow": false,
@@ -64,8 +64,8 @@
       "name": "small-mobile first-screen TIFF download",
       "pass": true,
       "present": true,
-      "top": 422.140625,
-      "bottom": 460.140625,
+      "top": 407.953125,
+      "bottom": 445.953125,
       "viewport": 667,
       "warning": true,
       "overflow": false,
@@ -114,7 +114,7 @@
     {
       "name": "browser builds and downloads genuine TIFF",
       "pass": true,
-      "filename": "gems26-browser-copy-20261002231616483-4fdde73c40a7-nan.tif"
+      "filename": "gems26-browser-copy-20261003044757696-4fdde73c40a7-nan.tif"
     },
     {
       "name": "browser copy warns same predictions and blocked gate",

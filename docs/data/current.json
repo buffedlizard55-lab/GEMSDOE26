@@ -1,15 +1,43 @@
 {
   "schema_version": 1,
-  "run_completed_utc": "2026-10-02T23:07:46+00:00",
+  "run_completed_utc": "2026-10-02T23:43:47+00:00",
   "scientific_decision": "BLOCKED_DO_NOT_SUBMIT",
   "no_competition_upload": true,
   "latest_candidate": {
+    "run": "H27-SRCOH-v1",
+    "completed_utc": "2026-10-02T23:43:47+00:00",
+    "decision": "BLOCKED_DO_NOT_SUBMIT",
+    "tiff_emitted": false,
+    "path": null,
+    "dense_dti": 0.12677149276433053,
+    "sparse_dti": 0.07241423487204848,
+    "gate_rules_total": 15,
+    "gate_rules_passed": 0,
+    "weekly_slot_spent": false,
+    "upload_performed": false,
+    "leaderboard_accessed": false
+  },
+  "latest_available_research_tiff": {
     "run": "H27-DILCOND-v1",
     "completed_utc": "2026-10-02T23:07:46+00:00",
     "path": "docs/downloads/gems26-dilcond-oof-v1-20261003-47629f496133-nan.tif",
     "sha256": "d54cf7edc6ec57c29b88dec81fe3fb101efa4fe31fc9c1088664a0c2e5190887",
     "prediction_sha256": "47629f49613365849724e198f048449d6dffb5c74d742347b27517e3bcac11d7",
     "format_pass": true,
+    "format_checks": {
+      "single_band": true,
+      "float32": true,
+      "shape_matches_template": true,
+      "crs_matches_template": true,
+      "transform_matches_template": true,
+      "nodata_is_nan": true,
+      "all_inside_finite": true,
+      "inside_range_0_1": true,
+      "outside_all_nan": true,
+      "masked_read_range_0_1": true,
+      "masked_read_has_all_footprint_values": true,
+      "prediction_digest_matches": true
+    },
     "positive_pixels": 60068,
     "dense_dti": 0.13727877350145512,
     "sparse_dti": 0.0770345581440851,
@@ -17,36 +45,27 @@
     "note": "GEMS26 DILCOND-v1 OOF | 300/600/1200m positive-dilatation x positive-conductivity local-anomaly coincidence; four buffered folds; research-only OOF, not full-fit; unscored",
     "weekly_slot_spent": false
   },
-  "format_checks": {
-    "single_band": true,
-    "float32": true,
-    "shape_matches_template": true,
-    "crs_matches_template": true,
-    "transform_matches_template": true,
-    "nodata_is_nan": true,
-    "all_inside_finite": true,
-    "inside_range_0_1": true,
-    "outside_all_nan": true,
-    "masked_read_range_0_1": true,
-    "masked_read_has_all_footprint_values": true,
-    "prediction_digest_matches": true
+  "provenance_boundary": {
+    "pinned_source_hashes_match": true,
+    "experiment_commit_ancestry_reauthenticated": false,
+    "note": "The experiment-time H27-SRCOH slate/code commit objects are absent from this clone; pinned protocol/input/code hashes match. No replay was attempted."
   },
   "confirmation_summary": {
     "h25_reference": {
       "dense_dti": 0.17182539268263863,
-      "sparse_dti": 0.0964322294628285
+      "sparse_dti": 0.09684900892223824
+    },
+    "xedge_oof": {
+      "dense_dti": 0.133141092032657,
+      "sparse_dti": 0.07583869751317371
     },
     "raw_head": {
-      "dense_dti": 0.1319113851997432,
-      "sparse_dti": 0.07383643157181799
+      "dense_dti": 0.13624331213962992,
+      "sparse_dti": 0.07716576740583639
     },
-    "dilcond_head": {
-      "dense_dti": 0.13727877350145512,
-      "sparse_dti": 0.0770345581440851
-    },
-    "coincidence_only": {
-      "dense_dti": 0.050201497759074454,
-      "sparse_dti": 0.03346288638838922
+    "srcoh_head": {
+      "dense_dti": 0.12677149276433053,
+      "sparse_dti": 0.07241423487204848
     }
   },
   "previous_candidate": {

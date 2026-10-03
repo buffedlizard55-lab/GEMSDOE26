@@ -24,13 +24,13 @@
       "status": "primary_source_checked_full_document",
       "reviewed": "2026-10-02",
       "claim": "Three submissions per week; one final entry for both prize rounds; eligibility verification; complete reproducibility assets for finalists; generative-AI-use disclosure required in the narrative. Appendix A deadline is 5 p.m. ET on the deadline date.",
-      "scope": "All seven returned chunks read through the end of \u00a7A.17. Key date itself deferred to the competition website. This is not legal advice or an eligibility certification.",
+      "scope": "All seven returned chunks read through the end of §A.17. Key date itself deferred to the competition website. This is not legal advice or an eligibility certification.",
       "automated_refresh": false
     },
     {
       "id": "terms",
       "category": "Competition",
-      "title": "DrivenData Terms of Use \u2014 Prohibited Uses",
+      "title": "DrivenData Terms of Use — Prohibited Uses",
       "authority": "DrivenData",
       "url": "https://www.drivendata.org/termsofuse/",
       "status": "primary_source_checked",
@@ -66,7 +66,7 @@
     {
       "id": "mae",
       "category": "Methods",
-      "title": "Masked Autoencoders Are Scalable Vision Learners \u2014 He et al., CVPR 2022",
+      "title": "Masked Autoencoders Are Scalable Vision Learners — He et al., CVPR 2022",
       "authority": "Computer Vision Foundation / paper authors",
       "url": "https://openaccess.thecvf.com/content/CVPR2022/html/He_Masked_Autoencoders_Are_Scalable_Vision_Learners_CVPR_2022_paper.html",
       "status": "primary_publication_abstract_checked",
@@ -78,7 +78,7 @@
     {
       "id": "prithvi",
       "category": "Methods",
-      "title": "Foundation Models for Generalist Geospatial Artificial Intelligence \u2014 Jakubik et al., 2023",
+      "title": "Foundation Models for Generalist Geospatial Artificial Intelligence — Jakubik et al., 2023",
       "authority": "Paper authors / arXiv",
       "url": "https://arxiv.org/abs/2310.18660",
       "status": "primary_publication_abstract_checked",
@@ -108,7 +108,7 @@
       "api_url": "https://www.sciencebase.gov/catalog/item/657e1d85d34e23d3533209f7?format=json",
       "status": "primary_source_json_body_checked",
       "reviewed": "2026-10-02",
-      "claim": "Surveys span 51,857 km\u00b2, 149,030 line-km, four acquisition blocks; east\u2013west flight-line spacings 200 m (Area 1) and 400 m (Area 2); variable clearance and magnetic processing corrections matter.",
+      "claim": "Surveys span 51,857 km², 149,030 line-km, four acquisition blocks; east–west flight-line spacings 200 m (Area 1) and 400 m (Area 2); variable clearance and magnetic processing corrections matter.",
       "scope": "LastUpdated in reviewed API = 2025-02-28T23:02:25Z. Acquisition-block boundaries used by us are owner-derived from official figures, not official-coordinate polygons.",
       "license": "USGS data release; retain original metadata and attribution",
       "automated_refresh": true
@@ -123,7 +123,7 @@
       "reviewed": "2026-10-02",
       "claim": "Publicly accessible CC BY 4.0 regional datasets: faults, geodetics, gravity/magnetics, conductance, heat flow, thermal probes, wells/springs, volcanic and paleo-geothermal features.",
       "scope": "Official catalog availability/license verified, not every underlying binary downloaded this run. Contributors explicitly disclaim fitness/errors.",
-      "license": "CC BY 4.0 \u2014 attribution required",
+      "license": "CC BY 4.0 — attribution required",
       "automated_refresh": false
     },
     {
@@ -158,7 +158,7 @@
     {
       "id": "earney",
       "category": "Geology",
-      "title": "Blind geothermal system, Southern Gabbs Valley \u2014 Earney et al., GRC 2018",
+      "title": "Blind geothermal system, Southern Gabbs Valley — Earney et al., GRC 2018",
       "authority": "USGS / NBMG authors, DOE OSTI repository",
       "url": "https://www.osti.gov/servlets/purl/1724114",
       "status": "primary_paper_abstract_and_methods_checked",
@@ -170,7 +170,7 @@
     {
       "id": "siler",
       "category": "Geology",
-      "title": "Three-Dimensional Geothermal Fairway Mapping \u2014 Siler & Faulds",
+      "title": "Three-Dimensional Geothermal Fairway Mapping — Siler & Faulds",
       "authority": "NBMG authors, DOE OSTI repository",
       "url": "https://www.osti.gov/servlets/purl/1110515",
       "status": "primary_paper_abstract_and_methods_checked",
@@ -182,13 +182,13 @@
     {
       "id": "hermant",
       "category": "Geology",
-      "title": "Using Deep Learning to Map Quaternary Faults in Western USA \u2014 Hermant et al., SGW 2025",
+      "title": "Using Deep Learning to Map Quaternary Faults in Western USA — Hermant et al., SGW 2025",
       "authority": "Authors / Stanford Geothermal Workshop archive",
       "url": "https://pangea.stanford.edu/ERE/db/GeoConf/papers/SGW/2025/Hermant.pdf",
       "status": "primary_paper_abstract_introduction_checked",
       "reviewed": "2026-10-02",
       "claim": "Fault scarps can create local topographic changes; catalogue homogeneity/accuracy vary; a mapped North Central Nevada example has local catalogue offsets up to 400 m. Faults can be fluid conduits or barriers.",
-      "scope": "The 400 m observation is not a measurement of this competition\u2019s hidden truth or every catalogue trace. Institutional conference publication, not a government dataset.",
+      "scope": "The 400 m observation is not a measurement of this competition’s hidden truth or every catalogue trace. Institutional conference publication, not a government dataset.",
       "automated_refresh": false
     },
     {
@@ -225,8 +225,8 @@
       "source_url": "https://github.com/buffedlizard55-lab/GEMSDOE24/blob/07345ea0604953d7efb858d9cfbc21e20c7aca0b/src/gems/thinning.py",
       "status": "exact_file_and_pixel_operator_reproduced_score_owner_reported",
       "reviewed": "2026-10-02",
-      "claim": "H25-1 is an exactly reproduced subset of H19-5: 121131\u219260069 pixels; 1.5px deterministic dot thinning. The owner reports 0.2477 versus parent 0.1922.",
-      "scope": "A platform receipt tying score to file is absent; H25\u2019s old all-catalogue exclusion is leaky as a clean OOF baseline. Site still calls file unscored. See local forensics and holdout receipts.",
+      "claim": "H25-1 is an exactly reproduced subset of H19-5: 121131→60069 pixels; 1.5px deterministic dot thinning. The owner reports 0.2477 versus parent 0.1922.",
+      "scope": "A platform receipt tying score to file is absent; H25’s old all-catalogue exclusion is leaky as a clean OOF baseline. Site still calls file unscored. See local forensics and holdout receipts.",
       "automated_refresh": false
     },
     {
@@ -261,7 +261,7 @@
       "url": "https://research-hub.nlr.gov/en/publications/geologic-enhanced-mapping-system-gems-prize-official-rules/",
       "status": "primary_institutional_citation_checked",
       "reviewed": "2026-10-02",
-      "claim": "NLR's own publication record cites 'Geologic Enhanced Mapping System (GEMS) Prize: Official Rules', DOI 10.2172/3818146, 19 pages \u2014 consistent with the locally mirrored GEMS_96647.pdf (same page count/title pattern). Best available independent corroboration that the Dropbox-mirrored rules PDF is authentic; it is not a byte-for-byte fetch of the DOI-resolved PDF itself (osti.gov is unreachable from this sandbox).",
+      "claim": "NLR's own publication record cites 'Geologic Enhanced Mapping System (GEMS) Prize: Official Rules', DOI 10.2172/3818146, 19 pages — consistent with the locally mirrored GEMS_96647.pdf (same page count/title pattern). Best available independent corroboration that the Dropbox-mirrored rules PDF is authentic; it is not a byte-for-byte fetch of the DOI-resolved PDF itself (osti.gov is unreachable from this sandbox).",
       "scope": "Citation metadata page read only; DOI target not fetched due to sandbox egress block.",
       "automated_refresh": false
     },
@@ -273,7 +273,7 @@
       "url": "https://earthquake.usgs.gov/fdsnws/event/1/",
       "status": "named_free_official_source_not_obtainable_this_sandbox",
       "reviewed": "2026-10-02",
-      "claim": "Free, official, public USGS seismicity catalog API; would supply raw hypocenters for an H27-SEISMIC-LINEAMENT orientation-coherence hypothesis. Confirmed named and specific per the user's requirement, but direct HTTPS access from this sandbox fails (SSL_ERROR_SYSCALL) \u2014 see evidence/egress_check.json. Deferred, not implemented against synthetic data.",
+      "claim": "Free, official, public USGS seismicity catalog API; would supply raw hypocenters for an H27-SEISMIC-LINEAMENT orientation-coherence hypothesis. Confirmed named and specific per the user's requirement, but direct HTTPS access from this sandbox fails (SSL_ERROR_SYSCALL) — see evidence/egress_check.json. Deferred, not implemented against synthetic data.",
       "scope": "Endpoint identified and documented; not fetched. No data obtained, no hypothesis validated.",
       "automated_refresh": false
     },
@@ -285,8 +285,20 @@
       "url": "https://earth-search.aws.element84.com/v1",
       "status": "named_free_official_source_not_obtainable_this_sandbox",
       "reviewed": "2026-10-02",
-      "claim": "Free, public, no-login SpatioTemporal Asset Catalog over Sentinel-2 surface reflectance; would supply SWIR bands for an H27-ALTERATION hydrothermal-alteration-index hypothesis. Confirmed named and specific, but this sandbox cannot reach generic HTTPS hosts including S3-backed endpoints \u2014 see evidence/egress_check.json. Deferred, not implemented against synthetic data.",
+      "claim": "Free, public, no-login SpatioTemporal Asset Catalog over Sentinel-2 surface reflectance; would supply SWIR bands for an H27-ALTERATION hydrothermal-alteration-index hypothesis. Confirmed named and specific, but this sandbox cannot reach generic HTTPS hosts including S3-backed endpoints — see evidence/egress_check.json. Deferred, not implemented against synthetic data.",
       "scope": "Endpoint identified and documented; not fetched. No imagery obtained, no hypothesis validated.",
+      "automated_refresh": false
+    },
+    {
+      "id": "usgs_radiometric_alteration",
+      "category": "Geology",
+      "title": "Airborne radiometric data map alteration of porphyry copper systems in the Elkhorn district, MT",
+      "authority": "USGS publication record / Anderson et al., 2025",
+      "url": "https://pubs.usgs.gov/publication/70271704",
+      "status": "official_publication_abstract_checked",
+      "reviewed": "2026-10-02",
+      "claim": "The USGS-hosted 2025 conference paper reports surficial K, Th and U maps, radioelement ratios and potassium-enhancement mapping that highlighted known and additional hydrothermal alteration in the Elkhorn district, Montana.",
+      "scope": "Geographic and deposit-type analogue only. It is not a Nevada fault detector, does not establish that GeoDAWN archive channels have those exact names/units, and does not validate the competition task.",
       "automated_refresh": false
     }
   ]

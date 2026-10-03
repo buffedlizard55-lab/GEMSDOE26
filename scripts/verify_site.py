@@ -38,6 +38,8 @@ def verify(root:Path=ROOT):
             elif parsed.fragment and target.suffix=='.html' and parsed.fragment not in docs.get(target,Document()).ids:errors.append(f'{p.name}: missing fragment {url}')
     h=read_json(root/'evidence/holdout.json');xedge=read_json(root/'evidence/xedge_holdout.json')
     dilcond=read_json(root/'evidence/dilcond_holdout.json')
+    srcoh=read_json(root/'evidence/h27_srcoh_holdout.json')
+    srcoh_feature=read_json(root/'evidence/h27_srcoh_feature.json')
     model=read_json(root/'docs/data/browser-model.json')
     fp=decode_runs(base64.b64decode(model['footprint_runs_base64'],validate=True),HEIGHT*WIDTH).reshape(HEIGHT,WIDTH)
     if int(fp.sum())!=FOOTPRINT_PIXELS:errors.append('Incorrect browser footprint')
@@ -57,20 +59,31 @@ def verify(root:Path=ROOT):
         if not path.is_file() or sha256_file(path)!=row['sha256']:errors.append('Published SHA mismatch '+row['path']);continue
         receipt=validate_submission(path,template,fp,expected_digest=row['prediction_sha256']);checks.append(receipt)
         if not receipt['format_pass']:errors.append('Invalid publication '+row['path'])
-    latest=dilcond['oof_artifact'];latest_path=root/latest['path']
+    archived=dilcond['oof_artifact'];archived_path=root/archived['path']
     previous=xedge['oof_artifact'];previous_path=root/previous['path']
     current=read_json(root/'docs/data/current.json')
-    if (current.get('latest_candidate',{}).get('path')!=latest['path'] or
-            current.get('latest_candidate',{}).get('sha256')!=latest['sha256'] or
-            current.get('scientific_decision')!='BLOCKED_DO_NOT_SUBMIT'):
-        errors.append('Current site status is not synchronized with latest DILCOND receipt')
-    if not latest_path.is_file() or sha256_file(latest_path)!=latest['sha256']:
-        errors.append('DILCOND OOF artifact SHA mismatch '+latest['path'])
+    latest_status=current.get('latest_candidate',{})
+    latest_tiff=current.get('latest_available_research_tiff',{})
+    provenance=current.get('provenance_boundary',{})
+    if (current.get('scientific_decision')!='BLOCKED_DO_NOT_SUBMIT' or
+            latest_status.get('run')!=srcoh.get('run') or latest_status.get('decision')!='BLOCKED_DO_NOT_SUBMIT' or
+            latest_status.get('tiff_emitted') is not False or latest_status.get('path') is not None or
+            latest_status.get('gate_rules_total')!=15 or latest_status.get('gate_rules_passed')!=0 or
+            latest_status.get('weekly_slot_spent') is not False or latest_status.get('upload_performed') is not False or
+            latest_status.get('leaderboard_accessed') is not False or current.get('no_competition_upload') is not True or
+            provenance.get('experiment_commit_ancestry_reauthenticated') is not False or
+            provenance.get('pinned_source_hashes_match') is not True):
+        errors.append('Current site status must identify blocked H27-SRCOH with no TIFF and its provenance boundary')
+    if (latest_tiff.get('run')!=dilcond.get('run') or latest_tiff.get('path')!=archived['path'] or
+            latest_tiff.get('sha256')!=archived['sha256'] or latest_tiff.get('decision')!='BLOCKED_DO_NOT_SUBMIT'):
+        errors.append('Current available research TIFF is not synchronized with the earlier DILCOND receipt')
+    if not archived_path.is_file() or sha256_file(archived_path)!=archived['sha256']:
+        errors.append('H27-DILCOND archived OOF artifact SHA mismatch '+archived['path'])
     else:
-        latest_receipt=validate_submission(latest_path,template,fp,expected_digest=latest['prediction_sha256'])
-        checks.append(latest_receipt)
-        if not latest_receipt['format_pass'] or not dilcond['gate']['rules']['exact_oof_tiff_format_pass']:
-            errors.append('DILCOND OOF artifact fails strict format checks')
+        archived_receipt=validate_submission(archived_path,template,fp,expected_digest=archived['prediction_sha256'])
+        checks.append(archived_receipt)
+        if not archived_receipt['format_pass'] or not dilcond['gate']['rules']['exact_oof_tiff_format_pass']:
+            errors.append('H27-DILCOND OOF artifact fails strict format checks')
     if not previous_path.is_file() or sha256_file(previous_path)!=previous['sha256']:
         errors.append('XEDGE OOF artifact SHA mismatch '+previous['path'])
     else:
@@ -83,8 +96,14 @@ def verify(root:Path=ROOT):
             xedge['gate']['weekly_slot_spent'] or not xedge['label_free_feature_preceded_label_access'] or
             dilcond['gate']['decision']!='BLOCKED_DO_NOT_SUBMIT' or dilcond['gate']['holdout_pass'] or
             dilcond['gate']['weekly_slot_spent'] or not dilcond['label_free_feature_preceded_label_access'] or
-            model['release_decision']!=h['gate']['decision']):
-        errors.append('Failed research gate or label-free ordering relabelled')
+            srcoh['decision']!='BLOCKED_DO_NOT_SUBMIT' or srcoh['gate']['decision']!='BLOCKED_DO_NOT_SUBMIT' or
+            srcoh['gate']['holdout_pass'] or any(srcoh['gate']['rules'].values()) or len(srcoh['gate']['rules'])!=15 or
+            srcoh['weekly_slot_spent'] or srcoh['upload_performed'] or srcoh['leaderboard_accessed'] or
+            not srcoh['label_free_feature_preceded_label_access'] or srcoh_feature['labels_opened'] or
+            srcoh_feature['template_opened'] or model['release_decision']!=h['gate']['decision']):
+        errors.append('A blocked research gate, label-free ordering, or no-upload status was relabelled')
+    if any('srcoh' in x.name.casefold() and x.suffix.casefold()=='.tif' for x in (root/'docs/downloads').glob('*')):
+        errors.append('An H27-SRCOH TIFF must not be published')
     if sha256_file(root/'knowledge/preregistration.md')!=h['preregistration_sha256']:errors.append('Frozen preregistration changed')
     catalog=read_json(root/'sources/catalog.json')['sources'];ids={r['id'] for r in catalog}
     if len(ids)!=len(catalog):errors.append('Duplicate source ids')
@@ -92,9 +111,14 @@ def verify(root:Path=ROOT):
         if not set(claim['sources']).issubset(ids):errors.append('Missing claim source '+claim['id'])
     for p in (root/'index.html',root/'docs/index.html',root/'docs/executive-summary.html'):
         text=p.read_text()
-        if Path(latest['path']).name not in text or 'download' not in text or 'Do not submit' not in text or 'BLOCKED_DO_NOT_SUBMIT' not in text:
-            errors.append('Missing latest DILCOND first-screen artifact/warning '+p.name)
-    return {'checked_utc':utcnow(),'status':'PASS' if not errors else 'FAIL','local_html_pages':len(pages),'local_references_checked':references,'external_links_not_crawled':True,'errors':errors,'geotiffs':checks,'scientific_release':dilcond['gate']['decision'],'format_is_not_scientific_release':True}
+        if (Path(archived['path']).name not in text or 'H27-SRCOH' not in text or 'no tiff' not in text.casefold() or
+                'download' not in text.casefold() or 'Do not submit' not in text or 'BLOCKED_DO_NOT_SUBMIT' not in text):
+            errors.append('Missing latest H27-SRCOH failure + no-TIFF status or earlier DILCOND research download '+p.name)
+    return {'checked_utc':utcnow(),'status':'PASS' if not errors else 'FAIL','local_html_pages':len(pages),
+            'local_references_checked':references,'external_links_not_crawled':True,'errors':errors,'geotiffs':checks,
+            'scientific_release':srcoh['decision'],'latest_available_research_tiff':dilcond['run'],
+            'h27_srcoh_tiff_emitted':False,'provenance_boundary_preserved':not provenance.get('experiment_commit_ancestry_reauthenticated',True),
+            'format_is_not_scientific_release':True}
 
 
 def main():

@@ -1,8 +1,8 @@
 {
-  "checked_utc": "2026-10-02T23:15:58+00:00",
+  "checked_utc": "2026-10-03T04:48:11+00:00",
   "status": "PASS",
   "local_html_pages": 7,
-  "local_references_checked": 258,
+  "local_references_checked": 290,
   "external_links_not_crawled": true,
   "errors": [],
   "geotiffs": [
@@ -153,5 +153,8 @@
     }
   ],
   "scientific_release": "BLOCKED_DO_NOT_SUBMIT",
+  "latest_available_research_tiff": "H27-DILCOND-v1",
+  "h27_srcoh_tiff_emitted": false,
+  "provenance_boundary_preserved": true,
   "format_is_not_scientific_release": true
 }

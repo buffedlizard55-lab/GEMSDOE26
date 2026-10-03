@@ -26,7 +26,7 @@
   "positive_pixels": 60068,
   "mass": 60068.0,
   "scientific_release": "Separate from format; consult holdout and audit receipts",
-  "checked_utc": "2026-10-02T23:14:27+00:00",
+  "checked_utc": "2026-10-03T04:41:12+00:00",
   "inside_cell_identity": true,
   "nan_footprint_identity": true,
   "scope": "JavaScript copy of same frozen prediction cells; not a new detector"
