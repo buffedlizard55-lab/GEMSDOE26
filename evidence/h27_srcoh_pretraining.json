@@ -1,0 +1,102 @@
+{
+  "started_utc": "2026-10-02T23:39:11+00:00",
+  "completed_utc": "2026-10-02T23:40:36+00:00",
+  "labels_opened": false,
+  "input_feature_sha256": "4371c82e3b8339b807bdffcf4ef59a225520fe2988d521be208ae33743123bc5",
+  "all_channels": 19,
+  "training_geography": "Entire unlabeled footprint; transductive",
+  "architecture": "Small convolutional masked autoencoder, no unmasked decoder skip",
+  "mask_patch_pixels": 4,
+  "mask_ratio": 0.75,
+  "args": {
+    "epochs": 6,
+    "tile": 64,
+    "batch_size": 8,
+    "threads": 2,
+    "preregistration": "knowledge/hypothesis-slate-20261002-v2.md"
+  },
+  "loss": "Masked valid-only SmoothL1 (Huber)",
+  "epochs": [
+    {
+      "epoch": 1,
+      "mean_masked_huber_loss": 0.29933171999247776,
+      "visited_pixels": 5167373,
+      "tiles": 1384,
+      "steps": 173,
+      "elapsed_seconds": 14.02
+    },
+    {
+      "epoch": 2,
+      "mean_masked_huber_loss": 0.22106434999173777,
+      "visited_pixels": 5167373,
+      "tiles": 1384,
+      "steps": 173,
+      "elapsed_seconds": 27.75
+    },
+    {
+      "epoch": 3,
+      "mean_masked_huber_loss": 0.19394270937911348,
+      "visited_pixels": 5167373,
+      "tiles": 1384,
+      "steps": 173,
+      "elapsed_seconds": 41.1
+    },
+    {
+      "epoch": 4,
+      "mean_masked_huber_loss": 0.18114411361472454,
+      "visited_pixels": 5167373,
+      "tiles": 1384,
+      "steps": 173,
+      "elapsed_seconds": 54.72
+    },
+    {
+      "epoch": 5,
+      "mean_masked_huber_loss": 0.1694610313528535,
+      "visited_pixels": 5167373,
+      "tiles": 1384,
+      "steps": 173,
+      "elapsed_seconds": 68.01
+    },
+    {
+      "epoch": 6,
+      "mean_masked_huber_loss": 0.15645162774131477,
+      "visited_pixels": 5167373,
+      "tiles": 1384,
+      "steps": 173,
+      "elapsed_seconds": 85.81
+    }
+  ],
+  "footprint_pixels_visited": 5167373,
+  "footprint_pixels_masked": 5167373,
+  "band_valid_target_exposures": [
+    23242741,
+    23242741,
+    23242741,
+    23242741,
+    23242741,
+    23242692,
+    23242741,
+    23242741,
+    23242741,
+    23242741,
+    23242741,
+    23242741,
+    23242741,
+    23242741,
+    23242741,
+    23242741,
+    23242741,
+    23242741,
+    23242741
+  ],
+  "pixels_with_no_observed_channel": 3061,
+  "missingness_caveat": "These pixels are visited/masked but cannot provide any reconstruction target.",
+  "coverage_pass": true,
+  "encoder_state_sha256": "0c6b60ff3ef292f0d9b921d14b14d496a3938b2f0dc21600bd4bea8fa3910b95",
+  "checkpoint_sha256": "212d83913c9869fca0184e77a21da211acf57bd8f0863875a6db750558d96bcc",
+  "torch_version": "2.8.0+cu128",
+  "device": "cpu",
+  "elapsed_seconds": 85.85,
+  "preregistration_path": "knowledge/hypothesis-slate-20261002-v2.md",
+  "preregistration_sha256": "64310e85a5b636e20f2a35165ee10c714e204dedf62c57d1afe88351b2ee06a7"
+}

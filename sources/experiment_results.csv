@@ -9,3 +9,7 @@ H26-XEDGE-v1,h25_reference,0.17182539268263863,0.0964322294628285,"preregistered
 H26-XEDGE-v1,raw_head,0.1319113851997432,0.07383643157181799,"preregistered known-catalogue screen, not hidden-fault or leaderboard evidence"
 H26-XEDGE-v1,xedge_head,0.133141092032657,0.07496853604153157,"preregistered known-catalogue screen, not hidden-fault or leaderboard evidence"
 H26-XEDGE-v1,edge_only,0.07832001317082773,0.04449748508323333,"preregistered known-catalogue screen, not hidden-fault or leaderboard evidence"
+H27-SRCOH-v1,h25_reference,0.17182539268263863,0.09684900892223824,"preregistered screen failed; reused catalogue, not hidden-fault or leaderboard evidence"
+H27-SRCOH-v1,xedge_oof,0.133141092032657,0.07583869751317371,"preregistered screen failed; reused catalogue, not hidden-fault or leaderboard evidence"
+H27-SRCOH-v1,raw_head,0.13624331213962992,0.07716576740583639,"preregistered screen failed; reused catalogue, not hidden-fault or leaderboard evidence"
+H27-SRCOH-v1,srcoh_head,0.12677149276433053,0.07241423487204848,"preregistered screen failed; reused catalogue, not hidden-fault or leaderboard evidence"

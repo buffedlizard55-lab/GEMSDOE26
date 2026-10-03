@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "freeze": "H27-SRCOH-v1 preregistration and scientific source freeze",
+  "preregistration_path": "knowledge/hypothesis-slate-20261002-v2.md",
+  "preregistration_sha256": "64310e85a5b636e20f2a35165ee10c714e204dedf62c57d1afe88351b2ee06a7",
+  "slate_commit": "140cbd5286cd9130c290772575c42ea1d862453c",
+  "input_manifest_sha256": "b84e403f462e6dc0264eba442a169c9bc6ff22df305e273d1f0a36f0e44f72af",
+  "code_sha256": {
+    "scripts/prepare_data.py": "d93af8a82d0f43e5a683e01c615e6591877ffa8a81afb94d2d03371a04749900",
+    "scripts/pretrain.py": "c2041a2fee81042ffb9cf4be861a11e43399fbfbfc8a0cb03d44d31506bf6036",
+    "scripts/infer_representation.py": "4d6c41d0c51fa8675f9f67b5bd46fca2dfdb7b51ec3c096ea2cc8b87111a1423",
+    "scripts/build_anomaly.py": "eccf39db54a862bb0e863d39259400eecdeb97188bb29432e25a6842bc16c27e",
+    "scripts/build_h27_srcoh.py": "8aca6c65dd19372d8b4af6ad9e06631ea75757b70c086dc6e2def3bb81f95b93",
+    "scripts/run_h27_srcoh_holdout.py": "e3b4d51e70a67cce94b478bc92e6c9ae858586ee50689ef8b5b8388760fa49ef",
+    "src/gems26/common.py": "f32eb42bfa980ce7cac4a830b675c7226ddb5cc2e02ad6cbca52ab831de20988",
+    "src/gems26/ssl.py": "2c020e7dd34f41ac4ddf9bb69cca33616a1bade3e2066dac2e8f7aad91a35aa8",
+    "src/gems26/emission.py": "c118e26fd351b4054de06e2ed9b87c2cc2007b8e46b8f87d170b01a90165722d",
+    "src/gems26/strain.py": "737be12000a6e85c1aec88da57b0a71e08af93358cd2fed07a59dfed03a4604b",
+    "src/gems26/h27_protocol.py": "ff03f455e4668ecef94f6ba04db070defcc93fd97eaace778356df2b67ab97a8",
+    "src/gems26/heads.py": "b63ff3a37d871ffb0ddb35751fec48e1b1f1f1ff3c097a5bb2391a6e79974d8c",
+    "src/gems26/holdout.py": "788d0bd13c3694680113c81a39ea4da4091b97c8467ae1f3cf524a0122b50190",
+    "src/gems26/metric.py": "9ce0bd94450607221048f4d3888f8ed1a07feaa1a5ef6095e503ef87f51f3702",
+    "src/gems26/submission.py": "2b084b5307d821ef6b7104c1c1174951740c5e53a5afe335f6310a05ad1c4ed1",
+    "tests/test_common.py": "8107fe91b7b84ce251a0485ff3b5ae30c428c586e62c9696c417750dae0ca09a",
+    "tests/test_emission.py": "14a6ef505bd1951045c832612e4f859a06876f9f88e9b6890f40987425f69290",
+    "tests/test_ssl.py": "f8496dcb795733f2a99e8a159bd87f0046111fec9963258ae4afa9890631bb70",
+    "tests/test_holdout.py": "2569c45397e83288a2a3ce3b7abcffcfc679c61d348b835270f3b35c7cde667b",
+    "tests/test_submission.py": "17c2ac0f196ea3c1cb68c19b5b7107681ee054f04df81cdbb94a2a0e2b6db9df",
+    "tests/test_strain.py": "d0b88fb314250d05cc9de1e25cc5d6b9972817468e857d4b186bd362b7cab8f7",
+    "tests/test_h27_freeze.py": "2866eb67ac3bb73c2bb33dbc64d2cf735c59cf2e96e291ce719d0c1c3d4fb9ab"
+  }
+}

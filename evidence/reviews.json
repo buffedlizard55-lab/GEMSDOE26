@@ -36,7 +36,7 @@
       "title": "Cold end-to-end replication and final request reconciliation",
       "completed_utc": "2026-10-02T20:38:44+00:00",
       "status": "PASS_ENGINEERING_SCIENCE_REMAINS_BLOCKED",
-      "summary": "Cold source-isolated automatic restore\u2192prepare\u2192six-pass SSL\u2192masked inference\u2192anomaly\u2192four-fold heads/holdout reproduced encoder state, all six metric arms and all three TIFFs exactly. Fresh base install passed 85 non-Torch tests; full environment 100 Python tests and 5 JS tests pass. Added small-phone first-screen check, real direct-download filename/SHA and clipboard test; fixed small-screen wrapping and asynchronous clipboard permissions/fallback. All 26 Chromium checks pass and the actual browser-downloaded TIFF passes independent Rasterio cell/NaN identity. Full original prompt preserved and requirements explicitly distinguish implemented engineering from unmet winning-score/independent-truth goals. PR/deployment follows, recorded separately after execution. Final staging review found and fixed an omitted linked test-source directory; the public allowlist now includes tests without raw data/.git. Final local reference count 192.",
+      "summary": "Cold source-isolated automatic restore→prepare→six-pass SSL→masked inference→anomaly→four-fold heads/holdout reproduced encoder state, all six metric arms and all three TIFFs exactly. Fresh base install passed 85 non-Torch tests; full environment 100 Python tests and 5 JS tests pass. Added small-phone first-screen check, real direct-download filename/SHA and clipboard test; fixed small-screen wrapping and asynchronous clipboard permissions/fallback. All 26 Chromium checks pass and the actual browser-downloaded TIFF passes independent Rasterio cell/NaN identity. Full original prompt preserved and requirements explicitly distinguish implemented engineering from unmet winning-score/independent-truth goals. PR/deployment follows, recorded separately after execution. Final staging review found and fixed an omitted linked test-source directory; the public allowlist now includes tests without raw data/.git. Final local reference count 192.",
       "tests": {
         "python_passed": 101,
         "node_passed": 5,
@@ -54,7 +54,7 @@
       "title": "Preregistered science, provenance chronology and performance-gate review",
       "completed_utc": "2026-10-02T22:10:26+00:00",
       "status": "EVIDENCE_CONSISTENT_SCIENTIFIC_GATE_FAILED",
-      "summary": "Checked slate commit 876c0b2 (21:39:31 UTC) and exact final protocol/tie-rule commit fce3f74 (21:48:21) precede feature construction (21:50:06\u201321:50:19) and label-pixel access (21:52:13). Confirmed receipts, ancestry, artifact and feature-receipt hashes. Confirmation sparse DTI was 0.074969 XEDGE, 0.073836 raw (+0.001132, below +0.005), and 0.096432 H25 (\u22120.021464); dense XEDGE 0.133141 is \u22120.038684 below H25. Fold wins: 3/4 vs raw, 0/4 vs H25. Fixed gate remains BLOCKED_DO_NOT_SUBMIT; catalogue reused, not hidden-fault evidence; weekly slot false. Historical 0.2477 and supplied 0.3195 remain unauthenticated/unrefreshed.",
+      "summary": "Checked slate commit 876c0b2 (21:39:31 UTC) and exact final protocol/tie-rule commit fce3f74 (21:48:21) precede feature construction (21:50:06–21:50:19) and label-pixel access (21:52:13). Confirmed receipts, ancestry, artifact and feature-receipt hashes. Confirmation sparse DTI was 0.074969 XEDGE, 0.073836 raw (+0.001132, below +0.005), and 0.096432 H25 (−0.021464); dense XEDGE 0.133141 is −0.038684 below H25. Fold wins: 3/4 vs raw, 0/4 vs H25. Fixed gate remains BLOCKED_DO_NOT_SUBMIT; catalogue reused, not hidden-fault evidence; weekly slot false. Historical 0.2477 and supplied 0.3195 remain unauthenticated/unrefreshed.",
       "tests": {
         "slate_commit_ancestor": true,
         "final_protocol_commit_ancestor": true,
@@ -74,7 +74,7 @@
       "title": "Leakage, implementation, source-integrity and GeoTIFF review",
       "completed_utc": "2026-10-02T22:10:26+00:00",
       "status": "PASS_ENGINEERING_FORMAT_ONLY_SCIENCE_BLOCKED",
-      "summary": "Reviewed the label-free XEDGE transform, fixed 300/600/1,200 m scales, 48-pixel support erosion, zero-edge tie handling, spatial-fold runner and fail-closed gates. Builder has no label/template path; AST guard and tests pass. No network/leaderboard/upload path was added. Direct independent format check confirms one float32 band on the pinned 3,292\u00d73,730 grid, EPSG:32611, exact template transform, [0,1] footprint values and NaN outside; exact TIFF SHA matches the holdout receipt. Helper-script execution hashes are explicitly marked reconstructed after provenance-guard-only edits; this is software evidence, not hardware attestation.",
+      "summary": "Reviewed the label-free XEDGE transform, fixed 300/600/1,200 m scales, 48-pixel support erosion, zero-edge tie handling, spatial-fold runner and fail-closed gates. Builder has no label/template path; AST guard and tests pass. No network/leaderboard/upload path was added. Direct independent format check confirms one float32 band on the pinned 3,292×3,730 grid, EPSG:32611, exact template transform, [0,1] footprint values and NaN outside; exact TIFF SHA matches the holdout receipt. Helper-script execution hashes are explicitly marked reconstructed after provenance-guard-only edits; this is software evidence, not hardware attestation.",
       "tests": {
         "python_passed": 108,
         "node_passed": 5,
@@ -138,7 +138,125 @@
         "no_competition_upload": true
       },
       "scientific_decision": "BLOCKED_DO_NOT_SUBMIT"
+    },
+    {
+      "pass": 8,
+      "review_set": "H27-SRCOH-v1 public status integration",
+      "title": "Outcome-first README, landing page, guide and site regression review",
+      "completed_utc": "2026-10-02T23:56:53+00:00",
+      "status": "PASS_ENGINEERING_SITE_SCIENCE_REMAINS_BLOCKED",
+      "summary": "Promoted the failed H27-SRCOH screen to the current status across README, landing, research, current.json, claims and experiment inventory while retaining XEDGE only as an archived, format-valid OOF download. The first responsive browser pass found the download below the fold on laptop/mobile; the H27 notice and archive card were compacted and the full retest passed. The actual download preserved the exact pinned XEDGE bytes/SHA. H27 produced no TIFF and remained blocked.",
+      "tests": {
+        "python_passed": 117,
+        "node_passed": 5,
+        "site_build_pass": true,
+        "site_verify_pass": true,
+        "local_html_pages": 7,
+        "local_references": 271,
+        "browser_checks_passed": 26,
+        "browser_checks_failed": 0,
+        "first_screen_sizes": [
+          "desktop",
+          "laptop",
+          "mobile",
+          "small-mobile"
+        ],
+        "direct_download_exact_bytes": true,
+        "javascript_errors": 0,
+        "external_automatic_requests": 0,
+        "initial_first_screen_issue_found_and_fixed": true,
+        "h27_tiff_created": false
+      },
+      "scientific_decision": "BLOCKED_DO_NOT_SUBMIT"
+    },
+    {
+      "pass": 9,
+      "review_set": "H27-SRCOH-v1 evidence reconciliation",
+      "title": "Frozen gate, chronology, source claims and cross-file metric audit",
+      "completed_utc": "2026-10-02T23:56:53+00:00",
+      "status": "METRICS_AND_SOURCE_HASHES_PASS_ANCESTRY_NOT_REAUTHENTICATED_IN_CURRENT_CLONE",
+      "summary": "Cross-checked all 15 preregistered gate rules (all false), H27 feature/holdout receipt hashes, every pinned code/input/protocol hash, and the result/current.json/CSV/C22/C26 metrics. The experiment receipts and the previous checkout review record the slate/code freeze commit IDs; this PR checkout was freshly created at assigned base cee5eb0 and those experiment-time commit objects are absent. Consequently the earlier ancestry result cannot be independently reauthenticated from this clone, and this provenance limitation is now explicit. The label-free chronology and zero-slot/upload/leaderboard flags remain in the receipts; reused catalogue/quadrants, H25 leakage, and unauthenticated strain aliases/units are preserved as limitations.",
+      "tests": {
+        "all_15_gate_rules_false": true,
+        "frozen_source_hashes_pass": true,
+        "feature_receipt_hash_pass": true,
+        "labels_unopened_for_feature": true,
+        "template_unopened_for_feature": true,
+        "metrics_cross_file_match": true,
+        "claims_updated": true,
+        "h27_tiff_created": false,
+        "weekly_slot_spent": false,
+        "upload_performed": false,
+        "leaderboard_accessed": false,
+        "repeat_sparse_delta_vs_raw": -0.0047515325337879055,
+        "repeat_sparse_delta_vs_xedge_oof": -0.0034244626411252255,
+        "repeat_sparse_delta_vs_h25": -0.02443477405018976,
+        "experiment_time_freeze_ids_recorded_in_receipts": true,
+        "previous_checkout_ancestry_check_recorded": true,
+        "current_clone_starts_at_assigned_base": "cee5eb0982dad19be65181ecefaa05bc5d6d7844",
+        "experiment_time_commit_objects_available_in_current_clone": false,
+        "ancestry_reauthenticated_from_current_clone": false,
+        "pinned_code_input_protocol_hashes_pass_current_clone": true
+      },
+      "scientific_decision": "BLOCKED_DO_NOT_SUBMIT"
+    },
+    {
+      "pass": 10,
+      "review_set": "H27-SRCOH-v1 full-request and publication reconciliation",
+      "title": "Original prompt, submission-stop guidance, staged-site safety and final check",
+      "completed_utc": "2026-10-02T23:56:53+00:00",
+      "status": "PASS_REQUEST_RECONCILIATION_SCIENCE_REMAINS_BLOCKED",
+      "summary": "Reconciled the README/current requirement matrix against the full owner prompt; the permanent prompt section remains byte-identical. The guide opens with an unambiguous no-approved-file decision, marks XEDGE as research-only and tells readers to stop before upload steps; the next H27 hypotheses remain deferred and untested. Rechecked root/nested download paths, mobile/laptop first-screen CTA, all local links, and allowlisted staging (no .git/raw inputs). Four viewport checks, direct-file integrity, clipboard/SHA actions, and local pages pass. Engineering/site readiness does not change the failed science gate.",
+      "tests": {
+        "owner_prompt_suffix_byte_identical": true,
+        "requirement_matrix_current": true,
+        "no_current_candidate_approved": true,
+        "guide_stop_before_upload": true,
+        "h27_future_hypotheses_deferred": true,
+        "local_html_pages": 7,
+        "local_references": 271,
+        "responsive_viewports_passed": 4,
+        "public_stage_excludes_git_and_raw_data": true,
+        "no_h27_tiff": true,
+        "all_competition_activity_flags_false": true
+      },
+      "scientific_decision": "BLOCKED_DO_NOT_SUBMIT"
+    },
+    {
+      "pass": 11,
+      "review_set": "H27-SRCOH-v1 final post-edit regression",
+      "title": "Clean-environment final builder, test, link and browser verification",
+      "completed_utc": "2026-10-03T04:20:29+00:00",
+      "status": "PASS_LOCAL_CI_READY_SCIENCE_REMAINS_BLOCKED",
+      "summary": "After the final download-card helper cleanup, rebuilt the public pages and passed the site verifier; the staged site remains allowlisted. Python tests passed with the Torch-only module skipped because the documented PyTorch CPU index closed TLS in this sandbox. Node tests and all 26 Chromium checks passed, including the exact archived TIFF SHA, direct filename, four responsive viewports, guide/research/source/review routes, clipboard/checksum controls, no JS errors and no external automatic requests. The prior full environment run had 117 Python tests pass. The current PR clone lacks experiment-time Git objects, so the README, result report, claim ledger, research and review pages now explicitly mark ancestry as not reauthenticated; no H27 replay or fold retuning was attempted. No scientific code or H27 outcomes changed.",
+      "tests": {
+        "python_passed": 102,
+        "python_skipped": 1,
+        "python_skip_reason": "tests/test_ssl.py requires torch; CPU PyTorch index TLS closed before download",
+        "previous_full_python_passed": 117,
+        "node_passed": 5,
+        "site_build_pass": true,
+        "site_verify_pass": true,
+        "html_pages": 7,
+        "local_references": 271,
+        "browser_checks_passed": 26,
+        "browser_checks_failed": 0,
+        "responsive_sizes": [
+          "desktop",
+          "laptop",
+          "mobile",
+          "small-mobile"
+        ],
+        "direct_download_sha": "527cd3247208a80a17439ac4e72e08a55829bb2fe201b16aa328ae86eba6dfbd",
+        "javascript_errors": 0,
+        "external_automatic_requests": 0,
+        "h27_tiff_created": false,
+        "current_clone_ancestry_limit_documented": true,
+        "h27_replay_attempted": false,
+        "provenance_limit_visible_in_public_research_and_review_pages": true
+      },
+      "scientific_decision": "BLOCKED_DO_NOT_SUBMIT"
     }
   ],
-  "scope": "Successive self-review implementation checks, not independent scientific experiments or external reviews. XEDGE entries are appended only after each pass; a format/site pass does not change the blocked scientific decision."
+  "scope": "Successive self-review implementation checks, not independent scientific experiments or external reviews. H26-XEDGE and H27 entries are appended only after each pass; repository-snapshot provenance limits are recorded rather than inferred away. A format/site pass does not change the blocked scientific decision."
 }

@@ -2,27 +2,37 @@
 
 **Read this entire README, including the complete owner prompt below, at the start of every session.** Maximize P(Win). Own the Outcome. Preserve failures, protect weekly slots, and never turn a format pass into an invented performance claim.
 
-## Latest candidate: XEDGE-v1 OOF diagnostic — research only
+## Latest test: H27-SRCOH-v1 — `BLOCKED_DO_NOT_SUBMIT`
+
+The H27 receipts record a four-candidate slate and a frozen spatial screen before implementation/evaluation; the current checkout cannot reauthenticate that ancestry (see the provenance limitation below). H27-SRCOH was the only authorized test. It failed against its matched raw control, fixed H26-XEDGE OOF and historical H25; **no H27 GeoTIFF was emitted** and no contest slot or upload was used. The prominent landing-page download below is the older XEDGE file; separate historical artifacts remain on the guide. XEDGE is still research-only and blocked.
+
+| Emitted arm | Dense pooled local DTI | Sparse offsets 120–149 (mean ± SD) | Sparse offsets 150–179 (mean ± SD) |
+|---|---:|---:|---:|
+| H25-1 historical reference, as emitted | 0.171825 | 0.097701 ± 0.006259 | 0.096849 ± 0.004882 |
+| H26-XEDGE OOF, as emitted | 0.133141 | 0.075165 ± 0.007525 | 0.075839 ± 0.006257 |
+| Matched raw head, 52 dimensions | 0.136243 | 0.076816 ± 0.007653 | 0.077166 ± 0.006224 |
+| **H27-SRCOH head** | **0.126771** | **0.071865 ± 0.007098** | **0.072414 ± 0.006073** |
+
+In the repeat group H27 was −0.004752 sparse DTI versus raw (0/4 fold wins), −0.003424 versus XEDGE OOF (1/4 wins), and −0.024435 versus H25 (0/4 wins). Dense deltas were −0.009472, −0.006370 and −0.045054 respectively. All 15 preregistered gate rules failed. These are reused-catalogue local proxies, **not DrivenData scores or hidden-fault validation**; H25's known all-catalogue-mask leakage is retained and disclosed.
+
+- [Four-hypothesis H27 slate and frozen numerical protocol](knowledge/hypothesis-slate-20261002-v2.md) · [code-freeze manifest](knowledge/h27-srcoh-code-freeze.json) · [H27 result and provenance notes](knowledge/h27-srcoh-result-20261002.md).
+- Receipts: [label-free feature](evidence/h27_srcoh_feature.json), [holdout/gate](evidence/h27_srcoh_holdout.json), [selection draws](evidence/h27_srcoh_selection.json), [repeat draws](evidence/h27_srcoh_confirmation.json), and separate [preparation](evidence/h27_srcoh_preparation.json), [pretraining](evidence/h27_srcoh_pretraining.json), [inference](evidence/h27_srcoh_representation.json) and [anomaly](evidence/h27_srcoh_anomaly.json) receipts.
+- Owner-mirror aliases for the three strain-named channels and their units remain unauthenticated. The screen's 4,272,494-cell support is transductive over the unlabeled study area.
+
+## Available download: archived H26-XEDGE OOF diagnostic — research only
 
 **[Download the XEDGE four-fold OOF GeoTIFF](https://buffedlizard55-lab.github.io/GEMSDOE26/docs/downloads/gems26-xedge-oof-v1-20261002-5147f8a58ddd-nan.tif)** · [Site](https://buffedlizard55-lab.github.io/GEMSDOE26/) · [Executive guide](docs/executive-summary.html)
 
-> **BLOCKED_DO_NOT_SUBMIT.** XEDGE-v1 failed the preregistered performance gate. This is an out-of-fold research mosaic, not a full-data final model. No competition upload or weekly slot was used; do not submit this file.
+> **BLOCKED_DO_NOT_SUBMIT.** This is an out-of-fold research mosaic, not a full-data final model. Its format passes local checks; its scientific gate failed. Do not submit it.
 
 - File: `docs/downloads/gems26-xedge-oof-v1-20261002-5147f8a58ddd-nan.tif`, **476,670 bytes / 60,068 selected cells**.
 - SHA256: `527cd3247208a80a17439ac4e72e08a55829bb2fe201b16aa328ae86eba6dfbd`.
 - Note: `GEMS26 XEDGE-v1 OOF | 300/600/1200m RTP+gravity edge persistence; four buffered folds; research-only OOF, not full-fit; unscored`.
-- Strict file-format checks pass: one float32 band, **3,292×3,730**, EPSG:32611, exact owner-mirrored template transform, finite `[0,1]` in all **5,167,373** footprint pixels, NaN outside, and raw/masked read-back. This is **format validation only**, not scientific release or server acceptance.
+- Strict format checks pass: one float32 band, **3,292×3,730**, EPSG:32611, exact owner-mirrored template transform, finite `[0,1]` in all **5,167,373** footprint pixels, NaN outside, and raw/masked read-back. This is **format validation only**, not scientific release or server acceptance.
 
-| Frozen confirmation arm | Dense pooled local DTI | Mean pooled sparse local DTI |
-|---|---:|---:|
-| H25-1 historical reference | 0.171825 | 0.096432 |
-| Matched raw-feature head | 0.131911 | 0.073836 |
-| **XEDGE head (candidate)** | **0.133141** | **0.074969** |
-| XEDGE edge-only ablation | 0.078320 | 0.044497 |
+The earlier XEDGE screen gained only **+0.001132 sparse DTI** over raw (below its +0.005 gate), and lost to H25 in dense DTI and all four confirmation quadrants. See [`evidence/xedge_holdout.json`](evidence/xedge_holdout.json) and the earlier [scientific result](knowledge/results.md).
 
-XEDGE gained only **+0.001132 sparse DTI** over the fresh raw control (the frozen gate required **+0.005**) and lost **−0.021464** to H25. Its dense score was **−0.038684** below H25, beyond the permitted −0.005. It won 3/4 confirmation quadrants versus raw but 0/4 versus H25; that is not enough to pass. All draws reuse the same known catalogue and are not hidden-fault evidence. See [`evidence/xedge_holdout.json`](evidence/xedge_holdout.json), the [screen protocol](knowledge/hypothesis-slate-20261002.md), and [`knowledge/results.md`](knowledge/results.md).
-
-The owner-reported H25-1 score **0.2477** and supplied leaderboard snapshot **0.3195** remain unrefreshed. No result here beats or authenticates either external score. The earlier SSL and label-free-error TIFFs remain separately identified research artifacts; the historical H25 TIFF is **identical old bytes, not a new submission; do not resubmit**.
+The owner-reported H25-1 score **0.2477** and supplied leaderboard snapshot **0.3195** remain unrefreshed and are not authenticated to a file here. No local result beats or authenticates either external score. The historical H25 TIFF is **identical old bytes, not a new submission; do not resubmit**.
 
 ## Earlier H26-SSL run — retained negative evidence
 
@@ -51,12 +61,12 @@ The owner reports H19-5 **0.1922→H25-1 0.2477** (+28.88%); no authenticated fi
 
 ## Evidence, standing rules & limitations
 
-- [Original four-hypothesis preregistration](knowledge/preregistration.md), committed **02a8bad before H26-SSL implementation**, remains unchanged. The [XEDGE/DRAIN/STRAIN/CBASE slate](knowledge/hypothesis-slate-20261002.md) was committed as **876c0b2 before XEDGE implementation**; the exact v1 transform, including zero-score tie handling, was frozen in **fce3f74 before feature/label evaluation**. XEDGE is tested and blocked; DRAIN remains deferred pending verified official bytes/coverage, and strain/CBASE remain semantics-limited.
-- [Latest XEDGE feature receipt](evidence/xedge_feature.json), [selection draws](evidence/xedge_selection.json), [confirmation draws](evidence/xedge_confirmation.json), and [full gate/audit](evidence/xedge_holdout.json). The earlier [SSL gate](evidence/holdout.json), [labels-first nuisance audit](evidence/accessibility_audit.json), and [error diagnostics](evidence/error_diagnostics.json) remain separate.
-- [Primary-source ledger](sources/catalog.json), [central claim ledger](sources/claims.json), [19-band inventory](sources/data_inventory.csv), [all reported scores](sources/reported_scores.csv), [requirement matrix](knowledge/requirement-matrix.md), [three review passes](evidence/reviews.json).
-- Full-unlabeled training is **transductive**. Catalogue thinning and reused quadrants do not independently validate unknown faults. Do not retune the failed run on revealed confirmation folds.
+- [Original H26-SSL preregistration](knowledge/preregistration.md) remains unchanged. The [H26 XEDGE/DRAIN/STRAIN/CBASE slate](knowledge/hypothesis-slate-20261002.md) and its fixed screen remain historical, tested-negative evidence. H27's [four-candidate slate](knowledge/hypothesis-slate-20261002-v2.md) and receipts record the `ef6f88f` ranking, `140cbd5` numerical freeze and `3d6967` code freeze. This PR checkout starts at assigned base `cee5eb0` and lacks those commit objects, so ancestry cannot be reauthenticated here; the pinned code/input hashes still match. The previous checkout's review log records the earlier ancestry check. H27-SRCOH failed and is blocked; the other three H27 hypotheses remain deferred and untested. Do not rerun or retune the revealed holdout.
+- [H27 label-free feature](evidence/h27_srcoh_feature.json), [selection](evidence/h27_srcoh_selection.json), [confirmation](evidence/h27_srcoh_confirmation.json), and [full gate](evidence/h27_srcoh_holdout.json), plus separate [preparation](evidence/h27_srcoh_preparation.json), [pretraining](evidence/h27_srcoh_pretraining.json), [inference](evidence/h27_srcoh_representation.json) and [anomaly](evidence/h27_srcoh_anomaly.json) receipts. H26-XEDGE and earlier SSL receipts remain separately preserved.
+- [Primary-source ledger](sources/catalog.json), [central claim ledger](sources/claims.json), [19-band inventory](sources/data_inventory.csv), [all reported scores](sources/reported_scores.csv), [requirement matrix](knowledge/requirement-matrix.md), [implementation/science/site review log](evidence/reviews.json).
+- Full-unlabeled training and the H27 percentile ranks are **transductive**. Catalogue thinning and reused quadrants do not independently validate unknown faults. Do not retune H26-SSL, H26-XEDGE or H27-SRCOH on revealed confirmation folds.
 - `tc`, earthquake aliases and conductive-base/basement naming remain ambiguous in the mirror. Do not infer full stress/MT tensors from scalar channels or declare radiometrics absent from uncertified tags.
-- The mirror example contains **60,988 positives and exactly matches known labels**, contrary to the described absence example. No example pixel values were used in label-free preparation, pretraining, inference, anomaly or XEDGE feature construction; supervised labels were opened only after those stages. Header/NaN footprint checks are separate. Hash integrity does not authenticate organizer provenance.
+- The mirror example contains **60,988 positives and exactly matches known labels**, contrary to the described absence example. No example pixel values were used in label-free preparation, pretraining, inference, anomaly, XEDGE or H27 feature construction; the H27 receipts record label-free stages before its supervised spatial screen. Header/NaN footprint checks are separate. Hash integrity does not authenticate organizer provenance.
 - Target = **fault locations**, not confirmed geothermal vents/resources. Useful resource discovery requires additional heat, permeability/fluid, stress/lithology and field/well evidence.
 - [DrivenData Terms](https://www.drivendata.org/termsofuse/) prohibit automatic site access. The initial requested review was tool-retrieved **before discovering that term**, not human-read. No later competition scraping, automated login or upload is implemented. Eligibility/account-holder attestations cannot be supplied by an agent; never request credentials.
 - [Official rules PDF](https://docs.nlr.gov/docs/fy26osti/96647.pdf) read through its final section: 3 submissions/week, 1 selected final entry across both rounds, eligibility, finalist reproduction assets and AI disclosure. [AI assistance disclosure](AI_DISCLOSURE.md).
@@ -81,7 +91,12 @@ python3 -m venv .venv
 # Uses ignored .cache/reproduction and shared ignored data/raw; no Git branch changes.
 # Repeating it verifies the completed replica without refitting. No parameter sweep.
 
-# Independent format-only check of the latest XEDGE OOF research TIFF:
+# H27-SRCOH source, hashes and negative receipts are preserved, but do not rerun it.
+# This PR checkout lacks the experiment-time commit objects recorded in its receipt;
+# ancestry cannot be reauthenticated here. See the H27 result's provenance boundary.
+# Its revealed holdout is already blocked; do not reopen or retune those folds.
+
+# Independent format-only check of the archived XEDGE OOF research TIFF:
 .venv/bin/python scripts/validate_submission.py docs/downloads/gems26-xedge-oof-v1-20261002-5147f8a58ddd-nan.tif
 .venv/bin/python -m pytest -q
 npm ci --ignore-scripts
@@ -100,12 +115,11 @@ The original per-stage entry points remain available: `bash scripts/download_com
 
 ## Next session — most important first
 
-1. Reread this full prompt, preserve both negative holdout receipts, do not retune the revealed XEDGE folds, and do not resubmit renamed/OOF fields.
-2. Resolve original organizer band semantics and template provenance; prioritize genuinely untouched spatial or independent geological fault truth. The repeated known-catalogue screens are not independent validation.
-3. Keep H26-DRAIN deferred until official 1 m tile bytes, full footprint coverage, datum and seams are verified; do not substitute another unverified alias for XEDGE.
-4. For any new representation research, add random-frozen-encoder/matched-parameter controls and held-out **unlabeled reconstruction** evaluation; do not equate reconstruction loss with fault specificity.
-5. Re-rank a new 3–5 hypothesis slate only after a defensible independent test design and official data semantics/availability are resolved. H26-XEDGE failed; the remaining listed ideas are not validated candidates.
-6. Eligibility, deadline confirmation and any eventual **approved** upload are lawful account-holder tasks. No current candidate is approved for a slot.
+1. Reread this full README and preserve H26-SSL, H26-XEDGE and H27-SRCOH negative receipts. Resolve the missing H27 experiment-time Git objects before any static ancestry audit; do not rerun/retune revealed H27 folds or relabel an archived OOF/historical field as current/approved.
+2. Prioritize independent fault truth, genuinely untouched spatial holdouts and authenticated official raster semantics/provenance/coverage. Repeated screens against the reused known catalogue are not independent validation.
+3. Keep H27-COMCAT-RIDGE, H27-RAD-ALTER and H27-CHANNEL-DEFLECT untested until their independent test design and required official input bytes/coverage are justified. Form a fresh preregistered slate only after that work; do not reuse H27 quadrants to select/tune.
+4. For any later self-supervised research, require random-frozen-encoder/matched-parameter controls and held-out **unlabeled reconstruction** evaluation; reconstruction error is not inherently fault-specific.
+5. No current candidate is approved; do not generate an H27 TIFF or consume a weekly slot. Eligibility, deadlines, and any eventual approved upload remain account-holder tasks.
 
 ---
 

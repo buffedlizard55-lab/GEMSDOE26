@@ -25,6 +25,30 @@ def test_gate_requires_both_stages_comparators_folds_and_dense():
     assert not promotion_gate(a,b)['holdout_pass']
     assert not promotion_gate(a,b)['weekly_slot_spent'];assert not promotion_gate(a,b)['hidden_fault_validation']
 
+
+def test_h27_gate_requires_all_three_comparators_in_both_seed_groups():
+    def report(candidate, raw, xedge, h25, dense_candidate, dense_raw, dense_xedge, dense_h25,
+               folds=(.12, .12, .12, .12)):
+        sparse = {"srcoh_head": candidate, "raw_head": raw,
+                  "xedge_oof": xedge, "h25_reference": h25}
+        dense = {"srcoh_head": dense_candidate, "raw_head": dense_raw,
+                 "xedge_oof": dense_xedge, "h25_reference": dense_h25}
+        return {
+            "sparse": {tag: {"mean_pooled_dti": value,
+                             "fold_mean_dti": list(folds) if tag == "srcoh_head"
+                             else [value] * 4} for tag, value in sparse.items()},
+            "dense": {tag: {"pooled": {"dti": value}} for tag, value in dense.items()},
+        }
+    good = report(.12, .11, .11, .11, .20, .20, .20, .20)
+    gate = promotion_gate(good, good, primary="srcoh_head",
+                          comparators=("raw_head", "xedge_oof", "h25_reference"))
+    assert gate["holdout_pass"]
+    marginal_xedge = report(.12, .11, .115, .11, .20, .20, .20, .20)
+    gate = promotion_gate(good, marginal_xedge, primary="srcoh_head",
+                          comparators=("raw_head", "xedge_oof", "h25_reference"))
+    assert not gate["holdout_pass"]
+    assert gate["rules"]["confirmation_vs_xedge_oof_sparse_margin_0.005"] is False
+
 def test_degenerate_quadrants_refused():
     with pytest.raises(ValueError):quadrant_folds(np.zeros((5,5),bool))
     with pytest.raises(ValueError):quadrant_folds(np.ones((1,5),bool))

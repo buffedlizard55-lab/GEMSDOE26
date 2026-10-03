@@ -24,13 +24,13 @@
       "status": "primary_source_checked_full_document",
       "reviewed": "2026-10-02",
       "claim": "Three submissions per week; one final entry for both prize rounds; eligibility verification; complete reproducibility assets for finalists; generative-AI-use disclosure required in the narrative. Appendix A deadline is 5 p.m. ET on the deadline date.",
-      "scope": "All seven returned chunks read through the end of \u00a7A.17. Key date itself deferred to the competition website. This is not legal advice or an eligibility certification.",
+      "scope": "All seven returned chunks read through the end of §A.17. Key date itself deferred to the competition website. This is not legal advice or an eligibility certification.",
       "automated_refresh": false
     },
     {
       "id": "terms",
       "category": "Competition",
-      "title": "DrivenData Terms of Use \u2014 Prohibited Uses",
+      "title": "DrivenData Terms of Use — Prohibited Uses",
       "authority": "DrivenData",
       "url": "https://www.drivendata.org/termsofuse/",
       "status": "primary_source_checked",
@@ -66,7 +66,7 @@
     {
       "id": "mae",
       "category": "Methods",
-      "title": "Masked Autoencoders Are Scalable Vision Learners \u2014 He et al., CVPR 2022",
+      "title": "Masked Autoencoders Are Scalable Vision Learners — He et al., CVPR 2022",
       "authority": "Computer Vision Foundation / paper authors",
       "url": "https://openaccess.thecvf.com/content/CVPR2022/html/He_Masked_Autoencoders_Are_Scalable_Vision_Learners_CVPR_2022_paper.html",
       "status": "primary_publication_abstract_checked",
@@ -78,7 +78,7 @@
     {
       "id": "prithvi",
       "category": "Methods",
-      "title": "Foundation Models for Generalist Geospatial Artificial Intelligence \u2014 Jakubik et al., 2023",
+      "title": "Foundation Models for Generalist Geospatial Artificial Intelligence — Jakubik et al., 2023",
       "authority": "Paper authors / arXiv",
       "url": "https://arxiv.org/abs/2310.18660",
       "status": "primary_publication_abstract_checked",
@@ -108,10 +108,22 @@
       "api_url": "https://www.sciencebase.gov/catalog/item/657e1d85d34e23d3533209f7?format=json",
       "status": "primary_source_json_body_checked",
       "reviewed": "2026-10-02",
-      "claim": "Surveys span 51,857 km\u00b2, 149,030 line-km, four acquisition blocks; east\u2013west flight-line spacings 200 m (Area 1) and 400 m (Area 2); variable clearance and magnetic processing corrections matter.",
-      "scope": "LastUpdated in reviewed API = 2025-02-28T23:02:25Z. Acquisition-block boundaries used by us are owner-derived from official figures, not official-coordinate polygons.",
+      "claim": "Surveys span 51,857 km², 149,030 line-km, four acquisition blocks; east–west flight-line spacings 200 m (Area 1) and 400 m (Area 2); variable clearance and magnetic processing corrections matter.",
+      "scope": "USGS ScienceBase item JSON reports a 2025-02-28 source update, the release spatial bounding box, and archived Area-1/Area-2 grid ZIP metadata. The item describes magnetic and radiometric products. Listed ZIPs: 22103_area1_grids.zip (44,487,393 bytes) and 22103_area2_grids.zip (238,439,415 bytes). Direct binary HEAD to ScienceBase closed at TLS in this sandbox; archive contents, radiometric channel names/units and exact competition-grid coverage are not verified. Release extent is not the same as cellwise coverage.",
       "license": "USGS data release; retain original metadata and attribution",
-      "automated_refresh": true
+      "automated_refresh": true,
+      "metadata_files": [
+        {
+          "name": "22103_area1_grids.zip",
+          "bytes": 44487393,
+          "download_url": "https://www.sciencebase.gov/catalog/file/get/657e1d85d34e23d3533209f7?f=__disk__83%2Ff2%2F53%2F83f25379f9fb3df7a545c37001f1a78f52f9af7e"
+        },
+        {
+          "name": "22103_area2_grids.zip",
+          "bytes": 238439415,
+          "download_url": "https://www.sciencebase.gov/catalog/file/get/657e1d85d34e23d3533209f7?f=__disk__f0%2F51%2F14%2Ff05114e2023fca1feb5bc64d704476d28f897a7c"
+        }
+      ]
     },
     {
       "id": "ingenious",
@@ -123,7 +135,7 @@
       "reviewed": "2026-10-02",
       "claim": "Publicly accessible CC BY 4.0 regional datasets: faults, geodetics, gravity/magnetics, conductance, heat flow, thermal probes, wells/springs, volcanic and paleo-geothermal features.",
       "scope": "Official catalog availability/license verified, not every underlying binary downloaded this run. Contributors explicitly disclaim fitness/errors.",
-      "license": "CC BY 4.0 \u2014 attribution required",
+      "license": "CC BY 4.0 — attribution required",
       "automated_refresh": false
     },
     {
@@ -148,17 +160,18 @@
       "url": "https://tnmaccess.nationalmap.gov/api/v1/products?bbox=-119.5,39.5,-119.4,39.6&datasets=Digital%20Elevation%20Model%20%28DEM%29%201%20meter&max=2",
       "status": "primary_api_metadata_checked_binary_access_blocked_here",
       "reviewed": "2026-10-02",
-      "claim": "Query returned seven matching tiles and two actual GeoTIFF URLs. Metadata states bare-earth lidar surface, NAD83 UTM meters, NAVD88 elevations, and public-domain 3DEP products; project seams may exist.",
-      "scope": "Only a small bbox checked. Direct binary HEAD and direct API requests failed TLS in this sandbox. Full-region raw-byte availability and coverage are NOT verified; H26-DRAIN is deferred, not executable here.",
+      "claim": "A small in-region query returned seven matching tiles and two GeoTIFF URLs; an approximate broader regional query returned 1,454 matching metadata items with concrete GeoTIFF URLs and sizes. Metadata describes bare-earth lidar DEMs, public-domain distribution, NAVD88 elevations and possible seams across collection projects.",
+      "scope": "The broader bbox is approximate and does not certify full exact competition-footprint coverage. Direct binary HEAD to the listed S3 sample failed TLS in this sandbox; raw tile bytes, exact coverage, seam treatment and source datum mosaic are NOT verified. H27-CHANNEL-DEFLECT remains deferred.",
       "license": "Public domain (explicit metadata statement)",
       "sample_download_url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Elevation/1m/Projects/NV_WestCentral_EarthMRI_2020_D20/TIFF/USGS_1M_11_x28y439_NV_WestCentral_EarthMRI_2020_D20.tif",
       "sample_bytes_from_metadata": 29746910,
-      "automated_refresh": true
+      "automated_refresh": true,
+      "regional_metadata_query": "https://tnmaccess.nationalmap.gov/api/v1/products?bbox=-120.1%2C37.2%2C-117.8%2C40.9&datasets=Digital%20Elevation%20Model%20%28DEM%29%201%20meter&max=10"
     },
     {
       "id": "earney",
       "category": "Geology",
-      "title": "Blind geothermal system, Southern Gabbs Valley \u2014 Earney et al., GRC 2018",
+      "title": "Blind geothermal system, Southern Gabbs Valley — Earney et al., GRC 2018",
       "authority": "USGS / NBMG authors, DOE OSTI repository",
       "url": "https://www.osti.gov/servlets/purl/1724114",
       "status": "primary_paper_abstract_and_methods_checked",
@@ -170,7 +183,7 @@
     {
       "id": "siler",
       "category": "Geology",
-      "title": "Three-Dimensional Geothermal Fairway Mapping \u2014 Siler & Faulds",
+      "title": "Three-Dimensional Geothermal Fairway Mapping — Siler & Faulds",
       "authority": "NBMG authors, DOE OSTI repository",
       "url": "https://www.osti.gov/servlets/purl/1110515",
       "status": "primary_paper_abstract_and_methods_checked",
@@ -182,13 +195,13 @@
     {
       "id": "hermant",
       "category": "Geology",
-      "title": "Using Deep Learning to Map Quaternary Faults in Western USA \u2014 Hermant et al., SGW 2025",
+      "title": "Using Deep Learning to Map Quaternary Faults in Western USA — Hermant et al., SGW 2025",
       "authority": "Authors / Stanford Geothermal Workshop archive",
       "url": "https://pangea.stanford.edu/ERE/db/GeoConf/papers/SGW/2025/Hermant.pdf",
       "status": "primary_paper_abstract_introduction_checked",
       "reviewed": "2026-10-02",
       "claim": "Fault scarps can create local topographic changes; catalogue homogeneity/accuracy vary; a mapped North Central Nevada example has local catalogue offsets up to 400 m. Faults can be fluid conduits or barriers.",
-      "scope": "The 400 m observation is not a measurement of this competition\u2019s hidden truth or every catalogue trace. Institutional conference publication, not a government dataset.",
+      "scope": "The 400 m observation is not a measurement of this competition’s hidden truth or every catalogue trace. Institutional conference publication, not a government dataset.",
       "automated_refresh": false
     },
     {
@@ -225,8 +238,8 @@
       "source_url": "https://github.com/buffedlizard55-lab/GEMSDOE24/blob/07345ea0604953d7efb858d9cfbc21e20c7aca0b/src/gems/thinning.py",
       "status": "exact_file_and_pixel_operator_reproduced_score_owner_reported",
       "reviewed": "2026-10-02",
-      "claim": "H25-1 is an exactly reproduced subset of H19-5: 121131\u219260069 pixels; 1.5px deterministic dot thinning. The owner reports 0.2477 versus parent 0.1922.",
-      "scope": "A platform receipt tying score to file is absent; H25\u2019s old all-catalogue exclusion is leaky as a clean OOF baseline. Site still calls file unscored. See local forensics and holdout receipts.",
+      "claim": "H25-1 is an exactly reproduced subset of H19-5: 121131→60069 pixels; 1.5px deterministic dot thinning. The owner reports 0.2477 versus parent 0.1922.",
+      "scope": "A platform receipt tying score to file is absent; H25’s old all-catalogue exclusion is leaky as a clean OOF baseline. Site still calls file unscored. See local forensics and holdout receipts.",
       "automated_refresh": false
     },
     {
@@ -240,6 +253,31 @@
       "claim": "Registry identifies DOI 10.15121/1881483, INGENIOUS compilation, DOE Geothermal Data Repository publisher and metadata update 2025-03-07T03:05:37Z. DataCite documents public single-DOI GET retrieval.",
       "scope": "Full returned registry response read; API request documentation first chunk checked. Registry updates are not GDR-file-change or binary-availability checks. API docs: https://support.datacite.org/docs/api-get-doi",
       "automated_refresh": true
+    },
+    {
+      "id": "comcat",
+      "category": "Data",
+      "title": "USGS ComCat FDSN Event Web Service",
+      "authority": "U.S. Geological Survey, Earthquake Hazards Program",
+      "url": "https://earthquake.usgs.gov/fdsnws/event/1/",
+      "query_url": "https://earthquake.usgs.gov/fdsnws/event/1/count?format=geojson&starttime=1975-01-01&endtime=2024-12-31&minmagnitude=2.5&minlatitude=37.3641&maxlatitude=40.7247&minlongitude=-120.0024&maxlongitude=-116.1415",
+      "status": "official_api_documentation_and_count_query_checked",
+      "reviewed": "2026-10-02",
+      "claim": "Official count query returned 14,502 ComCat records for M≥2.5, 1975-01-01 through 2024-12-31, in the GeoDAWN ScienceBase bounding rectangle.",
+      "scope": "Count/query availability only. It does not establish magnitude completeness, event location quality, fault association or alignment to the competition footprint. Full event records were not used in H27-SRCOH.",
+      "automated_refresh": false
+    },
+    {
+      "id": "usgs_radiometric_alteration",
+      "category": "Geology",
+      "title": "Airborne radiometric data map alteration of porphyry copper systems in the Elkhorn district, MT",
+      "authority": "USGS publication record / Anderson et al., 2025",
+      "url": "https://pubs.usgs.gov/publication/70271704",
+      "status": "official_publication_abstract_checked",
+      "reviewed": "2026-10-02",
+      "claim": "The USGS-hosted 2025 conference paper reports surficial K, Th and U maps, radioelement ratios and potassium-enhancement mapping that highlighted known and additional hydrothermal alteration in the Elkhorn district, Montana.",
+      "scope": "Geographic and deposit-type analogue only. It is not a Nevada fault detector, does not establish that GeoDAWN archive channels have those exact names/units, and does not validate the competition task.",
+      "automated_refresh": false
     }
   ]
 }

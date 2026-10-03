@@ -1,0 +1,225 @@
+{
+  "completed_utc": "2026-10-02T23:39:02+00:00",
+  "feature_pin": {
+    "repo": "buffedlizard55-lab/GEMSDOE",
+    "ref": "c0c06ac82178f26b94fce3397036ef8f12a2f3a0",
+    "remote_paths": [
+      "data/bridge/gems-geodawn-numerical-features.tif.part-000",
+      "data/bridge/gems-geodawn-numerical-features.tif.part-001",
+      "data/bridge/gems-geodawn-numerical-features.tif.part-002",
+      "data/bridge/gems-geodawn-numerical-features.tif.part-003",
+      "data/bridge/gems-geodawn-numerical-features.tif.part-004"
+    ],
+    "path": "data/raw/training_features.tif",
+    "bytes": 418912844,
+    "sha256": "4371c82e3b8339b807bdffcf4ef59a225520fe2988d521be208ae33743123bc5",
+    "status": "owner_mirror_integrity_only"
+  },
+  "shape": [
+    19,
+    3730,
+    3292
+  ],
+  "footprint_pixels": 5167373,
+  "any_observed_pixels": 5164312,
+  "inside_pixels_without_any_observation": 3061,
+  "all_channels_retained": true,
+  "labels_opened": false,
+  "band_scale_fit": "Full unlabeled footprint: median, scale=(q98-q02)/4, clip [-8,8]",
+  "semantic_warning": "Mirror descriptions are not organizer metadata; tc, earthquake and conductive-base depth meanings require source resolution.",
+  "bands": [
+    {
+      "band": 1,
+      "description_from_owner_mirror_not_certified": "mag_anom - Magnetic anomaly - deviation from expected Earth's magnetic field",
+      "valid_pixels": 5164312,
+      "median": -57.68793296813965,
+      "scale": 124.71309143066418,
+      "q02": -252.58673706054688,
+      "q98": 246.2656286621098,
+      "clipped_pixels": 2177
+    },
+    {
+      "band": 2,
+      "description_from_owner_mirror_not_certified": "rtp - Reduced to pole magnetic data - magnetic anomaly corrected for latitude effects",
+      "valid_pixels": 5164312,
+      "median": -137.22166442871094,
+      "scale": 174.07086914062515,
+      "q02": -407.90181518554687,
+      "q98": 288.38166137695373,
+      "clipped_pixels": 3650
+    },
+    {
+      "band": 3,
+      "description_from_owner_mirror_not_certified": "tmi_hg - Total magnetic intensity horizontal gradient - rate of change in horizontal direction",
+      "valid_pixels": 5164312,
+      "median": 13.155465126037598,
+      "scale": 35.64210016936065,
+      "q02": 0.9594014465808869,
+      "q98": 143.5278021240235,
+      "clipped_pixels": 14353
+    },
+    {
+      "band": 4,
+      "description_from_owner_mirror_not_certified": "geod_2ndinv - Geodetic second invariant - measure of strain rate tensor magnitude",
+      "valid_pixels": 5164312,
+      "median": 19.90778923034668,
+      "scale": 12.550000190734863,
+      "q02": 2.0,
+      "q98": 52.20000076293945,
+      "clipped_pixels": 0
+    },
+    {
+      "band": 5,
+      "description_from_owner_mirror_not_certified": "iso_grav_anom_slope - Isostatic gravity anomaly slope - gradient of gravity after isostatic correction",
+      "valid_pixels": 5164312,
+      "median": 0.10218460857868195,
+      "scale": 0.07649870078079403,
+      "q02": 0.020130424685776235,
+      "q98": 0.32612522780895237,
+      "clipped_pixels": 0
+    },
+    {
+      "band": 6,
+      "description_from_owner_mirror_not_certified": "tc - Tilt angle or total curvature - magnetic field derivative for edge detection",
+      "valid_pixels": 5164300,
+      "median": 18.48169994354248,
+      "scale": 4.282358131408689,
+      "q02": 10.461785087585449,
+      "q98": 27.591217613220202,
+      "clipped_pixels": 10
+    },
+    {
+      "band": 7,
+      "description_from_owner_mirror_not_certified": "geod_shearrate - Geodetic shear rate - rate of angular deformation from GPS/InSAR",
+      "valid_pixels": 5164312,
+      "median": 9.699999809265137,
+      "scale": 8.649999618530273,
+      "q02": 0.0,
+      "q98": 34.599998474121094,
+      "clipped_pixels": 0
+    },
+    {
+      "band": 8,
+      "description_from_owner_mirror_not_certified": "geod_dilaterate - Geodetic dilatation rate - rate of volumetric strain (expansion/contraction)",
+      "valid_pixels": 5164312,
+      "median": 5.5,
+      "scale": 7.887011995315554,
+      "q02": -6.199999809265137,
+      "q98": 25.34804817199708,
+      "clipped_pixels": 0
+    },
+    {
+      "band": 9,
+      "description_from_owner_mirror_not_certified": "tmi_vg - Total magnetic intensity vertical gradient - rate of change in vertical direction",
+      "valid_pixels": 5164312,
+      "median": -0.008997071534395218,
+      "scale": 0.26468635216355413,
+      "q02": -0.4942414838075638,
+      "q98": 0.5645039248466527,
+      "clipped_pixels": 6791
+    },
+    {
+      "band": 10,
+      "description_from_owner_mirror_not_certified": "deq_n100a15 - Distance to earthquake (n=100km radius, a=15\u00b0 azimuth parameters)",
+      "valid_pixels": 5164312,
+      "median": 622.7999877929688,
+      "scale": 6600.700000762939,
+      "q02": 147.1999969482422,
+      "q98": 26550.0,
+      "clipped_pixels": 50001
+    },
+    {
+      "band": 11,
+      "description_from_owner_mirror_not_certified": "iso_grav_anom_vg - Isostatic gravity anomaly vertical gradient - vertical rate of change",
+      "valid_pixels": 5164312,
+      "median": -0.07213491946458817,
+      "scale": 1.789122025966646,
+      "q02": -3.6292053508758544,
+      "q98": 3.5272827529907302,
+      "clipped_pixels": 41
+    },
+    {
+      "band": 12,
+      "description_from_owner_mirror_not_certified": "det_elev - Detrended elevation - topography with regional trends removed",
+      "valid_pixels": 5164312,
+      "median": -75.57621002197266,
+      "scale": 253.89093994140643,
+      "q02": -410.86644165039064,
+      "q98": 604.697318115235,
+      "clipped_pixels": 0
+    },
+    {
+      "band": 13,
+      "description_from_owner_mirror_not_certified": "iso_grav_anom - Isostatic gravity anomaly - gravity after compensating for topographic mass",
+      "valid_pixels": 5164312,
+      "median": -7.26103401184082,
+      "scale": 10.243065958023074,
+      "q02": -30.140839996337892,
+      "q98": 10.831423835754403,
+      "clipped_pixels": 0
+    },
+    {
+      "band": 14,
+      "description_from_owner_mirror_not_certified": "tmi - Total magnetic intensity - total strength of magnetic field",
+      "valid_pixels": 5164312,
+      "median": -124.8157730102539,
+      "scale": 157.21814926147465,
+      "q02": -369.2342224121094,
+      "q98": 259.6383746337892,
+      "clipped_pixels": 3706
+    },
+    {
+      "band": 15,
+      "description_from_owner_mirror_not_certified": "depth_to_base_surf - Depth to basement surface - thickness of sedimentary cover",
+      "valid_pixels": 5164312,
+      "median": 316.3645324707031,
+      "scale": 662.368481163979,
+      "q02": 2.3073937034606935,
+      "q98": 2651.7813183593767,
+      "clipped_pixels": 6586
+    },
+    {
+      "band": 16,
+      "description_from_owner_mirror_not_certified": "ieq_n100a15 - Earthquake intensity or density (n=100km radius, a=15\u00b0 parameters)",
+      "valid_pixels": 5164312,
+      "median": 755.7000122070312,
+      "scale": 934.2750091552734,
+      "q02": 278.70001220703125,
+      "q98": 4015.800048828125,
+      "clipped_pixels": 0
+    },
+    {
+      "band": 17,
+      "description_from_owner_mirror_not_certified": "cond_surf - Conductivity surface - electrical conductivity of subsurface",
+      "valid_pixels": 5164312,
+      "median": 2.885897636413574,
+      "scale": 0.7004575133323669,
+      "q02": 1.455568552017212,
+      "q98": 4.25739860534668,
+      "clipped_pixels": 0
+    },
+    {
+      "band": 18,
+      "description_from_owner_mirror_not_certified": "iso_grav_anom_hg - Isostatic gravity anomaly horizontal gradient - horizontal rate of change",
+      "valid_pixels": 5164312,
+      "median": 0.037620771676301956,
+      "scale": 2.2346880984306337,
+      "q02": -4.4349565505981445,
+      "q98": 4.50379584312439,
+      "clipped_pixels": 0
+    },
+    {
+      "band": 19,
+      "description_from_owner_mirror_not_certified": "det_elev_slope - Detrended elevation slope - gradient of elevation after detrending",
+      "valid_pixels": 5164312,
+      "median": 3.7492629289627075,
+      "scale": 7.470555298402906,
+      "q02": 0.10061034172773362,
+      "q98": 29.982831535339358,
+      "clipped_pixels": 0
+    }
+  ],
+  "values_sha256": "138c028e73c7d54ea0546e918a4625b54e93dc85f6920735f7f4211e1994c83f",
+  "observed_sha256": "1f48d9839a4ad1062482d293dc39e3ebb2ad59de366372ff8e6645e8506325b8",
+  "missing_targets_excluded": true
+}
